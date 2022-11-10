@@ -1,0 +1,31 @@
+.home {
+	&-wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		text-align: center;
+		min-height: 100vh;
+	}
+	&-header {
+		font-size: 60px;
+		color: hsl(32, 94%, 51%);
+		text-shadow: 0px 0px 25px hsl(32, 94%, 51%);
+	}
+	&-text {
+		font-size: 24px;
+		color: hsl(32, 94%, 51%);
+		text-shadow: 0px 0px 25px hsl hsl(32, 94%, 51%);
+	}
+	&-btn {
+		border-radius: 15px;
+		font-size: 14px;
+		color: hsl(0, 0%, 98%);
+		background-color: unset;
+		border: 0px;
+		box-shadow: 0px 0px 1px 0px hsl(0, 0%, 98%);
+		padding: 10px;
+		width: 30%;
+	}
+}
