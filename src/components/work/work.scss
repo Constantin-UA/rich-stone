@@ -1,2 +1,9 @@
 .work {
+	&-wrapper {
+		min-width: 98vw;
+		min-height: 100vh;
+		position: relative;
+		transition: all 1s ease-in-out;
+		padding-top: 10vh;
+	}
 }

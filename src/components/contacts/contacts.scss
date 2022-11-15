@@ -1,0 +1,35 @@
+.contacts {
+	position: relative;
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-logo {
+	}
+	&-title {
+	}
+	&-phone-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-phone-element {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&-icon {
+	}
+	&-phone {
+	}
+	&-map {
+	}
+}

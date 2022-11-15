@@ -1,11 +1,13 @@
 import { MainPage } from '../pages';
-
+import ErrorBoundary from '../errorBoundary/errorBoundary';
 import './app.scss';
 
 function App() {
 	return (
 		<main className="app">
-			<MainPage />
+			<ErrorBoundary>
+				<MainPage />
+			</ErrorBoundary>
 		</main>
 	);
 }

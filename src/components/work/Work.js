@@ -1,6 +1,6 @@
 //Components
 import { Container } from 'react-bootstrap';
-import CarouselFade from '../carousel/CarouselFade';
+import Slider from '../slider/Slider';
 //SCSS
 import './work.scss';
 
@@ -8,7 +8,7 @@ function Works() {
 	return (
 		<section className="work">
 			<Container className="work-wrapper">
-				<CarouselFade />
+				<Slider />
 			</Container>
 		</section>
 	);

@@ -1,0 +1,28 @@
+.carousel {
+	min-width: 80vw;
+	height: 90vh;
+	transition: all 1s ease-in-out;
+	position: relative;
+	&-inner {
+		width: 800px;
+		height: 600px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		box-shadow: 0px 0px 15px 1px hsla(42, 92%, 71%, 100%);
+		border-radius: 15px;
+		overflow: hidden;
+	}
+
+	&-control-prev,
+	&-control-next {
+		&-icon {
+			box-shadow: 0px 0px 10px 1px hsla(42, 92%, 71%, 100%);
+			border-radius: 50%;
+		}
+	}
+	&-indicators {
+	}
+}
