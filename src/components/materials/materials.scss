@@ -6,6 +6,13 @@
 		align-items: center;
 		justify-content: center;
 	}
+	&-title {
+		font-size: 60px;
+		color: #f9d073;
+		text-shadow: 0px 0px 10px #f9d073;
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
 	&-box {
 		position: relative;
 		display: grid;
@@ -15,5 +22,13 @@
 	}
 	&-item {
 		overflow: hidden;
+		border: 1px solid #f9d073;
+		border-radius: 50px;
+		box-shadow: 0px 0px 10px 0px #f9d073;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+	}
+	&-item:hover {
+		box-shadow: 0px 0px 10px 10px #e7b33b;
 	}
 }

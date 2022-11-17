@@ -34,9 +34,9 @@ for (let i = 0; i < 9; i++) {
 }
 function Materials() {
 	return (
-		<section className="materials">
+		<section id="materials" className="materials">
 			<Container className="materials-wrapper">
-				<div className="materials-titil">Materials</div>
+				<div className="materials-title">Матерiали</div>
 				<div className="materials-box">
 					{dataImg.map((elem, idx) => {
 						return (

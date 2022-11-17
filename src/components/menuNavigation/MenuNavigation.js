@@ -5,22 +5,29 @@ function MenuNavigation() {
 		<section className="menuNavigation">
 			<div className="menuNavigation-wrapper">
 				<div className="menuNavigation-logo-box">
-					<div className="menuNavigation-logo">Rich Stone</div>
+					<a href="/#home" className="menuNavigation-logo">
+						Rich Stone
+					</a>
 				</div>
-				<Nav className="menuNavigation-main" defaultActiveKey="/home" as="ul">
+				<Nav className="menuNavigation-main" defaultActiveKey="1" as="ul">
 					<Nav.Item as="li">
-						<Nav.Link className="menuNavigation-link" href="/home">
-							About
+						<Nav.Link className="menuNavigation-link" href="/#about">
+							Компания
 						</Nav.Link>
 					</Nav.Item>
 					<Nav.Item as="li">
-						<Nav.Link className="menuNavigation-link" eventKey="link-2">
-							Partners
+						<Nav.Link className="menuNavigation-link" href="/#work">
+							Галерая робiт
 						</Nav.Link>
 					</Nav.Item>
 					<Nav.Item as="li">
-						<Nav.Link className="menuNavigation-link" eventKey="link-3">
-							Contacts
+						<Nav.Link className="menuNavigation-link" href="/#partners">
+							Партнери
+						</Nav.Link>
+					</Nav.Item>
+					<Nav.Item as="li">
+						<Nav.Link className="menuNavigation-link" href="/#contacts">
+							Контакти
 						</Nav.Link>
 					</Nav.Item>
 				</Nav>

@@ -1,22 +1,22 @@
 import { Container } from 'react-bootstrap';
-
+import Image from 'react-bootstrap/Image';
+import BG from '../../assets/about/bg.jpg';
 import './about.scss';
 
 function About() {
 	return (
-		<section className="about">
+		<section id="about" className="about">
+			<Image className="about-bg" alt="bg" src={BG} />
 			<Container className="about-wrapper">
-				<h4 className="about-title">О КОМПАНИИ</h4>
-				<p className="about-text">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta suscipit culpa dolor
-					repellat. Debitis quam sit ipsam perspiciatis. Consequatur delectus voluptatum ipsa quasi,
-					maiores iste. Aut facere, harum eveniet voluptas perspiciatis quia eos accusamus corporis
-					quidem, enim a ab voluptate delectus voluptatum ipsum molestias numquam maxime. Impedit
-					tempore doloribus dignissimos est ipsa adipisci architecto natus culpa. Sapiente molestiae
-					ipsa reiciendis, at perferendis, illum velit earum fugit laborum, magni dolorem. Sed, sint
-					culpa nam vel iusto quia, delectus itaque nemo maiores vero voluptas non quis ullam
-					tenetur corrupti? Doloremque ratione quas hic sed maxime iste, provident libero velit nam
-					perferendis cupiditate?
+				<h4 className="about-title">Компанія Rich Stone.</h4>
+				<p className="about-subtitle">
+					Ми надаємо послуги з виготовлення та монтажу вже більше 10 років.
+				</p>
+
+				<p className="about-text-footer">
+					Чесні і відкриті умови співпраці. Робота в компанії з 10- річним стажем, яка займає міцні
+					позиції на ринку. Підтримка та поради персонального менеджера у виробничих питаннях.
+					Відповідальність і виконання взятих на себе зобов’язань. Команда досвідчених фахівців.
 				</p>
 			</Container>
 		</section>

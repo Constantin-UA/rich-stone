@@ -2,7 +2,7 @@ import { Container } from 'react-bootstrap';
 import './home.scss';
 function Home() {
 	return (
-		<section className="home">
+		<section id="home" className="home">
 			{/* <Image className="mainPage-bg" alt="bg" src={Bricks} /> */}
 			<Container className="home-wrapper">
 				<div className="home-logo-box">

@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
-/* import BG from '../../assets/1.jpg'; */
+import BG from '../../assets/partner/bg.jpg';
 import atem from '../../assets/partner/atem.png';
 import avant from '../../assets/partner/avant.png';
 import bienstone from '../../assets/partner/bienstone.png';
@@ -24,61 +24,36 @@ import vicostone from '../../assets/partner/vicostone.png';
 
 import './partnership.scss';
 const dataParntnerImg = [
-	atem,
-	avant,
-	bienstone,
-	caesa,
-	corian,
+	radianz,
 	hanex,
 	hanstone,
-	himacs,
-	neomarm,
-	quartz,
-	santa,
-	silestone,
-	staron,
-	stone,
-	teksolan,
-	tristone,
 	vicostone,
+	atem,
+	bienstone,
+	stone,
+	avant,
 	tekstone,
-	radianz,
+	neomarm,
+	corian,
+	tristone,
+	silestone,
+	himacs,
+	teksolan,
+	staron,
+	santa,
+	caesa,
+	quartz,
 ];
-const dataParntnerImgNames = [
-	'atem',
-	'avant',
-	'bienstone',
-	'caesa',
-	'corian',
-	'hanex',
-	'hanstone',
-	'himacs',
-	'neomarm',
-	'quartz',
-	'santa',
-	'silestone',
-	'staron',
-	'stone',
-	'teksolan',
-	'tristone',
-	'vicostone',
-	'tekstone',
-	'radianz',
-];
+
 function Partnership() {
 	return (
-		<section className="partnership">
-			{/* 			<Image className="partnership-bg" alt="bg" src={BG} /> */}
+		<section id="partners" className="partnership">
+			<Image className="partnership-bg" alt="bg" src={BG} />
 			<Container className="partnership-wrapper">
-				<h3 className="partnership-title">PARTNERSHIP</h3>
+				<h3 className="partnership-title">Партнери</h3>
 				<div className="partnership-box">
 					{dataParntnerImg.map((element, idx) => (
-						<Image
-							className={`partnership-icon partnership-icon-${dataParntnerImgNames[idx]}`}
-							alt={dataParntnerImgNames[idx]}
-							key={idx}
-							src={element}
-						/>
+						<Image className="partnership-icon" alt={idx} key={idx} src={element} />
 					))}
 				</div>
 			</Container>
