@@ -8,6 +8,7 @@
 		align-items: center;
 		justify-content: space-evenly;
 		text-align: center;
+		transition: all 1.5s ease-in-out;
 	}
 	&-logo-box {
 		display: flex;
@@ -23,9 +24,13 @@
 		color: #f9d073;
 		text-shadow: 0px 0px 15px #f9d073;
 	}
+	&-Rich {
+	}
 	&-Stone {
+		animation-delay: 0.1s;
 	}
 	&-text {
+		animation-delay: 0.5s;
 		width: 25vw;
 		font-size: 24px;
 		color: #f9d073;

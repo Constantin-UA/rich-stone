@@ -12,6 +12,11 @@
 		text-shadow: 0px 0px 10px #f9d073;
 		margin-bottom: 30px;
 		margin-top: 30px;
+		animation: zoomIn;
+		animation-duration: 1s;
+		cursor: pointer;
+	}
+	&-title:hover {
 	}
 	&-box {
 		position: relative;
@@ -29,6 +34,8 @@
 		transition: all 0.5s ease-in-out;
 	}
 	&-item:hover {
+		animation: flip;
+		animation-duration: 2s;
 		box-shadow: 0px 0px 10px 10px #e7b33b;
 	}
 }

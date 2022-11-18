@@ -40,7 +40,7 @@ function Materials() {
 				<div className="materials-box">
 					{dataImg.map((elem, idx) => {
 						return (
-							<div className="materials-item" key={idx}>
+							<div className="materials-item animate__animated" key={idx}>
 								<Image className="materials-item-img" alt={dataNames[idx]} src={elem} />
 							</div>
 						);

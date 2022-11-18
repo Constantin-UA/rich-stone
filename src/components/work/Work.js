@@ -4,12 +4,12 @@ import Slider from '../slider/Slider';
 //SCSS
 import './work.scss';
 
-function Works() {
+function Works({ data }) {
 	return (
 		<section id="work" className="work">
 			<Container className="work-wrapper">
 				<h2 className="work-title">Галерая робiт</h2>
-				<Slider />
+				<Slider data={data} />
 			</Container>
 		</section>
 	);

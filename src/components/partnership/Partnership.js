@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
 import BG from '../../assets/partner/bg.jpg';
@@ -44,16 +45,67 @@ const dataParntnerImg = [
 	caesa,
 	quartz,
 ];
+const dataParNames = [
+	'radianz',
+	'hanex',
+	'hanstone',
+	'vicostone',
+	'atem',
+	'bienstone',
+	'stone',
+	'avant',
+	'tekstone',
+	'neomarm',
+	'corian',
+	'tristone',
+	'silestone',
+	'himacs',
+	'teksolan',
+	'staron',
+	'santa',
+	'caesa',
+	'quartz',
+];
+const toggleOn = (elem, remove, add) => {
+	document.querySelector(`${elem}`).classList.remove(`${remove}`);
+	document.querySelector(`${elem}`).classList.add(`${add}`);
+};
+const toggleOff = (elem, remove, add) => {
+	document.querySelector(`${elem}`).classList.remove(`${remove}`);
+	document.querySelector(`${elem}`).classList.add(`${add}`);
+};
+function Partnership({ data }) {
+	useEffect(() => {
+		if (data === 'partners') {
+			toggleOn('.partnership-title', 'animate__zoomOut', 'animate__zoomIn');
+			toggleOn('.partnership-box', 'animate__zoomOut', 'animate__zoomIn');
+			document.querySelectorAll('.partnership-icon').forEach((elem) => {
+				elem.classList.remove('animate__zoomOut');
+				elem.classList.add('animate__zoomIn');
+			});
+		} else {
+			document.querySelectorAll('.partnership-icon').forEach((elem) => {
+				elem.classList.remove('animate__zoomIn');
+				elem.classList.add('animate__zoomOut');
+			});
+			toggleOff('.partnership-title', 'animate__zoomIn', 'animate__zoomOut');
+			toggleOff('.partnership-box', 'animate__zoomIn', 'animate__zoomOut');
+		}
+	}, [data]);
 
-function Partnership() {
 	return (
 		<section id="partners" className="partnership">
 			<Image className="partnership-bg" alt="bg" src={BG} />
 			<Container className="partnership-wrapper">
-				<h3 className="partnership-title">Партнери</h3>
-				<div className="partnership-box">
+				<h3 className="partnership-title animate__animated">Партнери</h3>
+				<div className="partnership-box animate__animated">
 					{dataParntnerImg.map((element, idx) => (
-						<Image className="partnership-icon" alt={idx} key={idx} src={element} />
+						<Image
+							className="partnership-icon animate__animated"
+							alt={idx}
+							key={idx}
+							src={element}
+						/>
 					))}
 				</div>
 			</Container>

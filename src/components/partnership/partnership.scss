@@ -43,11 +43,19 @@
 		align-items: center;
 		justify-content: space-around;
 		gap: 5px;
+		animation-delay: 0.2s;
 	}
 	&-icon {
 		display: grid;
 		width: fit-content;
 		height: fit-content;
+		transition: all 2s ease-in;
+		animation-duration: 1s;
+		animation-delay: 1s;
+	}
+	&-icon:hover {
+		animation: pulse;
+		animation-duration: 1s;
 	}
 }
 
