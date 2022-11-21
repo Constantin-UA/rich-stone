@@ -15,11 +15,15 @@
 		justify-content: center;
 	}
 	&-logo {
+		animation-delay: 0.5s;
+
 		font-size: 60px;
 		color: #f9d073;
 		text-shadow: 0px 0px 10px #f9d073;
 	}
 	&-title {
+		animation-delay: 1s;
+
 		font-size: 60px;
 		color: #f9d073;
 		text-shadow: 0px 0px 10px #f9d073;
@@ -32,6 +36,8 @@
 		row-gap: 15px;
 	}
 	&-phone-element {
+		animation-delay: 1s;
+
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -46,5 +52,8 @@
 		color: hsla(0, 0%, 100%, 0.8);
 	}
 	&-map {
+		width: 59vw;
+		height: 99.5vh;
+		padding-top: 10vh;
 	}
 }
