@@ -8,10 +8,11 @@ function Works({ data }) {
 	return (
 		<section id="work" className="work">
 			<Container className="work-wrapper">
-				<h2 className="work-title">Галерая робiт</h2>
 				<Slider data={data} />
 			</Container>
 		</section>
 	);
 }
 export default Works;
+
+//<h2 className="work-title">Галерая робiт</h2>

@@ -1,13 +1,14 @@
 .carousel {
 	min-width: 80vw;
-	height: 600px;
 	min-height: 80vh;
+	height: 600px;
 	transition: all 1s ease-in-out;
 	position: relative;
 	&-inner {
-		width: 800px;
-		max-height: 400px;
-		min-height: 50vh;
+		width: 80vw;
+		/* 		max-height: 400px;
+		min-height: 50vh; */
+		height: 60vh;
 		position: absolute;
 		top: 50%;
 		left: 50%;

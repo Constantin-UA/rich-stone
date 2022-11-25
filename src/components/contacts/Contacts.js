@@ -17,7 +17,7 @@ const toggleOff = (elem, remove, add) => {
 
 function Contacts({ data }) {
 	useEffect(() => {
-		if (data === 'contacts') {
+		if (data >= 3600) {
 			toggleOn('.contacts-map', 'animate__fadeOutRightBig', 'animate__fadeInRightBig');
 			toggleOn('.contacts-logo', 'animate__fadeOutLeftBig', 'animate__fadeInLeftBig');
 			toggleOn('.contacts-title', 'animate__fadeOutLeftBig', 'animate__fadeInLeftBig');

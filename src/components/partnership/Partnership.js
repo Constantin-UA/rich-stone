@@ -23,6 +23,7 @@ import radianz from '../../assets/partner/radianz.png';
 import tristone from '../../assets/partner/tristone.png';
 import vicostone from '../../assets/partner/vicostone.png';
 
+import { useToggler } from '../hook/useToggler.hook';
 import './partnership.scss';
 const dataParntnerImg = [
 	radianz,
@@ -66,30 +67,18 @@ const dataParNames = [
 	'caesa',
 	'quartz',
 ];
-const toggleOn = (elem, remove, add) => {
-	document.querySelector(`${elem}`).classList.remove(`${remove}`);
-	document.querySelector(`${elem}`).classList.add(`${add}`);
-};
-const toggleOff = (elem, remove, add) => {
-	document.querySelector(`${elem}`).classList.remove(`${remove}`);
-	document.querySelector(`${elem}`).classList.add(`${add}`);
-};
+
 function Partnership({ data }) {
+	const { toggler } = useToggler();
 	useEffect(() => {
-		if (data === 'partners') {
-			toggleOn('.partnership-title', 'animate__zoomOut', 'animate__zoomIn');
-			toggleOn('.partnership-box', 'animate__zoomOut', 'animate__zoomIn');
-			document.querySelectorAll('.partnership-icon').forEach((elem) => {
-				elem.classList.remove('animate__zoomOut');
-				elem.classList.add('animate__zoomIn');
-			});
+		if (data >= 2000 && data <= 2800) {
+			toggler('.partnership-title', 'animate__zoomOut', 'animate__zoomIn');
+			toggler('.partnership-box', 'animate__zoomOut', 'animate__zoomIn');
+			toggler('.partnership-icon', 'animate__zoomOut', 'animate__zoomIn', true);
 		} else {
-			document.querySelectorAll('.partnership-icon').forEach((elem) => {
-				elem.classList.remove('animate__zoomIn');
-				elem.classList.add('animate__zoomOut');
-			});
-			toggleOff('.partnership-title', 'animate__zoomIn', 'animate__zoomOut');
-			toggleOff('.partnership-box', 'animate__zoomIn', 'animate__zoomOut');
+			toggler('.partnership-title', 'animate__zoomIn', 'animate__zoomOut');
+			toggler('.partnership-box', 'animate__zoomIn', 'animate__zoomOut');
+			toggler('.partnership-icon', 'animate__zoomIn', 'animate__zoomOut', true);
 		}
 	}, [data]);
 

@@ -1,8 +1,10 @@
+@import '../../style/variables';
+
 .contacts {
 	position: relative;
 	&-wrapper {
-		min-width: 98.5vw;
-		min-height: 100vh;
+		min-width: $min-width-contacts;
+		min-height: $min-heigth-contacts;
 		transition: all 1s ease-in-out;
 		display: grid;
 		grid-template-columns: 40% 60%;

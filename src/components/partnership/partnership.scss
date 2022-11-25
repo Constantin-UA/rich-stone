@@ -1,9 +1,11 @@
+@import '../../style/variables';
+
 .partnership {
 	position: relative;
 	/* 	background: url('../../assets/partner/bg.jpg') center / cover no-repeat; */
 	&-wrapper {
-		min-width: 98.5vw;
-		min-height: 100vh;
+		min-width: $min-width-partners;
+		min-height: $min-heigth-partners;
 		position: relative;
 		transition: all 1s ease-in-out;
 		display: flex;
@@ -52,10 +54,6 @@
 		transition: all 2s ease-in;
 		animation-duration: 1s;
 		animation-delay: 1s;
-	}
-	&-icon:hover {
-		animation: pulse;
-		animation-duration: 1s;
 	}
 }
 

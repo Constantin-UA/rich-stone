@@ -15,30 +15,47 @@ import './mainPage.scss';
 //lazy load
 
 const MainPage = () => {
-	const [windowPosition, setWindowPosition] = useState('home');
+	const [scrollY, setScrollY] = useState(0);
 	useEffect(() => {
+		const handleScroll = (event) => {
+			//let clientHeight = document.querySelector('.mainPage').clientHeight;
+			setScrollY(window.scrollY);
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+	//const [windowPosition, setWindowPosition] = useState('home');
+	//const [scrollyy, setScrollyy] = useState(0);
+	/*	useEffect(() => {
 		console.log(windowPosition);
 	}, [windowPosition]);
 	useEffect(() => {
 		const handleScroll = (event) => {
-			if (window.scrollY === 0) {
+			setScrollyy(window.scrollY);
+			 let offsetHeight = document.querySelector('.mainPage').offsetHeight;
+			let clientHeight = document.querySelector('.mainPage').clientHeight;
+			let scrollY = window.scrollY;
+
+			console.log('client', clientHeight);
+			console.log('offset', offsetHeight);
+			 */ //4800px
+	/*
+			if (scrollY === 0) {
 				setWindowPosition('home');
-			}
-			if (window.scrollY >= 800 && window.scrollY <= 1500) {
+			} else if (scrollY > 0 && scrollY < clientHeight / 6) {
 				setWindowPosition('about');
-			}
-			if (window.scrollY >= 1600 && window.scrollY <= 2300) {
+			} else if (scrollY > clientHeight / 6 && scrollY < (clientHeight / 6) * 2) {
 				setWindowPosition('work');
-			}
-			if (window.scrollY >= 2400 && window.scrollY <= 3100) {
+			} else if (scrollY > (clientHeight / 6) * 2 && scrollY < (clientHeight / 6) * 3) {
 				setWindowPosition('partners');
-			}
-			if (window.scrollY >= 3200 && window.scrollY <= 4000) {
+			} else if (scrollY > (clientHeight / 6) * 3 && scrollY < (clientHeight / 6) * 4) {
 				setWindowPosition('materials');
-			}
-			if (window.scrollY >= 4100) {
+			} else if (scrollY > (clientHeight / 6) * 4 && scrollY < (clientHeight / 6) * 5) {
 				setWindowPosition('contacts');
 			}
+			
 		};
 
 		window.addEventListener('scroll', handleScroll);
@@ -46,18 +63,17 @@ const MainPage = () => {
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
-	}, []);
+	}, []);*/
 	//Render MainPage
 	return (
 		<div className="mainPage">
 			<MenuNavigation />
-			{/* 		<Scroller /> */}
-			<Home data={windowPosition} />
-			<About data={windowPosition} />
-			<Work data={windowPosition} />
-			<Partnership data={windowPosition} />
-			<Materials data={windowPosition} />
-			<Contacts data={windowPosition} />
+			<Home data={scrollY} />
+			<About data={scrollY} />
+			<Work data={scrollY} />
+			<Partnership data={scrollY} />
+			<Materials data={scrollY} />
+			<Contacts data={scrollY} />
 		</div>
 	);
 };

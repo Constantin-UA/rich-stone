@@ -1,8 +1,12 @@
+@import '../../style/variables';
+
 .about {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	min-width: $min-width-about;
+	min-height: $min-heigth-about;
 	&-bg {
 		position: absolute;
 		top: 50%;

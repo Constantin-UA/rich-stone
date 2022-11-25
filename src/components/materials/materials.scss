@@ -1,28 +1,29 @@
+@import '../../style/variables';
 .materials {
 	position: relative;
+	min-width: $min-width-materials;
+	min-height: $min-heigth-materials;
 	&-wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding-top: 10vh;
 	}
 	&-title {
 		font-size: 60px;
 		color: #f9d073;
 		text-shadow: 0px 0px 10px #f9d073;
 		margin-bottom: 30px;
-		margin-top: 30px;
-		animation: zoomIn;
-		animation-duration: 1s;
+		margin-top: 60px;
 		cursor: pointer;
 	}
-	&-title:hover {
-	}
+
 	&-box {
 		position: relative;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1fr);
 		gap: 20px;
 	}
 	&-item {
@@ -34,8 +35,6 @@
 		transition: all 0.5s ease-in-out;
 	}
 	&-item:hover {
-		animation: flip;
-		animation-duration: 2s;
 		box-shadow: 0px 0px 10px 10px #e7b33b;
 	}
 }

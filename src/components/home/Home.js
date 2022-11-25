@@ -1,24 +1,21 @@
 import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
+import { useToggler } from '../hook/useToggler.hook';
+import { useState } from 'react';
 import './home.scss';
-const toggleOn = (elem, remove, add) => {
-	document.querySelector(`${elem}`).classList.remove(`${remove}`);
-	document.querySelector(`${elem}`).classList.add(`${add}`);
-};
-const toggleOff = (elem, remove, add) => {
-	document.querySelector(`${elem}`).classList.remove(`${remove}`);
-	document.querySelector(`${elem}`).classList.add(`${add}`);
-};
+
 function Home({ data }) {
+	const { toggler } = useToggler();
+
 	useEffect(() => {
-		if (data === 'home') {
-			toggleOn('.home-Rich', 'animate__fadeOutLeftBig', 'animate__fadeInLeftBig');
-			toggleOn('.home-Stone', 'animate__fadeOutRightBig', 'animate__fadeInRightBig');
-			toggleOn('.home-text', 'animate__fadeOutUpBig', 'animate__fadeInUpBig');
+		if (data >= 0 && data <= 400) {
+			toggler('.home-Rich', 'animate__fadeOutLeftBig', 'animate__fadeInLeftBig');
+			toggler('.home-Stone', 'animate__fadeOutRightBig', 'animate__fadeInRightBig');
+			toggler('.home-text', 'animate__fadeOutUpBig', 'animate__fadeInUpBig');
 		} else {
-			toggleOff('.home-Rich', 'animate__fadeInLeftBig', 'animate__fadeOutLeftBig');
-			toggleOff('.home-Stone', 'animate__fadeInRightBig', 'animate__fadeOutRightBig');
-			toggleOff('.home-text', 'animate__fadeInUpBig', 'animate__fadeOutUpBig');
+			toggler('.home-Rich', 'animate__fadeInLeftBig', 'animate__fadeOutLeftBig');
+			toggler('.home-Stone', 'animate__fadeInRightBig', 'animate__fadeOutRightBig');
+			toggler('.home-text', 'animate__fadeInUpBig', 'animate__fadeOutUpBig');
 		}
 	}, [data]);
 	return (

@@ -1,6 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
 import { useState, useEffect } from 'react';
+import { useToggler } from '../hook/useToggler.hook';
 //img import
 import b_1 from '../../assets/work/img-1-1.png';
 import b_2 from '../../assets/work/img-1-2.png';
@@ -9,26 +10,33 @@ import b_3 from '../../assets/work/img-1-3.png';
 import './slider.scss';
 const imageArr = [b_1, b_2, b_3];
 
-const toggleOn = (elem) => {
-	document.querySelector(`${elem}`).classList.remove('animate__animated', 'animate__zoomOut');
-	document.querySelector(`${elem}`).classList.add('animate__animated', 'animate__zoomIn');
-};
-
-const toggleOff = (elem) => {
-	document.querySelector(`${elem}`).classList.remove('animate__animated', 'animate__zoomIn');
-	document.querySelector(`${elem}`).classList.add('animate__animated', 'animate__zoomOut');
-};
-
 function CarouselFade({ data }) {
 	const [slides, setSlides] = useState(imageArr);
+	const { togglerToSlider } = useToggler();
 
 	useEffect(() => {
-		if (data === 'work') {
-			toggleOn('.work-title');
-			toggleOn('.carousel');
+		if (data >= 1200 && data <= 2000) {
+			/* 			togglerToSlider(
+				'.work-title',
+				['animate__animated', 'animate__zoomOut'],
+				['animate__animated', 'animate__zoomIn']
+			); */
+			togglerToSlider(
+				'.carousel',
+				['animate__animated', 'animate__zoomOut'],
+				['animate__animated', 'animate__zoomIn']
+			);
 		} else {
-			toggleOff('.work-title');
-			toggleOff('.carousel');
+			/* togglerToSlider(
+				'.work-title',
+				['animate__animated', 'animate__zoomIn'],
+				['animate__animated', 'animate__zoomOut']
+			); */
+			togglerToSlider(
+				'.carousel',
+				['animate__animated', 'animate__zoomIn'],
+				['animate__animated', 'animate__zoomOut']
+			);
 		}
 	}, [data]);
 	return (

@@ -1,8 +1,11 @@
+@import '../../style/variables';
+
 .work {
+	min-height: $min-heigth-work;
+	overflow: hidden;
 	&-wrapper {
-		min-width: 98.5vw;
+		min-width: $min-width-work;
 		height: 800px;
-		min-height: 100vh;
 		transition: all 1s ease-in-out;
 		position: relative;
 		padding-top: 10vh;
