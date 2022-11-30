@@ -1,44 +1,85 @@
 @import '../../style/variables';
 .home {
+	position: relative;
+	overflow: hidden;
+	min-width: $min-width;
+	min-height: $min-heigth;
 	&-wrapper {
-		min-height: $min-heigth-home;
-		min-width: $min-width-home;
+		padding-top: 15vh;
+		height: $heigth-wrapper;
+		transition: all 1.5s ease-in-out;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: space-evenly;
+		justify-content: center;
 		text-align: center;
-		transition: all 1.5s ease-in-out;
 	}
-	&-logo-box {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		column-gap: 15vh;
-		padding: 15px;
+	&-logo {
+		&-box {
+			position: relative;
+			background-image: url('../../assets/home/RSlogo.png');
+			width: 400px;
+			height: 400px;
+			overflow: hidden;
+			box-shadow: 0 0 5px 0px #f9d073;
+			border-radius: 10px;
+		}
+		&-R,
+		&-S {
+			height: 60%;
+			position: absolute;
+		}
+		&-R {
+			top: 49%;
+			left: 40%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+		&-S {
+			top: 51%;
+			left: 60%;
+			transform: translate(-50%, -50%);
+		}
 	}
-	&-Rich,
-	&-Stone {
-		font-size: 150px;
-		line-height: 120px;
-		color: #f9d073;
-		text-shadow: 0px 0px 15px #f9d073;
-	}
-	&-Rich {
-	}
-	&-Stone {
-		animation-delay: 0.1s;
-	}
+
 	&-text {
 		animation-delay: 0.5s;
-		width: 25vw;
-		font-size: 24px;
+		width: 35vw;
+		font-size: 42px;
 		color: #f9d073;
-		text-shadow: 0px 0px 15px #f9d073;
+		text-shadow: 0px 2px 5px hsl(0, 0%, 0%);
 	}
 }
-
+.img-1,
+.img-2,
+.img-3,
+.img-4,
+.img-5 {
+	transition: 1s all ease;
+	position: absolute;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: 100%;
+	z-index: -2;
+}
+.img-1 {
+	background-image: url('../../assets/home/home-bg-0.png');
+}
+.img-2 {
+	background-image: url('../../assets/home/home-bg-1.jpg');
+}
+.img-3 {
+	background-image: url('../../assets/home/home-bg-2.jpg');
+}
+.img-4 {
+	background-image: url('../../assets/home/home-bg-3.jpg');
+}
+.img-5 {
+	background-image: url('../../assets/home/home-bg-4.jpg');
+}
 @media (max-width: 768px) {
 	.home {
 		&-Rich,

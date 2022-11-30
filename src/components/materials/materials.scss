@@ -1,24 +1,19 @@
 @import '../../style/variables';
 .materials {
 	position: relative;
-	min-width: $min-width-materials;
-	min-height: $min-heigth-materials;
+	overflow: hidden;
+	min-width: $min-width;
+	min-height: $min-heigth;
 	&-wrapper {
+		padding-top: 15vh;
+		width: 60vw;
+		height: $heigth-wrapper;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		padding-top: 10vh;
 	}
-	&-title {
-		font-size: 60px;
-		color: #f9d073;
-		text-shadow: 0px 0px 10px #f9d073;
-		margin-bottom: 30px;
-		margin-top: 60px;
-		cursor: pointer;
-	}
-
 	&-box {
 		position: relative;
 		display: grid;
@@ -28,13 +23,13 @@
 	}
 	&-item {
 		overflow: hidden;
-		border: 1px solid #f9d073;
-		border-radius: 50px;
-		box-shadow: 0px 0px 10px 0px #f9d073;
+		border-radius: 10px;
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
+		border: 1px solid #000;
+		box-shadow: 0px 0px 5px 0px hsla(0, 0%, 80%, 0.8);
 	}
 	&-item:hover {
-		box-shadow: 0px 0px 10px 10px #e7b33b;
+		box-shadow: 0 0 5px 2px #f9d073;
 	}
 }

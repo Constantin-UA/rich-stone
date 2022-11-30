@@ -1,14 +1,15 @@
 @import '../../style/variables';
 
 .work {
-	min-height: $min-heigth-work;
+	position: relative;
 	overflow: hidden;
+	min-width: $min-width;
+	min-height: $min-heigth;
 	&-wrapper {
-		min-width: $min-width-work;
-		height: 800px;
+		padding-top: 15vh;
+		height: $heigth-wrapper;
 		transition: all 1s ease-in-out;
 		position: relative;
-		padding-top: 10vh;
 		display: flex;
 		flex-direction: column;
 	}

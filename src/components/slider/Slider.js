@@ -15,23 +15,24 @@ function CarouselFade({ data }) {
 	const { togglerToSlider } = useToggler();
 
 	useEffect(() => {
-		if (data >= 1200 && data <= 2000) {
-			/* 			togglerToSlider(
-				'.work-title',
-				['animate__animated', 'animate__zoomOut'],
-				['animate__animated', 'animate__zoomIn']
-			); */
+		const clientHeight = document.querySelector('.mainPage').clientHeight;
+		const home = document.querySelector('.home').clientHeight;
+		const about = document.querySelector('.about').clientHeight;
+		const work = document.querySelector('.work').clientHeight;
+		const part = document.querySelector('.partnership').clientHeight;
+		const min = about + work / 2;
+		const max = clientHeight - home - about - work - part / 2;
+
+		console.log('slider min: ', min);
+		console.log('slider max: ', max);
+
+		if (data >= min && data <= max) {
 			togglerToSlider(
 				'.carousel',
 				['animate__animated', 'animate__zoomOut'],
 				['animate__animated', 'animate__zoomIn']
 			);
 		} else {
-			/* togglerToSlider(
-				'.work-title',
-				['animate__animated', 'animate__zoomIn'],
-				['animate__animated', 'animate__zoomOut']
-			); */
 			togglerToSlider(
 				'.carousel',
 				['animate__animated', 'animate__zoomIn'],
@@ -40,7 +41,7 @@ function CarouselFade({ data }) {
 		}
 	}, [data]);
 	return (
-		<Carousel controls={false} interval={8000} fade>
+		<Carousel controls={true} indicators={false} interval={8000} fade>
 			{slides.map((src, idx) => {
 				return (
 					<Carousel.Item key={idx}>

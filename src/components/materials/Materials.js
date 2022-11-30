@@ -57,18 +57,26 @@ const toggleOff = (elem, all) => {
 };
 function Materials({ data }) {
 	useEffect(() => {
-		if (data >= 2800 && data <= 3600) {
-			toggleOn('.materials-title', false);
+		const clientHeight = document.querySelector('.mainPage').clientHeight,
+			home = document.querySelector('.home').clientHeight,
+			mater = document.querySelector('.materials').clientHeight,
+			contacts = document.querySelector('.contacts').clientHeight;
+
+		const min = clientHeight - home - contacts - mater / 2;
+		const max = clientHeight - home - contacts / 2;
+
+		console.log('material min: ', min);
+		console.log('material max: ', max);
+
+		if (data >= min && data <= max) {
 			toggleOn('.materials-item', true);
 		} else {
-			toggleOff('.materials-title', false);
 			toggleOff('.materials-item', true);
 		}
 	}, [data]);
 	return (
 		<section id="materials" className="materials">
 			<Container className="materials-wrapper">
-				<div className="materials-title animate__animated">Матерiали</div>
 				<div className="materials-box">
 					{dataImg.map((elem, idx) => {
 						return (

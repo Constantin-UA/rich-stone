@@ -12,7 +12,15 @@ function About({ data }) {
 	const { toggler } = useToggler();
 
 	useEffect(() => {
-		if (data >= 400 && data <= 1200) {
+		const about = document.querySelector('.about').clientHeight;
+		const work = document.querySelector('.work').clientHeight;
+		const min = about / 2;
+		const max = about + work / 2;
+
+		console.log('about min: ', min);
+		console.log('about max: ', max);
+
+		if (data >= min && data <= max) {
 			toggler('.about-title', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.about-subtitle', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.about-text-footer', 'animate__zoomOut', 'animate__zoomIn', true);
@@ -26,20 +34,23 @@ function About({ data }) {
 		<section id="about" className="about">
 			<Image className="about-bg" alt="bg" src={BG} />
 			<Container className="about-wrapper">
-				<h4 className="about-title animate__animated">Компанія Rich Stone.</h4>
-				<p className="about-subtitle animate__animated">
-					Ми надаємо послуги з виготовлення та монтажу вже більше 10 років.
-				</p>
-				<p className="about-text-footer animate__animated">
-					Чесні і відкриті умови співпраці. Робота в компанії з 10- річним стажем, яка займає міцні
-					позиції на ринку. Підтримка та поради персонального менеджера у виробничих питаннях.
-					Відповідальність і виконання взятих на себе зобов’язань. Команда досвідчених фахівців.
-				</p>
-				<p className="about-text-footer animate__animated">
-					Мы развиваем наш сервис, формируем рынок камня Украины и нацелены на долгосрочное и
-					взаимовыгодное сотрудничество. Для нас важно понимать, какие потребности у наших клиентов,
-					и использовать возможности лучших мировых производителей для удовлетворения этих запросов.
-				</p>
+				<div className="about-title animate__animated">
+					Компанія Rich Stone вже понад 10 років надає послуги з виготовлення та монтажу виробів з
+					натурального та штучного каменю.
+				</div>
+				<div className="about-subtitle animate__animated">
+					<p>
+						У нас Ви знайдете кращі зразки виробів із каменю для дому, офісу, торгівельного центру
+						чи магазину.
+					</p>
+					<p>Серед спектрів наших послуг:</p>
+					<p>
+						- виготовлення виробів з натурального каменю (травертину, оніксу, мармуру та граніту)
+					</p>
+					<p>- монтаж готових виробів із природного та штучного каменю </p>
+					<p>- створення мозаїк із натурального каменю</p>
+					<p>- фігурне різання мармуру та граніту</p>
+				</div>
 			</Container>
 		</section>
 	);

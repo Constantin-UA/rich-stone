@@ -17,18 +17,24 @@ const toggleOff = (elem, remove, add) => {
 
 function Contacts({ data }) {
 	useEffect(() => {
-		if (data >= 3600) {
+		const clientHeight = document.querySelector('.mainPage').clientHeight,
+			home = document.querySelector('.home').clientHeight,
+			contacts = document.querySelector('.contacts').clientHeight;
+		const min = clientHeight - home - contacts / 2;
+		const max = clientHeight;
+
+		console.log('contact min: ', min);
+		console.log('contact max: ', max);
+
+		if (data >= min) {
 			toggleOn('.contacts-map', 'animate__fadeOutRightBig', 'animate__fadeInRightBig');
-			toggleOn('.contacts-logo', 'animate__fadeOutLeftBig', 'animate__fadeInLeftBig');
 			toggleOn('.contacts-title', 'animate__fadeOutLeftBig', 'animate__fadeInLeftBig');
-			toggleOn('.contacts-phone-element', 'animate__fadeOutLeftBig', 'animate__fadeInLeftBig');
 			document.querySelectorAll('.contacts-phone-element').forEach((elem) => {
 				elem.classList.remove('animate__fadeOutLeftBig');
 				elem.classList.add('animate__fadeInLeftBig');
 			});
 		} else {
-			toggleOn('.contacts-map', 'animate__fadeInRightBig', 'animate__fadeOutRightBig');
-			toggleOff('.contacts-logo', 'animate__fadeInLeftBig', 'animate__fadeOutLeftBig');
+			toggleOff('.contacts-map', 'animate__fadeInRightBig', 'animate__fadeOutRightBig');
 			toggleOff('.contacts-title', 'animate__fadeInLeftBig', 'animate__fadeOutLeftBig');
 			document.querySelectorAll('.contacts-phone-element').forEach((elem) => {
 				elem.classList.remove('animate__fadeInLeftBig');
@@ -40,7 +46,6 @@ function Contacts({ data }) {
 		<section id="contacts" className="contacts">
 			<Container className="contacts-wrapper">
 				<div className="contacts-box">
-					<div className="contacts-logo animate__animated">Rich Stone</div>
 					<h6 className="contacts-title animate__animated">Контакти</h6>
 					<div className="contacts-phone-box">
 						<div className="contacts-phone-element animate__animated">

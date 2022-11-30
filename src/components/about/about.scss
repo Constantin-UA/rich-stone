@@ -1,12 +1,13 @@
 @import '../../style/variables';
 
 .about {
+	position: relative;
+	overflow: hidden;
+	min-width: $min-width;
+	min-height: $min-heigth;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: relative;
-	min-width: $min-width-about;
-	min-height: $min-heigth-about;
 	&-bg {
 		position: absolute;
 		top: 50%;
@@ -14,74 +15,36 @@
 		transform: translate(-50%, -50%);
 		z-index: -1;
 		width: 98vw;
-		opacity: 0.5;
+		opacity: 0.8;
 	}
 	&-wrapper {
-		width: 50vw;
-		height: 800px;
-		min-height: 100vh;
+		padding-top: 15vh;
+		height: $heigth-wrapper;
+		width: 60vw;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 	&-title {
-		font-size: 60px;
+		font-size: calc(18px + 2vmin);
 		color: #f9d073;
-		text-shadow: 0px 0px 10px #000;
-		margin-bottom: 30px;
-		margin-top: 30px;
+		text-shadow: 0px 1px 2px #f9d073;
+		background-color: hsla(0, 0%, 0%, 0.8);
+		border: 1px solid #000;
+		box-shadow: 0 0 10px 0px #f9d073;
 	}
 	&-subtitle {
+		padding-left: 10px;
+		padding-right: 10px;
 		animation-delay: 0.3s;
-
-		font-size: 28px;
-		color: #ffffffcc;
-		text-shadow: 0px 0px 5px #000;
-	}
-	&-text-wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-		row-gap: 20px;
-		margin-top: 30px;
-	}
-	&-text-list-title {
-		font-size: 24px;
-		color: #ffffffcc;
-		text-shadow: 0px 0px 1px #f9d073;
-	}
-	&-list {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		row-gap: 20px;
-	}
-	&-el {
-		text-align: center;
-		font-size: 14px;
-		color: #ffffffcc;
-		text-shadow: 0px 0px 1px #f9d073;
-	}
-	&-text {
-		padding: 25px;
-		text-align: center;
-		font-size: 16px;
-		color: #ffffffcc;
-		text-shadow: 0px 0px 5px #000;
-	}
-	&-text-footer {
-		animation-delay: 0.5s;
-
-		padding: 25px;
-		text-align: center;
-		font-size: 14px;
-		text-shadow: 0px 0px 5px #000;
-		color: #f9d073;
-		background-color: hsla(0, 0%, 0%, 0.5);
-		border-radius: 15px;
-		box-shadow: 0px 0px 1px 1px #f9d073;
+		font-size: calc(8px + 2vmin);
+		color: hsla(0, 0%, 100%, 0.8);
+		text-shadow: 3px 3px 2px #000;
+		align-items: baseline;
+		text-align: justify;
+		background-color: hsla(0, 0%, 70%, 0.2);
+		border: 1px solid #000;
+		box-shadow: 0 0 10px 0px #f9d073;
 	}
 }

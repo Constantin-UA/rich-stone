@@ -1,13 +1,10 @@
 .carousel {
 	min-width: 80vw;
 	min-height: 80vh;
-	height: 600px;
 	transition: all 1s ease-in-out;
-	position: relative;
+	position: inherit;
 	&-inner {
-		width: 80vw;
-		/* 		max-height: 400px;
-		min-height: 50vh; */
+		width: 60vw;
 		height: 60vh;
 		position: absolute;
 		top: 50%;
@@ -15,32 +12,18 @@
 		transform: translate(-50%, -50%);
 		display: flex;
 		box-shadow: 0px 0px 10px 0px #f9d073;
-		border-radius: 15px;
+		border-radius: 10px;
 		overflow: hidden;
 	}
-
 	&-control-prev,
 	&-control-next {
 		&-icon {
-			/* 			box-shadow: 0px 0px 10px 0px #f9d073;
-			border-radius: 50%;
-			background-image: unset; */
+			box-shadow: 0px 0px 10px 0px hsla(0, 0%, 100%, 0.8);
+			border-radius: 10px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 	}
-	&-indicators {
-	}
-}
-.carousel-indicators {
-	position: absolute;
-	right: 0px;
-	bottom: 50px;
-	left: 0;
-	z-index: 2;
-	display: flex;
-	justify-content: center;
-	padding: 0;
-	margin-right: 15%;
-	margin-bottom: 1rem;
-	margin-left: 15%;
-	list-style: none;
 }

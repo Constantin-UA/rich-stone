@@ -2,27 +2,32 @@
 
 .partnership {
 	position: relative;
-	/* 	background: url('../../assets/partner/bg.jpg') center / cover no-repeat; */
+	overflow: hidden;
+	min-width: $min-width;
+	min-height: $min-heigth;
+	background-image: url('../../assets/partner/bg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	&-wrapper {
-		min-width: $min-width-partners;
-		min-height: $min-heigth-partners;
+		padding-top: 15vh;
+		height: $heigth-wrapper;
 		position: relative;
 		transition: all 1s ease-in-out;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		overflow: hidden;
 	}
 	&-bg {
 		position: absolute;
-		opacity: 0.5;
+		opacity: 0.8;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
-		min-height: 100vh;
-		border-radius: 15px;
+		min-height: 100%;
+		border-radius: 10px;
 	}
 	&-title {
 		font-size: 60px;
@@ -36,7 +41,7 @@
 		max-width: 800px;
 		height: auto;
 		border: 1px solid #f9d073;
-		border-radius: 50px;
+		border-radius: 10px;
 		box-shadow: 0px 0px 10px 0px #f9d073;
 		padding: 15px;
 		position: relative;

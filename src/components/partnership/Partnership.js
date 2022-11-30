@@ -71,12 +71,22 @@ const dataParNames = [
 function Partnership({ data }) {
 	const { toggler } = useToggler();
 	useEffect(() => {
-		if (data >= 2000 && data <= 2800) {
-			toggler('.partnership-title', 'animate__zoomOut', 'animate__zoomIn');
+		const clientHeight = document.querySelector('.mainPage').clientHeight,
+			home = document.querySelector('.home').clientHeight,
+			about = document.querySelector('.about').clientHeight,
+			work = document.querySelector('.work').clientHeight,
+			mater = document.querySelector('.materials').clientHeight,
+			contacts = document.querySelector('.contacts').clientHeight;
+		const min = home + about + work / 2;
+		const max = clientHeight - home - contacts - mater / 2;
+
+		console.log('partners min: ', min);
+		console.log('partners max: ', max);
+
+		if (data >= min && data <= max) {
 			toggler('.partnership-box', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.partnership-icon', 'animate__zoomOut', 'animate__zoomIn', true);
 		} else {
-			toggler('.partnership-title', 'animate__zoomIn', 'animate__zoomOut');
 			toggler('.partnership-box', 'animate__zoomIn', 'animate__zoomOut');
 			toggler('.partnership-icon', 'animate__zoomIn', 'animate__zoomOut', true);
 		}
@@ -84,9 +94,8 @@ function Partnership({ data }) {
 
 	return (
 		<section id="partners" className="partnership">
-			<Image className="partnership-bg" alt="bg" src={BG} />
+			{/* 			<Image className="partnership-bg" alt="bg" src={BG} /> */}
 			<Container className="partnership-wrapper">
-				<h3 className="partnership-title animate__animated">Партнери</h3>
 				<div className="partnership-box animate__animated">
 					{dataParntnerImg.map((element, idx) => (
 						<Image

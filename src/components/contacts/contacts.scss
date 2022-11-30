@@ -2,26 +2,24 @@
 
 .contacts {
 	position: relative;
+	overflow: hidden;
+	min-width: $min-width;
+	min-height: $min-heigth;
 	&-wrapper {
-		min-width: $min-width-contacts;
-		min-height: $min-heigth-contacts;
+		padding-top: 15vh;
 		transition: all 1s ease-in-out;
+		height: $heigth-wrapper;
 		display: grid;
 		grid-template-columns: 40% 60%;
 		grid-template-rows: auto;
+		justify-content: center;
+		align-items: center;
 	}
 	&-box {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-	}
-	&-logo {
-		animation-delay: 0.5s;
-
-		font-size: 60px;
-		color: #f9d073;
-		text-shadow: 0px 0px 10px #f9d073;
 	}
 	&-title {
 		animation-delay: 1s;
@@ -54,8 +52,8 @@
 		color: hsla(0, 0%, 100%, 0.8);
 	}
 	&-map {
+		align-self: flex-end;
 		width: 59vw;
 		height: 99.5vh;
-		padding-top: 10vh;
 	}
 }

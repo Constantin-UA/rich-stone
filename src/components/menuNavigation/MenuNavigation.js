@@ -1,4 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
+import Image from 'react-bootstrap/Image';
+import logo from '../../assets/navLogo.png';
 import './menuNavigation.scss';
 function MenuNavigation() {
 	return (
@@ -6,7 +8,7 @@ function MenuNavigation() {
 			<div className="menuNavigation-wrapper">
 				<div className="menuNavigation-logo-box">
 					<a href="/#home" className="menuNavigation-logo">
-						Rich Stone
+						<Image className="menuNavigation-logo-img animate__animated" src={logo}></Image>
 					</a>
 				</div>
 				<Nav className="menuNavigation-main" defaultActiveKey="1" as="ul">
@@ -32,6 +34,14 @@ function MenuNavigation() {
 							href="/#partners"
 						>
 							Партнери
+						</Nav.Link>
+					</Nav.Item>
+					<Nav.Item as="li">
+						<Nav.Link
+							className="menuNavigation-link animate__animated animate__fadeInDown"
+							href="/#materials"
+						>
+							Матерiали
 						</Nav.Link>
 					</Nav.Item>
 					<Nav.Item as="li">
