@@ -48,8 +48,6 @@ function Home({ data }) {
 			<div className={backClass}></div>
 			<Container className="home-wrapper">
 				<div className="home-logo-box animate__animated">
-					{/* <h1 className="home-Rich animate__animated">Rich</h1>
-					<h2 className="home-Stone animate__animated">Stone</h2> */}
 					<div className="home-logo-R">
 						<Image className="home-logo-R-img animate__animated" src={logoR}></Image>
 					</div>

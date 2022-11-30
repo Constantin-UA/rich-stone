@@ -1,6 +1,6 @@
 .carousel {
-	min-width: 80vw;
-	min-height: 80vh;
+	min-width: 100%;
+	min-height: 100%;
 	transition: all 1s ease-in-out;
 	position: inherit;
 	&-inner {
@@ -26,4 +26,14 @@
 			transform: translate(-50%, -50%);
 		}
 	}
+}
+
+// media
+@media (max-width: 768px) {
+}
+@media (max-width: 425px) {
+}
+@media (max-width: 375px) {
+}
+@media (max-width: 320px) {
 }

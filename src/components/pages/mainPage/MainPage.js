@@ -7,7 +7,6 @@ import Partnership from '../../partnership/Partnership';
 import About from '../../about/About';
 import Materials from '../../materials/Materials';
 import Contacts from '../../contacts/Contacts';
-import Scroller from '../../scroller/Scroller';
 
 //CSS
 import './mainPage.scss';
@@ -33,11 +32,11 @@ const MainPage = () => {
 		<div className="mainPage">
 			<MenuNavigation />
 			<Home data={scrollY} />
-			<About data={scrollY} />
+			{/* 			<About data={scrollY} />
 			<Work data={scrollY} />
 			<Partnership data={scrollY} />
 			<Materials data={scrollY} />
-			<Contacts data={scrollY} />
+			<Contacts data={scrollY} /> */}
 		</div>
 	);
 };
