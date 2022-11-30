@@ -87,10 +87,16 @@
 
 // media
 @media (max-width: 768px) {
+	.home {
+		min-width: $min-width-768;
+	}
 }
 @media (max-width: 576px) {
 }
 @media (max-width: 425px) {
+	.container {
+		padding: 0;
+	}
 	.home {
 		&-logo {
 			&-box {

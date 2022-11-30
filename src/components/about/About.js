@@ -13,9 +13,8 @@ function About({ data }) {
 
 	useEffect(() => {
 		const about = document.querySelector('.about').clientHeight;
-		const work = document.querySelector('.work').clientHeight;
 		const min = about / 2;
-		const max = about + work / 2;
+		const max = about + about / 2;
 
 		console.log('about min: ', min);
 		console.log('about max: ', max);

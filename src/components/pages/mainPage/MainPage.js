@@ -1,5 +1,6 @@
 //import component
 import { useEffect, useState } from 'react';
+import OffNav from '../../offNav/OffNav';
 import MenuNavigation from '../../menuNavigation/MenuNavigation';
 import Home from '../../home/Home';
 import Work from '../../work/Work';
@@ -26,14 +27,16 @@ const MainPage = () => {
 	useEffect(() => {
 		console.log(scrollY);
 	}, [scrollY]);
-
+	const [show, setShow] = useState(false);
 	//Render MainPage
 	return (
 		<div className="mainPage">
-			<MenuNavigation />
+			<OffNav show={show} setShow={setShow} />
+			<MenuNavigation show={setShow} />
 			<Home data={scrollY} />
-			{/* 			<About data={scrollY} />
+			<About data={scrollY} />
 			<Work data={scrollY} />
+			{/*
 			<Partnership data={scrollY} />
 			<Materials data={scrollY} />
 			<Contacts data={scrollY} /> */}

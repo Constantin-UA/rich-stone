@@ -1,17 +1,19 @@
 @import '../../style/variables';
 
 .work {
-	position: relative;
 	overflow: hidden;
 	min-width: $min-width;
 	min-height: $min-heigth;
 	&-wrapper {
 		padding-top: 15vh;
 		height: $heigth-wrapper;
-		transition: all 1s ease-in-out;
+		width: 100%;
+		overflow: hidden;
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 }
 

@@ -4,6 +4,9 @@ $white-opacity: #ffffffcc;
 $bg-color: rgb(9, 9, 9);
 
 //width
+$min-width-768: 98.5vw;
+
+$min-width-nav: 98.5vw;
 $min-width-home: 98.5vw;
 $min-width-about: 98.5vw;
 $min-width-work: 98.5vw;
@@ -13,7 +16,7 @@ $min-width-contacts: 98.5vw;
 //heigth
 $heigth-wrapper: 100vh;
 //heigth
-
+$min-heigth-nav: 15vh;
 $min-heigth-home: 100vh;
 $min-heigth-about: 100vh;
 $min-heigth-work: 100vh;

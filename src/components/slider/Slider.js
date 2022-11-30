@@ -18,13 +18,13 @@ function CarouselFade({ data }) {
 	const { togglerToSlider } = useToggler();
 
 	useEffect(() => {
-		const clientHeight = document.querySelector('.mainPage').clientHeight;
-		const home = document.querySelector('.home').clientHeight;
+		//const clientHeight = document.querySelector('.mainPage').clientHeight;
+		//const home = document.querySelector('.home').clientHeight;
 		const about = document.querySelector('.about').clientHeight;
 		const work = document.querySelector('.work').clientHeight;
-		const part = document.querySelector('.partnership').clientHeight;
+		//const part = document.querySelector('.partnership').clientHeight;
 		const min = about + work / 2;
-		const max = clientHeight - home - about - work - part / 2;
+		const max = about + work + work / 2;
 
 		console.log('slider min: ', min);
 		console.log('slider max: ', max);
