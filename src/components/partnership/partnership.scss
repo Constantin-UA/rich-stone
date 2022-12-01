@@ -37,7 +37,6 @@
 	}
 	&-box {
 		background-color: hsl(0, 0%, 98%);
-		width: 80vw;
 		max-width: 800px;
 		height: auto;
 		border: 1px solid #f9d073;
@@ -49,7 +48,7 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-around;
-		gap: 5px;
+		gap: 10px;
 		animation-delay: 0.2s;
 	}
 	&-icon {
@@ -64,8 +63,26 @@
 
 // media
 @media (max-width: 768px) {
+	.partnership {
+		&-wrapper {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		&-box {
+		}
+	}
 }
 @media (max-width: 425px) {
+	.partnership {
+		&-box {
+			padding: 0;
+			gap: 5px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-around;
+		}
+	}
 }
 @media (max-width: 375px) {
 }

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
-import BG from '../../assets/partner/bg.jpg';
 import atem from '../../assets/partner/atem.png';
 import avant from '../../assets/partner/avant.png';
 import bienstone from '../../assets/partner/bienstone.png';
@@ -19,7 +18,6 @@ import stone from '../../assets/partner/stone.png';
 import teksolan from '../../assets/partner/teksolan.png';
 import tekstone from '../../assets/partner/tekstone.png';
 import radianz from '../../assets/partner/radianz.png';
-
 import tristone from '../../assets/partner/tristone.png';
 import vicostone from '../../assets/partner/vicostone.png';
 
@@ -32,15 +30,12 @@ const dataParntnerImg = [
 	vicostone,
 	atem,
 	bienstone,
-	stone,
 	avant,
-	tekstone,
 	neomarm,
 	corian,
 	tristone,
 	silestone,
 	himacs,
-	teksolan,
 	staron,
 	santa,
 	caesa,
@@ -53,15 +48,12 @@ const dataParNames = [
 	'vicostone',
 	'atem',
 	'bienstone',
-	'stone',
 	'avant',
-	'tekstone',
 	'neomarm',
 	'corian',
 	'tristone',
 	'silestone',
 	'himacs',
-	'teksolan',
 	'staron',
 	'santa',
 	'caesa',
@@ -71,14 +63,13 @@ const dataParNames = [
 function Partnership({ data }) {
 	const { toggler } = useToggler();
 	useEffect(() => {
-		const clientHeight = document.querySelector('.mainPage').clientHeight,
-			home = document.querySelector('.home').clientHeight,
-			about = document.querySelector('.about').clientHeight,
-			work = document.querySelector('.work').clientHeight,
-			mater = document.querySelector('.materials').clientHeight,
-			contacts = document.querySelector('.contacts').clientHeight;
+		const home = document.querySelector('.home').clientHeight;
+		const about = document.querySelector('.about').clientHeight;
+		const work = document.querySelector('.work').clientHeight;
+		const partners = document.querySelector('.partnership').clientHeight;
+
 		const min = home + about + work / 2;
-		const max = clientHeight - home - contacts - mater / 2;
+		const max = home + about + work + partners / 2;
 
 		console.log('partners min: ', min);
 		console.log('partners max: ', max);
@@ -94,7 +85,6 @@ function Partnership({ data }) {
 
 	return (
 		<section id="partners" className="partnership">
-			{/* 			<Image className="partnership-bg" alt="bg" src={BG} /> */}
 			<Container className="partnership-wrapper">
 				<div className="partnership-box animate__animated">
 					{dataParntnerImg.map((element, idx) => (

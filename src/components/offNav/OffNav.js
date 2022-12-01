@@ -8,7 +8,7 @@ function OffNav({ show, setShow }) {
 	const handleClose = () => setShow(false);
 
 	return (
-		<Offcanvas show={show} onHide={handleClose} placement="top">
+		<Offcanvas show={show} onHide={handleClose} placement="top" scroll={true}>
 			<Offcanvas.Header closeButton>
 				<Offcanvas.Title className="offcanvas-logo-box">
 					<a href="/#home" className="offcanvas-logo">

@@ -36,10 +36,11 @@ const MainPage = () => {
 			<Home data={scrollY} />
 			<About data={scrollY} />
 			<Work data={scrollY} />
-			{/*
 			<Partnership data={scrollY} />
 			<Materials data={scrollY} />
-			<Contacts data={scrollY} /> */}
+			<Contacts data={scrollY} />
+			{/*
+			 */}
 		</div>
 	);
 };
