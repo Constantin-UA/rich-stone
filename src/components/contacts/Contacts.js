@@ -23,22 +23,19 @@ function Contacts({ data }) {
 		const min = clientHeight - home - contacts / 2;
 		const max = clientHeight;
 
-		console.log('contact min: ', min);
-		console.log('contact max: ', max);
-
 		if (data >= min) {
-			toggleOn('.contacts-map', 'animate__fadeOutRightBig', 'animate__fadeInRightBig');
-			toggleOn('.contacts-title', 'animate__fadeOutLeftBig', 'animate__fadeInLeftBig');
+			toggleOn('.contacts-map', 'animate__fadeOutUpBig', 'animate__fadeInUpBig');
+			toggleOn('.contacts-title', 'animate__zoomOut', 'animate__zoomIn');
 			document.querySelectorAll('.contacts-phone-element').forEach((elem) => {
-				elem.classList.remove('animate__fadeOutLeftBig');
-				elem.classList.add('animate__fadeInLeftBig');
+				elem.classList.remove('animate__zoomOut');
+				elem.classList.add('animate__zoomIn');
 			});
 		} else {
-			toggleOff('.contacts-map', 'animate__fadeInRightBig', 'animate__fadeOutRightBig');
-			toggleOff('.contacts-title', 'animate__fadeInLeftBig', 'animate__fadeOutLeftBig');
+			toggleOff('.contacts-map', 'animate__fadeInUpBig', 'animate__fadeOutUpBig');
+			toggleOff('.contacts-title', 'animate__zoomIn', 'animate__zoomOut');
 			document.querySelectorAll('.contacts-phone-element').forEach((elem) => {
-				elem.classList.remove('animate__fadeInLeftBig');
-				elem.classList.add('animate__fadeOutLeftBig');
+				elem.classList.remove('animate__zoomIn');
+				elem.classList.add('animate__zoomOut');
 			});
 		}
 	}, [data]);
@@ -75,3 +72,4 @@ function Contacts({ data }) {
 }
 
 export default Contacts;
+//toggler('.home-text', 'animate__fadeInUpBig', 'animate__fadeOutUpBig');

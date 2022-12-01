@@ -13,6 +13,7 @@ function Home({ data }) {
 	const [bgTitles, setBgTitles] = useState(['img-1', 'img-2', 'img-3', 'img-4', 'img-5']);
 	const [backClass, setBackClass] = useState('home img-1');
 	const [count, setCount] = useState(0);
+	const [start, setStart] = useState(true);
 	const { toggler } = useToggler();
 
 	useEffect(() => {
@@ -21,28 +22,32 @@ function Home({ data }) {
 			toggler('.home-logo-S-img', 'animate__fadeOutRightBig', 'animate__fadeInRightBig');
 			toggler('.home-logo-box', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.home-text', 'animate__fadeOutUpBig', 'animate__fadeInUpBig');
+			setStart(true);
 		} else {
 			toggler('.home-logo-R-img', 'animate__fadeInLeftBig', 'animate__fadeOutLeftBig');
 			toggler('.home-logo-S-img', 'animate__fadeInRightBig', 'animate__fadeOutRightBig');
 			toggler('.home-logo-box', 'animate__zoomIn', 'animate__zoomOut');
 			toggler('.home-text', 'animate__fadeInUpBig', 'animate__fadeOutUpBig');
+			setStart(false);
 		}
 	}, [data]);
 
 	useEffect(() => {
-		console.log('effect home bg');
 		const changeBg = setInterval(() => {
-			setBackClass('home ' + bgTitles[count]);
-			if (count < 4) {
-				setCount(count + 1);
-			} else {
-				setCount(0);
+			if (start) {
+				console.log('ture: ', count);
+				setBackClass('home ' + bgTitles[count]);
+				if (count < 4) {
+					setCount(count + 1);
+				} else {
+					setCount(0);
+				}
 			}
 		}, 5000);
 		return () => {
 			clearInterval(changeBg);
 		};
-	}, []);
+	}, [count]);
 	return (
 		<section id="home" className="home">
 			<div className={backClass}></div>

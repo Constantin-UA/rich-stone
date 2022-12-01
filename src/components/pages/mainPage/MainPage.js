@@ -24,9 +24,7 @@ const MainPage = () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
-	useEffect(() => {
-		console.log(scrollY);
-	}, [scrollY]);
+
 	const [show, setShow] = useState(false);
 	//Render MainPage
 	return (

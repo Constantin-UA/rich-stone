@@ -16,10 +16,16 @@
 	&-box {
 		display: flex;
 		flex-wrap: wrap;
-		overflow: scroll;
+		overflow: auto;
 		align-items: center;
 		justify-content: space-evenly;
 		row-gap: 6vh;
+	}
+	&-box::-webkit-scrollbar {
+		background-color: #f9d073;
+		border-radius: 10px;
+		border: 1px solid #fff;
+		width: 5px;
 	}
 	&-item {
 		border-radius: 10px;

@@ -71,9 +71,6 @@ function Partnership({ data }) {
 		const min = home + about + work / 2;
 		const max = home + about + work + partners / 2;
 
-		console.log('partners min: ', min);
-		console.log('partners max: ', max);
-
 		if (data >= min && data <= max) {
 			toggler('.partnership-box', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.partnership-icon', 'animate__zoomOut', 'animate__zoomIn', true);

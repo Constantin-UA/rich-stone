@@ -16,9 +16,6 @@ function About({ data }) {
 		const min = about / 2;
 		const max = about + about / 2;
 
-		console.log('about min: ', min);
-		console.log('about max: ', max);
-
 		if (data >= min && data <= max) {
 			toggler('.about-title', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.about-subtitle', 'animate__zoomOut', 'animate__zoomIn');

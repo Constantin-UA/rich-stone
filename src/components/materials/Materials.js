@@ -100,19 +100,18 @@ function Materials({ data }) {
 		const min = clientHeight - home - contacts - mater / 2;
 		const max = clientHeight - home - contacts / 2;
 
-		console.log('material min: ', min);
-		console.log('material max: ', max);
-
 		if (data >= min && data <= max) {
+			toggleOn('.materials-box', false);
 			toggleOn('.materials-item', true);
 		} else {
+			toggleOff('.materials-box', false);
 			toggleOff('.materials-item', true);
 		}
 	}, [data]);
 	return (
 		<section id="materials" className="materials">
 			<Container className="materials-wrapper">
-				<div className="materials-box">
+				<div className="materials-box animate__animated">
 					{dataImg.map((elem, idx) => {
 						return (
 							<div className="materials-item animate__animated" key={idx}>
