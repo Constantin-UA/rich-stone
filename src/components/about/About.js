@@ -2,8 +2,10 @@ import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useToggler } from '../hook/useToggler.hook';
 
-import Image from 'react-bootstrap/Image';
-import BG from '../../assets/about/bg.jpg';
+import Desktop from '../../assets/about/Desktop-bg.png';
+import Mobile from '../../assets/about/Mobile-bg.png';
+import Tablet from '../../assets/about/Tablet-bg.png';
+
 import './about.scss';
 
 //fast toggle class
@@ -28,7 +30,12 @@ function About({ data }) {
 	}, [data]);
 	return (
 		<section id="about" className="about">
-			<Image className="about-bg" alt="bg" src={BG} />
+			<picture>
+				<source media="(max-width: 430px)" srcSet={Mobile} />
+				<source media="(max-width: 800px)" srcSet={Tablet} />
+				<img className="about-bg" src={Desktop} alt="bg" />
+			</picture>
+
 			<Container className="about-wrapper">
 				<div className="about-title animate__animated">
 					Компанія Rich Stone вже понад 10 років надає послуги з виготовлення та монтажу виробів з

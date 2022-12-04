@@ -25,11 +25,11 @@
 			overflow: hidden;
 			position: absolute;
 			top: 2vw;
-			left: 7vw;
+			left: 6vw;
 			cursor: pointer;
 			box-shadow: 0 0 5px 0px #f9d073;
-			width: 150px;
-			height: 150px;
+			width: 110px;
+			height: 160px;
 		}
 		&-box:hover {
 			box-shadow: 0px 0px 5px 1px hsl(42, 92%, 71%);
@@ -60,21 +60,7 @@
 }
 
 // media
-@media (max-width: 768px) {
-	.menuNavigation {
-		min-width: $min-width-768;
-		&-wrapper {
-			width: 100%;
-		}
-		&-logo {
-			&-box {
-				width: 80px;
-				height: 80px;
-			}
-		}
-	}
-}
-@media (max-width: 577px) {
+@media (max-width: 1024px) {
 	.menuNavigation {
 		&-logo {
 			&-box {
@@ -83,7 +69,23 @@
 		}
 	}
 }
-@media (max-width: 426px) {
+@media (max-width: 768px) {
+	.menuNavigation {
+		min-width: $min-width-768;
+		&-wrapper {
+			width: 100%;
+			justify-content: center;
+		}
+		&-logo {
+			&-box {
+				width: 70px;
+				height: 70px;
+			}
+		}
+	}
+}
+
+@media (max-width: 536px) {
 	.menuNavigation-box {
 		display: none;
 	}

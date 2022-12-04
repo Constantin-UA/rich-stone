@@ -1,7 +1,7 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Nav from 'react-bootstrap/Nav';
 import Image from 'react-bootstrap/Image';
-import logo from '../../assets/navLogo.png';
+import logo from '../../assets/logo/Frame200x201.png';
 
 import './offNav.scss';
 function OffNav({ show, setShow }) {

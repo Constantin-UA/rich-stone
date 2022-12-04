@@ -4,16 +4,27 @@ import { useToggler } from '../hook/useToggler.hook';
 import { useState } from 'react';
 import Image from 'react-bootstrap/Image';
 
-import logoR from '../../assets/home/R.png';
-import logoS from '../../assets/home/S.png';
+import logoR from '../../assets/logo/R117x159.png';
+import logoS from '../../assets/logo/S110x152.png';
+import bg1 from '../../assets/home/Desktop-1.png';
+import bg2 from '../../assets/home/Desktop-2.png';
+import bg3 from '../../assets/home/Desktop-3.png';
+import bgM1 from '../../assets/home/Mobile-1.png';
+import bgM2 from '../../assets/home/Mobile-2.png';
+import bgM3 from '../../assets/home/Mobile-3.png';
 
 import './home.scss';
 
 function Home({ data }) {
-	const [bgTitles, setBgTitles] = useState(['img-1', 'img-2', 'img-3', 'img-4', 'img-5']);
-	const [backClass, setBackClass] = useState('home img-1');
-	const [count, setCount] = useState(0);
 	const [start, setStart] = useState(true);
+	const [background, setBackground] = useState(
+		<picture>
+			<source media="(max-width: 756px)" srcSet={bgM1} />
+			<img className="home-bg animate__animated animate__fadeIn" src={bg1} alt="bg" />
+		</picture>
+		//<Image className="home-bg animate__animated animate__fadeIn" src={bg1} alt="bg" />
+	);
+	const [position, setPositon] = useState(0);
 	const { toggler } = useToggler();
 
 	useEffect(() => {
@@ -35,22 +46,56 @@ function Home({ data }) {
 	useEffect(() => {
 		const changeBg = setInterval(() => {
 			if (start) {
-				console.log('ture: ', count);
-				setBackClass('home ' + bgTitles[count]);
-				if (count < 4) {
-					setCount(count + 1);
-				} else {
-					setCount(0);
+				if (position === 0) {
+					setBackground(
+						<picture>
+							<source media="(max-width: 756px)" srcSet={bgM2} />
+							<img
+								className="home-bg animate__animated animate__fadeIn"
+								src={bg2}
+								alt="bg"
+								key={position}
+							/>
+						</picture>
+					);
+					setPositon(1);
+				} else if (position === 1) {
+					setBackground(
+						<picture>
+							<source media="(max-width: 756px)" srcSet={bgM3} />
+							<img
+								className="home-bg animate__animated animate__fadeIn"
+								src={bg3}
+								alt="bg"
+								key={position}
+							/>
+						</picture>
+					);
+					setPositon(2);
+				} else if (position === 2) {
+					setBackground(
+						<picture>
+							<source media="(max-width: 756px)" srcSet={bgM1} />
+							<img
+								className="home-bg animate__animated animate__fadeIn"
+								src={bg1}
+								alt="bg"
+								key={position}
+							/>
+						</picture>
+					);
+					setPositon(0);
 				}
 			}
-		}, 5000);
+		}, 8000);
+
 		return () => {
 			clearInterval(changeBg);
 		};
-	}, [count]);
+	}, [position, start]);
 	return (
 		<section id="home" className="home">
-			<div className={backClass}></div>
+			{background}
 			<Container className="home-wrapper">
 				<div className="home-logo-box animate__animated">
 					<div className="home-logo-R">
@@ -67,4 +112,5 @@ function Home({ data }) {
 		</section>
 	);
 }
+
 export default Home;
