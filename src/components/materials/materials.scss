@@ -56,14 +56,9 @@
 @media (max-width: 376px) {
 	.materials {
 		&-box {
-			row-gap: 4vh;
+			row-gap: 10px;
 		}
 	}
 }
 @media (max-width: 320px) {
-	.materials {
-		&-box {
-			row-gap: 0;
-		}
-	}
 }
