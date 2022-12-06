@@ -6,12 +6,12 @@ import Image from 'react-bootstrap/Image';
 
 import logoR from '../../assets/logo/R117x159.png';
 import logoS from '../../assets/logo/S110x152.png';
-import bg1 from '../../assets/home/Desktop-1.png';
-import bg2 from '../../assets/home/Desktop-2.png';
-import bg3 from '../../assets/home/Desktop-3.png';
-import bgM1 from '../../assets/home/Mobile-1.png';
-import bgM2 from '../../assets/home/Mobile-2.png';
-import bgM3 from '../../assets/home/Mobile-3.png';
+import bg1 from '../../assets/home/Desktop-1-min.png';
+import bg2 from '../../assets/home/Desktop-2-min.png';
+import bg3 from '../../assets/home/Desktop-3-min.png';
+import bgM1 from '../../assets/home/Mobile-1-min.png';
+import bgM2 from '../../assets/home/Mobile-2-min.png';
+import bgM3 from '../../assets/home/Mobile-3-min.png';
 
 import './home.scss';
 
@@ -88,11 +88,19 @@ function Home({ data }) {
 				}
 			}
 		}, 8000);
-
 		return () => {
 			clearInterval(changeBg);
 		};
 	}, [position, start]);
+
+	useEffect(() => {
+		const fadeOutBg = setTimeout(() => {
+			toggler('.home-bg', 'animate__fadeIn', 'animate__fadeOut');
+		}, 7500);
+		return () => {
+			clearTimeout(fadeOutBg);
+		};
+	}, [background]);
 	return (
 		<section id="home" className="home">
 			{background}
@@ -105,9 +113,9 @@ function Home({ data }) {
 						<Image className="home-logo-S-img animate__animated" src={logoS}></Image>
 					</div>
 				</div>
-				<p className="home-text animate__animated">
+				<h1 className="home-text animate__animated">
 					Вся розкіш та шляхетність натурального каменю!
-				</p>
+				</h1>
 			</Container>
 		</section>
 	);

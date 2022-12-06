@@ -1,5 +1,5 @@
 $yellow: #f9d073;
-$yellow-text: #f9d073;
+$yellow-orange: #ffc132;
 $white-opacity: #ffffffcc;
 $bg-color: rgb(9, 9, 9);
 
@@ -15,6 +15,7 @@ $min-width-materials: 98.5vw;
 $min-width-contacts: 98.5vw;
 //heigth
 $heigth-wrapper: 100vh;
+$min-heigth-wrapper: 640px;
 //heigth
 $min-heigth-nav: 15vh;
 $min-heigth-home: 100vh;
@@ -26,3 +27,38 @@ $min-heigth-contacts: 100vh;
 //heigth
 $min-heigth: 100vh;
 $min-width: 98.5vw;
+//
+//animations
+@keyframes animation-Logo {
+	from {
+		box-shadow: 0 0 5px 1px $yellow-orange;
+	}
+	50% {
+		box-shadow: 0 0 30px 1px $yellow;
+	}
+	to {
+		box-shadow: 0 0 5px 1px $yellow-orange;
+	}
+}
+@keyframes animation-navLogo {
+	from {
+		box-shadow: 0 0 1px 1px $yellow-orange;
+	}
+	50% {
+		box-shadow: 0 0 10px 1px $yellow-orange;
+	}
+	to {
+		box-shadow: 0 0 1px 1px $yellow-orange;
+	}
+}
+@keyframes animation-text {
+	from {
+		text-shadow: 0px 0px 1px $yellow-orange;
+	}
+	50% {
+		text-shadow: 0px 0px 10px $yellow-orange;
+	}
+	to {
+		text-shadow: 0px 0px 1px $yellow-orange;
+	}
+}

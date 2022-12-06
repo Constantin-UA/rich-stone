@@ -24,12 +24,12 @@
 			border-radius: 5px;
 			overflow: hidden;
 			position: absolute;
-			top: 2vw;
+			top: 33%;
 			left: 6vw;
 			cursor: pointer;
-			box-shadow: 0 0 5px 0px #f9d073;
 			width: 110px;
 			height: 160px;
+			animation: 5s ease-in-out 1s infinite normal animation-navLogo;
 		}
 		&-box:hover {
 			box-shadow: 0px 0px 5px 1px hsl(42, 92%, 71%);
@@ -44,14 +44,15 @@
 		text-shadow: 0px 0px 1px #f9d073;
 	}
 }
+
 .menuNavigation-box {
 	flex-wrap: nowrap;
 	a {
 		font-size: 2vmax;
 		color: #f9d073;
-		text-shadow: 0px 0px 1px #f9d073;
 		padding: 10px;
 		text-decoration: none;
+		animation: 5s ease-in-out 1s infinite normal animation-text;
 	}
 	a:hover {
 		color: hsla(0, 0%, 100%, 0.8);

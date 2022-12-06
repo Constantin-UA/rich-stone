@@ -5,13 +5,14 @@
 	overflow: hidden;
 	min-width: $min-width;
 	min-height: $min-heigth;
-	background-image: url('../../assets/partner/bg.png');
+	background-image: url('../../assets/partner/bg-min.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	&-wrapper {
 		padding-top: 15vh;
 		height: $heigth-wrapper;
+		min-height: $min-heigth-wrapper;
 		position: relative;
 		transition: all 1s ease-in-out;
 		display: flex;
@@ -64,7 +65,7 @@
 // media
 @media (max-width: 768px) {
 	.partnership {
-		background-image: url('../../assets/partner/Mobile-bg.png');
+		background-image: url('../../assets/partner/Mobile-bg-min.png');
 		&-wrapper {
 			padding-left: 0px;
 			padding-right: 0px;

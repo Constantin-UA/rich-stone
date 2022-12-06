@@ -18,6 +18,7 @@
 		opacity: 0.8;
 	}
 	&-wrapper {
+		min-height: $min-heigth-wrapper;
 		padding-top: 15vh;
 		height: $heigth-wrapper;
 		width: 60vw;
@@ -28,7 +29,7 @@
 		row-gap: 10px;
 	}
 	&-title {
-		font-size: 2vmax;
+		font-size: calc(16px + 1vmax);
 		padding: 10px;
 		color: #f9d073;
 		text-shadow: 0px 1px 2px #f9d073;
@@ -37,25 +38,48 @@
 		box-shadow: 0 0 10px 0px #f9d073;
 	}
 	&-subtitle {
-		padding-left: 10px;
-		padding-right: 10px;
 		animation-delay: 0.3s;
-		font-size: 1.5vmax;
+		padding: 10px;
+		font-size: calc(14px + 1vmax);
 		color: hsla(0, 0%, 100%, 1);
 		text-shadow: 0px 0px 2px #f9d073;
 		align-items: baseline;
-		text-align: justify;
+		text-align: center;
 		background-color: hsla(0, 0%, 0%, 0.5);
 		border: 1px solid #000;
 		box-shadow: 0 0 10px 0px #f9d073;
+	}
+	&-descr {
+		padding: 10px 0px 10px 0px;
+		animation-delay: 0.5s;
+		background-color: hsla(0, 0%, 0%, 0.5);
+		border: 1px solid #000;
+		box-shadow: 0 0 10px 0px #f9d073;
+		&-title {
+			margin-bottom: 10px;
+			align-items: center;
+			font-size: calc(12px + 1vmax);
+			color: hsla(0, 0%, 100%, 1);
+		}
+		&-lists {
+			font-size: calc(10px + 1vmax);
+			color: hsla(0, 0%, 100%, 1);
+			text-shadow: 0px 0px 2px #f9d073;
+			align-items: baseline;
+			text-align: justify;
+			list-style-type: none;
+			padding: 10px;
+		}
+		&-item {
+		}
 	}
 }
 
 @media (max-width: 768px) {
 	.about {
 		&-wrapper {
-			padding-left: 0;
-			padding-right: 0;
+			padding-left: 10;
+			padding-right: 10;
 			width: 80%;
 		}
 		&-title {

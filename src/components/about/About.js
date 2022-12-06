@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useToggler } from '../hook/useToggler.hook';
 
-import Desktop from '../../assets/about/Desktop-bg.png';
-import Mobile from '../../assets/about/Mobile-bg.png';
-import Tablet from '../../assets/about/Tablet-bg.png';
+import Desktop from '../../assets/about/Desktop-bg-min.png';
+import Mobile from '../../assets/about/Mobile-bg-min.png';
+import Tablet from '../../assets/about/Tablet-bg-min.png';
 
 import './about.scss';
 
@@ -21,10 +21,12 @@ function About({ data }) {
 		if (data >= min && data <= max) {
 			toggler('.about-title', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.about-subtitle', 'animate__zoomOut', 'animate__zoomIn');
+			toggler('.about-descr', 'animate__fadeOutDown', 'animate__fadeInUp');
 			toggler('.about-text-footer', 'animate__zoomOut', 'animate__zoomIn', true);
 		} else {
 			toggler('.about-title', 'animate__zoomIn', 'animate__zoomOut');
 			toggler('.about-subtitle', 'animate__zoomIn', 'animate__zoomOut');
+			toggler('.about-descr', 'animate__fadeInUp', 'animate__fadeOutDown');
 			toggler('.about-text-footer', 'animate__zoomIn', 'animate__zoomOut', true);
 		}
 	}, [data]);
@@ -37,22 +39,26 @@ function About({ data }) {
 			</picture>
 
 			<Container className="about-wrapper">
-				<div className="about-title animate__animated">
+				<h2 className="about-title animate__animated">
 					Компанія Rich Stone вже понад 10 років надає послуги з виготовлення та монтажу виробів з
 					натурального та штучного каменю.
-				</div>
-				<div className="about-subtitle animate__animated">
-					<p>
-						У нас Ви знайдете кращі зразки виробів із каменю для дому, офісу, торгівельного центру
-						чи магазину.
-					</p>
-					<p>Серед спектрів наших послуг:</p>
-					<p>
-						- виготовлення виробів з натурального каменю (травертину, оніксу, мармуру та граніту)
-					</p>
-					<p>- монтаж готових виробів із природного та штучного каменю </p>
-					<p>- створення мозаїк із натурального каменю</p>
-					<p>- фігурне різання мармуру та граніту</p>
+				</h2>
+				<h3 className="about-subtitle animate__animated">
+					У нас Ви знайдете кращі зразки виробів із каменю для дому, офісу, торгівельного центру чи
+					магазину.
+				</h3>
+				<div className="about-descr animate__animated">
+					<h4 className="about-descr-title">Серед спектрів наших послуг:</h4>
+					<ul className="about-descr-lists">
+						<li className="about-descr-item">
+							виготовлення виробів з натурального каменю (травертину, оніксу, мармуру та граніту)
+						</li>
+						<li className="about-descr-item">
+							монтаж готових виробів із природного та штучного каменю{' '}
+						</li>
+						<li className="about-descr-item">створення мозаїк із натурального каменю</li>
+						<li className="about-descr-item">фігурне різання мармуру та граніту</li>
+					</ul>
 				</div>
 			</Container>
 		</section>

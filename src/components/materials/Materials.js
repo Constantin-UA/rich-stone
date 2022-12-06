@@ -1,12 +1,11 @@
 import { Container } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image';
 import { useEffect } from 'react';
 import MaterialCard from '../materialCard/MaterialCard';
 //images imports
-import matImg_0 from '../../assets/materials/Granit-1.png';
-import matImg_1 from '../../assets/materials/Marmor-1.png';
-import matImg_2 from '../../assets/materials/Aqril-1.png';
-import matImg_3 from '../../assets/materials/Quarz-1.png';
+import matImg_0 from '../../assets/materials/Granit-1-min.png';
+import matImg_1 from '../../assets/materials/Marmor-1-min.png';
+import matImg_2 from '../../assets/materials/Aqril-1-min.png';
+import matImg_3 from '../../assets/materials/Quarz-1-min.png';
 
 //scss imports
 import './materials.scss';

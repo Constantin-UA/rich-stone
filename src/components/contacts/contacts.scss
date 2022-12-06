@@ -8,6 +8,7 @@
 	&-wrapper {
 		padding-top: 15vh;
 		transition: all 1s ease-in-out;
+		min-height: $min-heigth-wrapper;
 		height: $heigth-wrapper;
 		position: relative;
 		display: grid;
@@ -25,9 +26,9 @@
 		animation-delay: 1s;
 		font-size: 60px;
 		color: #f9d073;
-		text-shadow: 0px 0px 10px #f9d073;
 		margin-bottom: 30px;
 		margin-top: 30px;
+		animation: 10s ease-in-out 1s infinite normal animation-text;
 	}
 	&-phone-box {
 		display: flex;
@@ -36,7 +37,6 @@
 	}
 	&-phone-element {
 		animation-delay: 1s;
-
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -47,6 +47,7 @@
 		height: 45px;
 	}
 	&-phone {
+		animation: 5s ease-in-out 0s infinite normal animation-contacts;
 		font-size: 24px;
 		color: hsla(0, 0%, 100%, 0.8);
 	}

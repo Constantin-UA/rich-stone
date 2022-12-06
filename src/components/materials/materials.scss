@@ -7,6 +7,7 @@
 	&-wrapper {
 		padding-top: 15vh;
 		height: $heigth-wrapper;
+		min-height: $min-heigth-wrapper;
 		width: 80vw;
 		display: flex;
 		flex-direction: column;
@@ -20,6 +21,7 @@
 		align-items: center;
 		justify-content: space-evenly;
 		row-gap: 6vh;
+		column-gap: 10px;
 	}
 	&-box::-webkit-scrollbar {
 		background-color: #f9d073;
