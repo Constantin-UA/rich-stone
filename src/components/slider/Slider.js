@@ -2,56 +2,58 @@ import Carousel from 'react-bootstrap/Carousel';
 import { useState, useEffect } from 'react';
 import { useToggler } from '../hook/useToggler.hook';
 //img import
-//bathroom
-import B_D_1 from '../../assets/work/desktop/bathroom/imagecompressor/Desktop-1-min.png';
-import B_D_2 from '../../assets/work/desktop/bathroom/imagecompressor/Desktop-2-min.png';
-import B_D_3 from '../../assets/work/desktop/bathroom/imagecompressor/Desktop-3-min.png';
-import B_M_1 from '../../assets/work/mobile/bathroom/imagecompressor/Mobile-1-min.png';
-import B_M_2 from '../../assets/work/mobile/bathroom/imagecompressor/Mobile-2-min.png';
-import B_M_3 from '../../assets/work/mobile/bathroom/imagecompressor/Mobile-3-min.png';
-import B_T_1 from '../../assets/work/mobile/bathroom/imagecompressor/Tablet-1-min.png';
-import B_T_2 from '../../assets/work/mobile/bathroom/imagecompressor/Tablet-2-min.png';
-import B_T_3 from '../../assets/work/mobile/bathroom/imagecompressor/Tablet-3-min.png';
-//flors
-import F_D_1 from '../../assets/work/desktop/flors/imagecompressor/Desktop-1-min.png';
-import F_D_2 from '../../assets/work/desktop/flors/imagecompressor/Desktop-2-min.png';
-import F_D_3 from '../../assets/work/desktop/flors/imagecompressor/Desktop-3-min.png';
-import F_M_1 from '../../assets/work/mobile/flors/imagecompressor/Mobile-1-min.png';
-import F_M_2 from '../../assets/work/mobile/flors/imagecompressor/Mobile-2-min.png';
-import F_M_3 from '../../assets/work/mobile/flors/imagecompressor/Mobile-3-min.png';
-import F_T_1 from '../../assets/work/mobile/flors/imagecompressor/Tablet-1-min.png';
-import F_T_2 from '../../assets/work/mobile/flors/imagecompressor/Tablet-2-min.png';
-import F_T_3 from '../../assets/work/mobile/flors/imagecompressor/Tablet-3-min.png';
-//sters
-import S_D_1 from '../../assets/work/desktop/sters/imagecompressor/Desktop-1-min.png';
-import S_D_2 from '../../assets/work/desktop/sters/imagecompressor/Desktop-2-min.png';
-import S_D_3 from '../../assets/work/desktop/sters/imagecompressor/Desktop-3-min.png';
-import S_M_1 from '../../assets/work/mobile/sters/imagecompressor/Mobile-1-min.png';
-import S_M_2 from '../../assets/work/mobile/sters/imagecompressor/Mobile-2-min.png';
-import S_M_3 from '../../assets/work/mobile/sters/imagecompressor/Mobile-3-min.png';
-import S_T_1 from '../../assets/work/mobile/sters/imagecompressor/Tablet-1-min.png';
-import S_T_2 from '../../assets/work/mobile/sters/imagecompressor/Tablet-2-min.png';
-import S_T_3 from '../../assets/work/mobile/sters/imagecompressor/Tablet-3-min.png';
+//Desktop
+import B_D_1 from '../../assets/work/desktop/b-1-min.webp';
+import B_D_2 from '../../assets/work/desktop/b-2-min.webp';
+import B_D_3 from '../../assets/work/desktop/b-3-min.webp';
+import F_D_1 from '../../assets/work/desktop/f-1-min.webp';
+import F_D_2 from '../../assets/work/desktop/f-2-min.webp';
+import F_D_3 from '../../assets/work/desktop/f-3-min.webp';
+import S_D_1 from '../../assets/work/desktop/s-1-min.webp';
+import S_D_2 from '../../assets/work/desktop/s-2-min.webp';
+import S_D_3 from '../../assets/work/desktop/s-3-min.webp';
+import St_D_1 from '../../assets/work/desktop/st-1-min.webp';
+import St_D_2 from '../../assets/work/desktop/st-2-min.webp';
+import St_D_3 from '../../assets/work/desktop/st-3-min.webp';
+import T_D_1 from '../../assets/work/desktop/t-1-min.webp';
+import T_D_2 from '../../assets/work/desktop/t-2-min.webp';
+import T_D_3 from '../../assets/work/desktop/t-3-min.webp';
+//Tablet
+import B_T_1 from '../../assets/work/tablet/b-1-min.webp';
+import B_T_2 from '../../assets/work/tablet/b-2-min.webp';
+import B_T_3 from '../../assets/work/tablet/b-3-min.webp';
+import F_T_1 from '../../assets/work/tablet/f-1-min.webp';
+import F_T_2 from '../../assets/work/tablet/f-2-min.webp';
+import F_T_3 from '../../assets/work/tablet/f-3-min.webp';
+import S_T_1 from '../../assets/work/tablet/s-1-min.webp';
+import S_T_2 from '../../assets/work/tablet/s-2-min.webp';
+import S_T_3 from '../../assets/work/tablet/s-3-min.webp';
+import St_T_1 from '../../assets/work/tablet/st-1-min.webp';
+import St_T_2 from '../../assets/work/tablet/st-2-min.webp';
+import St_T_3 from '../../assets/work/tablet/st-3-min.webp';
+import T_T_1 from '../../assets/work/tablet/t-1-min.webp';
+import T_T_2 from '../../assets/work/tablet/t-2-min.webp';
+import T_T_3 from '../../assets/work/tablet/t-3-min.webp';
+//Mobile
+import B_M_1 from '../../assets/work/mobile/b-1-min.webp';
+import B_M_2 from '../../assets/work/mobile/b-2-min.webp';
+import B_M_3 from '../../assets/work/mobile/b-3-min.webp';
+import F_M_1 from '../../assets/work/mobile/f-1-min.webp';
+import F_M_2 from '../../assets/work/mobile/f-2-min.webp';
+import F_M_3 from '../../assets/work/mobile/f-3-min.webp';
+import S_M_1 from '../../assets/work/mobile/s-1-min.webp';
+import S_M_2 from '../../assets/work/mobile/s-2-min.webp';
+import S_M_3 from '../../assets/work/mobile/s-3-min.webp';
+import St_M_1 from '../../assets/work/mobile/st-1-min.webp';
+import St_M_2 from '../../assets/work/mobile/st-2-min.webp';
+import St_M_3 from '../../assets/work/mobile/st-3-min.webp';
+import T_M_1 from '../../assets/work/mobile/t-1-min.webp';
+import T_M_2 from '../../assets/work/mobile/t-2-min.webp';
+import T_M_3 from '../../assets/work/mobile/t-3-min.webp';
+
 //stoleshnica
-import St_D_1 from '../../assets/work/desktop/stoleshnichi/imagecompressor/Desktop-1-min.png';
-import St_D_2 from '../../assets/work/desktop/stoleshnichi/imagecompressor/Desktop-2-min.png';
-import St_D_3 from '../../assets/work/desktop/stoleshnichi/imagecompressor/Desktop-3-min.png';
-import St_M_1 from '../../assets/work/mobile/stoleshnichi/imagecompressor/Mobile-1-min.png';
-import St_M_2 from '../../assets/work/mobile/stoleshnichi/imagecompressor/Mobile-2-min.png';
-import St_M_3 from '../../assets/work/mobile/stoleshnichi/imagecompressor/Mobile-3-min.png';
-import St_T_1 from '../../assets/work/mobile/stoleshnichi/imagecompressor/Tablet-1-min.png';
-import St_T_2 from '../../assets/work/mobile/stoleshnichi/imagecompressor/Tablet-2-min.png';
-import St_T_3 from '../../assets/work/mobile/stoleshnichi/imagecompressor/Tablet-3-min.png';
 //tables
-import T_D_1 from '../../assets/work/desktop/tables/imagecompressor/Desktop-1-min.png';
-import T_D_2 from '../../assets/work/desktop/tables/imagecompressor/Desktop-2-min.png';
-import T_D_3 from '../../assets/work/desktop/tables/imagecompressor/Desktop-3-min.png';
-import T_M_1 from '../../assets/work/mobile/tables/imagecompressor/Mobile-1-min.png';
-import T_M_2 from '../../assets/work/mobile/tables/imagecompressor/Mobile-2-min.png';
-import T_M_3 from '../../assets/work/mobile/tables/imagecompressor/Mobile-3-min.png';
-import T_T_1 from '../../assets/work/mobile/tables/imagecompressor/Tablet-1-min.png';
-import T_T_2 from '../../assets/work/mobile/tables/imagecompressor/Tablet-2-min.png';
-import T_T_3 from '../../assets/work/mobile/tables/imagecompressor/Tablet-3-min.png';
+
 //import scssimagecompressor/
 import './slider.scss';
 

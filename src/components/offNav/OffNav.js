@@ -1,7 +1,7 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Nav from 'react-bootstrap/Nav';
 import Image from 'react-bootstrap/Image';
-import logo from '../../assets/logo/Frame200x201.png';
+import logo from '../../assets/logo/Frame200x201.webp';
 
 import './offNav.scss';
 function OffNav({ show, setShow }) {
@@ -15,6 +15,7 @@ function OffNav({ show, setShow }) {
 						<Image
 							className="offcanvas-logo-img animate__animated animate__zoomIn"
 							src={logo}
+							alt="Rich Stone offNav logo"
 						></Image>
 					</a>
 				</Offcanvas.Title>

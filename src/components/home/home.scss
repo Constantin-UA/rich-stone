@@ -34,14 +34,14 @@
 			height: 333px;
 			width: 200px;
 			position: relative;
-			background-image: url('../../assets/logo/Frame.png');
+			background-image: url('../../assets/logo/Frame.webp');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
 			overflow: hidden;
 			box-shadow: 0 0 5px 0px #f9d073;
 			border-radius: 10px;
-			animation: 10s ease-in-out 1s infinite normal animation-Logo;
+			//animation: 10s ease-in-out 1s infinite normal animation-Logo;
 		}
 		&-R,
 		&-S {
@@ -87,7 +87,7 @@
 		}
 		&-logo {
 			&-box {
-				background-image: url('../../assets/logo/Frame200x331.png');
+				background-image: url('../../assets/logo/Frame200x331.webp');
 				height: 331px;
 				width: 200px;
 			}
@@ -117,7 +117,6 @@
 		}
 		&-logo {
 			&-box {
-				background-image: url('../../assets/logo/Frame200x331.png');
 				height: 290px;
 				width: 175px;
 			}

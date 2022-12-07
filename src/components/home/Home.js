@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import { useToggler } from '../hook/useToggler.hook';
 import { useState } from 'react';
 import Image from 'react-bootstrap/Image';
+import { useToggler } from '../hook/useToggler.hook';
 
-import logoR from '../../assets/logo/R117x159.png';
-import logoS from '../../assets/logo/S110x152.png';
-import bg1 from '../../assets/home/Desktop-1-min.png';
-import bg2 from '../../assets/home/Desktop-2-min.png';
-import bg3 from '../../assets/home/Desktop-3-min.png';
-import bgM1 from '../../assets/home/Mobile-1-min.png';
-import bgM2 from '../../assets/home/Mobile-2-min.png';
-import bgM3 from '../../assets/home/Mobile-3-min.png';
+import logoR from '../../assets/logo/R117x159.webp';
+import logoS from '../../assets/logo/S110x152.webp';
+import bg1 from '../../assets/home/Desktop-1-min.webp';
+import bg2 from '../../assets/home/Desktop-2-min.webp';
+import bg3 from '../../assets/home/Desktop-3-min.webp';
+import bgM1 from '../../assets/home/Mobile-1-min.webp';
+import bgM2 from '../../assets/home/Mobile-2-min.webp';
+import bgM3 from '../../assets/home/Mobile-3-min.webp';
 
 import './home.scss';
 
@@ -76,7 +76,6 @@ function Home({ data }) {
 	useEffect(() => {
 		const changeBg = setInterval(() => {
 			if (start) {
-				console.log('effect home slides');
 				if (position === 0) {
 					setBackground(imageDate.b);
 					setPositon(1);
@@ -111,7 +110,7 @@ function Home({ data }) {
 						<Image className="home-logo-R-img animate__animated" src={logoR} alt="R"></Image>
 					</div>
 					<div className="home-logo-S">
-						<Image className="home-logo-S-img animate__animated" src={logoS} alt="R"></Image>
+						<Image className="home-logo-S-img animate__animated" src={logoS} alt="S"></Image>
 					</div>
 				</div>
 				<h1 className="home-text animate__animated">

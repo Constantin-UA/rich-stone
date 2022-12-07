@@ -1,5 +1,4 @@
 export function useToggler() {
-	console.log('hook used!');
 	const toggler = (elem, remove, add, AllMarker = false) => {
 		if (AllMarker) {
 			document.querySelectorAll(`${elem}`).forEach((el) => {

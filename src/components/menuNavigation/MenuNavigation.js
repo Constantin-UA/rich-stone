@@ -1,7 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
-import Image from 'react-bootstrap/Image';
-import logo from '../../assets/logo/LogoAll.png';
-import logoS from '../../assets/logo/Frame200x201.png';
+import logo from '../../assets/logo/LogoAll.webp';
+import logoS from '../../assets/logo/Frame200x201.webp';
 import './menuNavigation.scss';
 function MenuNavigation({ show }) {
 	const onClick = (e) => {
@@ -18,7 +17,11 @@ function MenuNavigation({ show }) {
 					<a href="/#home" className="menuNavigation-logo">
 						<picture>
 							<source media="(max-width: 756px)" srcSet={logoS} />
-							<img className="menuNavigation-logo-img animate__animated" src={logo} alt="bg" />
+							<img
+								className="menuNavigation-logo-img animate__animated"
+								src={logo}
+								alt="background logo Rich Stone"
+							/>
 						</picture>
 					</a>
 				</div>

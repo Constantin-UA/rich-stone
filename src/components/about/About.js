@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useToggler } from '../hook/useToggler.hook';
 
-import Desktop from '../../assets/about/Desktop-bg-min.png';
-import Mobile from '../../assets/about/Mobile-bg-min.png';
-import Tablet from '../../assets/about/Tablet-bg-min.png';
+import Desktop from '../../assets/about/Desktop-bg-min.webp';
+import Mobile from '../../assets/about/Mobile-bg-min.webp';
+import Tablet from '../../assets/about/Tablet-bg-min.webp';
 
 import './about.scss';
 
