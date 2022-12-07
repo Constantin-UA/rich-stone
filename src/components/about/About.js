@@ -35,7 +35,7 @@ function About({ data }) {
 			<picture>
 				<source media="(max-width: 430px)" srcSet={Mobile} />
 				<source media="(max-width: 800px)" srcSet={Tablet} />
-				<img className="about-bg" src={Desktop} alt="bg" />
+				<img className="about-bg" src={Desktop} alt="background sters work" />
 			</picture>
 
 			<Container className="about-wrapper">
@@ -54,7 +54,7 @@ function About({ data }) {
 							виготовлення виробів з натурального каменю (травертину, оніксу, мармуру та граніту)
 						</li>
 						<li className="about-descr-item">
-							монтаж готових виробів із природного та штучного каменю{' '}
+							монтаж готових виробів із природного та штучного каменю
 						</li>
 						<li className="about-descr-item">створення мозаїк із натурального каменю</li>
 						<li className="about-descr-item">фігурне різання мармуру та граніту</li>

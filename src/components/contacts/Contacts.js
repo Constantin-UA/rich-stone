@@ -21,7 +21,7 @@ function Contacts({ data }) {
 			home = document.querySelector('.home').clientHeight,
 			contacts = document.querySelector('.contacts').clientHeight;
 		const min = clientHeight - home - contacts / 2;
-		const max = clientHeight;
+		//const max = clientHeight;
 
 		if (data >= min) {
 			toggleOn('.contacts-map', 'animate__fadeOutUpBig', 'animate__fadeInUpBig');
@@ -43,7 +43,7 @@ function Contacts({ data }) {
 		<section id="contacts" className="contacts">
 			<Container className="contacts-wrapper">
 				<div className="contacts-box">
-					<h6 className="contacts-title animate__animated">Контакти</h6>
+					<h4 className="contacts-title animate__animated">Контакти</h4>
 					<div className="contacts-phone-box">
 						<div className="contacts-phone-element animate__animated">
 							<Image className="contacts-icon" src={telegaIcon} alt="icon" />

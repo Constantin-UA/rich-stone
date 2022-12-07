@@ -72,8 +72,8 @@
 		color: hsl(0, 0%, 100%);
 		text-shadow: 0 0 15px #f9d073;
 		background-color: hsla(0, 0%, 0%, 0.2);
-		border-radius: 50px;
-		padding: 5px;
+		border-radius: 25px;
+		padding: 15px;
 	}
 }
 
@@ -100,7 +100,6 @@
 
 		&-text {
 			width: 300px;
-			padding: 2px;
 			p {
 				margin: 0;
 			}

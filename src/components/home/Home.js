@@ -15,15 +15,45 @@ import bgM3 from '../../assets/home/Mobile-3-min.png';
 
 import './home.scss';
 
-function Home({ data }) {
-	const [start, setStart] = useState(true);
-	const [background, setBackground] = useState(
+const imageDate = {
+	a: (
 		<picture>
 			<source media="(max-width: 756px)" srcSet={bgM1} />
-			<img className="home-bg animate__animated animate__fadeIn" src={bg1} alt="bg" />
+			<img
+				className="home-bg animate__animated animate__fadeIn"
+				src={bg1}
+				alt="our works background"
+				key="first slide"
+			/>
 		</picture>
-		//<Image className="home-bg animate__animated animate__fadeIn" src={bg1} alt="bg" />
-	);
+	),
+	b: (
+		<picture>
+			<source media="(max-width: 756px)" srcSet={bgM2} />
+			<img
+				className="home-bg animate__animated animate__fadeIn"
+				src={bg2}
+				alt="our works background"
+				key="second slide"
+			/>
+		</picture>
+	),
+	c: (
+		<picture>
+			<source media="(max-width: 756px)" srcSet={bgM3} />
+			<img
+				className="home-bg animate__animated animate__fadeIn"
+				src={bg3}
+				alt="our works background"
+				key="third slide"
+			/>
+		</picture>
+	),
+};
+
+function Home({ data }) {
+	const [start, setStart] = useState(true);
+	const [background, setBackground] = useState(imageDate.a);
 	const [position, setPositon] = useState(0);
 	const { toggler } = useToggler();
 
@@ -46,48 +76,19 @@ function Home({ data }) {
 	useEffect(() => {
 		const changeBg = setInterval(() => {
 			if (start) {
+				console.log('effect home slides');
 				if (position === 0) {
-					setBackground(
-						<picture>
-							<source media="(max-width: 756px)" srcSet={bgM2} />
-							<img
-								className="home-bg animate__animated animate__fadeIn"
-								src={bg2}
-								alt="bg"
-								key={position}
-							/>
-						</picture>
-					);
+					setBackground(imageDate.b);
 					setPositon(1);
 				} else if (position === 1) {
-					setBackground(
-						<picture>
-							<source media="(max-width: 756px)" srcSet={bgM3} />
-							<img
-								className="home-bg animate__animated animate__fadeIn"
-								src={bg3}
-								alt="bg"
-								key={position}
-							/>
-						</picture>
-					);
+					setBackground(imageDate.c);
 					setPositon(2);
 				} else if (position === 2) {
-					setBackground(
-						<picture>
-							<source media="(max-width: 756px)" srcSet={bgM1} />
-							<img
-								className="home-bg animate__animated animate__fadeIn"
-								src={bg1}
-								alt="bg"
-								key={position}
-							/>
-						</picture>
-					);
+					setBackground(imageDate.a);
 					setPositon(0);
 				}
 			}
-		}, 8000);
+		}, 5000);
 		return () => {
 			clearInterval(changeBg);
 		};
@@ -96,7 +97,7 @@ function Home({ data }) {
 	useEffect(() => {
 		const fadeOutBg = setTimeout(() => {
 			toggler('.home-bg', 'animate__fadeIn', 'animate__fadeOut');
-		}, 7500);
+		}, 4500);
 		return () => {
 			clearTimeout(fadeOutBg);
 		};
@@ -107,10 +108,10 @@ function Home({ data }) {
 			<Container className="home-wrapper">
 				<div className="home-logo-box animate__animated">
 					<div className="home-logo-R">
-						<Image className="home-logo-R-img animate__animated" src={logoR}></Image>
+						<Image className="home-logo-R-img animate__animated" src={logoR} alt="R"></Image>
 					</div>
 					<div className="home-logo-S">
-						<Image className="home-logo-S-img animate__animated" src={logoS}></Image>
+						<Image className="home-logo-S-img animate__animated" src={logoS} alt="R"></Image>
 					</div>
 				</div>
 				<h1 className="home-text animate__animated">
