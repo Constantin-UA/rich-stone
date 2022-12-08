@@ -6,7 +6,6 @@ import OffNav from '../../offNav/OffNav';
 import MenuNavigation from '../../menuNavigation/MenuNavigation';
 import Home from '../../home/Home';
 import About from '../../about/About';
-//import Work from '../../work/Work';
 //CSS
 import './mainPage.scss';
 
@@ -27,15 +26,8 @@ const MainPage = () => {
 	}, []);
 
 	const [show, setShow] = useState(false);
-	const [loading, setLoading] = useState(true);
-	useEffect(() => {
-		setLoading(false);
-	}, []);
 	//Render MainPage
-	const view = loading ? <Spiner /> : <View show={show} setShow={setShow} scrollY={scrollY} />;
-	return <div className="mainPage">{view}</div>;
-};
-function View({ scrollY, show, setShow }) {
+
 	return (
 		<>
 			<Helmet>
@@ -100,17 +92,20 @@ function View({ scrollY, show, setShow }) {
 				/>
 				<meta property="twitter:image" content="./favicons/seoLogo.png" />
 			</Helmet>
-			<OffNav show={show} setShow={setShow} />
-			<MenuNavigation show={setShow} />
-			<Home data={scrollY} />
-			<About data={scrollY} />
-			<Suspense fallback={<Spiner />}>
-				<Work data={scrollY} />
-				<Partnership data={scrollY} />
-				<Materials data={scrollY} />
-				<Contacts data={scrollY} />
-			</Suspense>
+			<div className="mainPage">
+				<OffNav show={show} setShow={setShow} />
+				<MenuNavigation show={setShow} />
+				<Home data={scrollY} />
+				<About data={scrollY} />
+				<Suspense fallback={<Spiner />}>
+					<Work data={scrollY} />
+					<Partnership data={scrollY} />
+					<Materials data={scrollY} />
+					<Contacts data={scrollY} />
+				</Suspense>
+			</div>
 		</>
 	);
-}
+};
+
 export default MainPage;
