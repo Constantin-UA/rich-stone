@@ -1,8 +1,9 @@
 @import url('bootstrap/dist/css/bootstrap.min.css');
 
+// mine
 .offcanvas {
 	z-index: 10000;
-	--bs-offcanvas-height: 60vh;
+	--bs-offcanvas-height: 50vh;
 	background-color: hsla(0, 0%, 90%, 0.9);
 	&-box {
 		margin: 0 auto;
@@ -10,7 +11,7 @@
 		align-items: center;
 		justify-content: center;
 		width: 50vw;
-		gap: 10px;
+		gap: 5px;
 	}
 	&-header {
 		justify-content: flex-end;

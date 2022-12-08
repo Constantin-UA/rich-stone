@@ -38,35 +38,15 @@ const dataParntnerImg = [
 	caesa,
 	quartz,
 ];
-const dataParNames = [
-	'radianz',
-	'hanex',
-	'hanstone',
-	'vicostone',
-	'atem',
-	'bienstone',
-	'avant',
-	'neomarm',
-	'corian',
-	'tristone',
-	'silestone',
-	'himacs',
-	'staron',
-	'santa',
-	'caesa',
-	'quartz',
-];
-
 function Partnership({ data }) {
 	const { toggler } = useToggler();
 	useEffect(() => {
 		const home = document.querySelector('.home').clientHeight;
 		const about = document.querySelector('.about').clientHeight;
-		const work = document.querySelector('.work').clientHeight;
 		const partners = document.querySelector('.partnership').clientHeight;
 
-		const min = home + about + work / 2;
-		const max = home + about + work + partners / 2;
+		const min = home + about + partners / 2;
+		const max = home + about + partners + partners / 2;
 
 		if (data >= min && data <= max) {
 			toggler('.partnership-box', 'animate__zoomOut', 'animate__zoomIn');
