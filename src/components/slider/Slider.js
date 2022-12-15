@@ -21,11 +21,7 @@ function CarouselFade({ scrollY, data }) {
 			{data.slides.Desktop.map((src, idx) => {
 				return (
 					<Carousel.Item key={idx}>
-						<picture>
-							<source media="(max-width: 536px)" srcSet={data.slides.Mobile[idx]} />
-							<source media="(max-width: 769px)" srcSet={data.slides.Tablet[idx]} />
-							<img className="home-bg" src={src} alt="bg" />
-						</picture>
+						<img className="slide-bg" src={src} alt="bg" />
 					</Carousel.Item>
 				);
 			})}
@@ -43,3 +39,9 @@ function CarouselFade({ scrollY, data }) {
 }
 
 export default CarouselFade;
+
+/* <picture>
+<source media="(max-width: 536px)" srcSet={data.slides.Mobile[idx]} />
+<source media="(max-width: 769px)" srcSet={data.slides.Tablet[idx]} />
+<img className="slide-bg" src={src} alt="bg" />
+</picture> */

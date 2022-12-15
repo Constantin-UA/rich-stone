@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useToggler } from '../hook/useToggler.hook';
 
-import Desktop from '../../assets/about/Desktop-bg2.png';
-import Mobile from '../../assets/about/Mobile-bg2.png';
-import Tablet from '../../assets/about/Tablet-bg2.png';
+import Desktop from '../../assets/about/Desktop-bg2.webp';
+import Mobile from '../../assets/about/Mobile-bg2.webp';
+import Tablet from '../../assets/about/Tablet-bg2.webp';
 
 import './about.scss';
 
@@ -30,7 +30,7 @@ function About({ scrollY, data }) {
 			toggler('.about-descr', 'animate__fadeInUp', 'animate__fadeOutDown');
 			toggler('.about-text-footer', 'animate__zoomIn', 'animate__zoomOut', true);
 		}
-	}, [scrollY]);
+	}, [scrollY, toggler]);
 
 	return (
 		<section id="about" className="about">

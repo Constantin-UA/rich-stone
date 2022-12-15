@@ -80,6 +80,9 @@
 		}
 	}
 	.slide {
+		&-bg {
+			object-fit: cover;
+		}
 		&-btn {
 			font-size: 12px;
 			background-color: rgba(9, 9, 9, 0.2);

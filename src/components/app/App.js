@@ -11,7 +11,7 @@ function App() {
 		<main className="app">
 			<ErrorBoundary>
 				<Suspense fallback={<Spiner />}>
-					<MainPage data={ua.data} />
+					<MainPage data={ru.data} />
 				</Suspense>
 			</ErrorBoundary>
 		</main>

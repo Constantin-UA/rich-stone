@@ -5,7 +5,7 @@
 	overflow: hidden;
 	min-width: $min-width;
 	min-height: $min-heigth;
-	background-image: url('../../assets/partner/bg-min.webp');
+	background-image: url('../../assets/partner/bg.webp');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -65,7 +65,7 @@
 // media
 @media (max-width: 768px) {
 	.partnership {
-		background-image: url('../../assets/partner/Mobile-bg-min.webp');
+		background-image: url('../../assets/partner/Mobile-bg.webp');
 		&-wrapper {
 			padding-left: 0px;
 			padding-right: 0px;
