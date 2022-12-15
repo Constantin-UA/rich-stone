@@ -15,7 +15,7 @@
 	}
 	&-header {
 		justify-content: flex-end;
-		height: 15vh;
+		height: 150px;
 	}
 	&-body {
 		display: flex;
@@ -29,7 +29,7 @@
 			overflow: hidden;
 			cursor: pointer;
 			position: absolute;
-			top: 8%;
+			top: 40px;
 			left: 50%;
 			transform: translate(-50%, -10%);
 			width: 90px;
@@ -71,7 +71,6 @@
 	.offcanvas {
 		&-logo {
 			&-box {
-				top: 7%;
 				width: 70px;
 				height: 70px;
 			}

@@ -6,7 +6,7 @@
 	min-width: $min-width;
 	min-height: $min-heigth;
 	&-wrapper {
-		padding-top: 15vh;
+		padding-top: $wrapper-padding-top;
 		transition: all 1s ease-in-out;
 		min-height: $min-heigth-wrapper;
 		height: $heigth-wrapper;
@@ -18,28 +18,30 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 		width: 100%;
 		height: 100%;
+		padding: 10px;
 	}
 	&-title {
 		animation-delay: 1s;
 		font-size: 60px;
 		color: #f9d073;
 		margin-bottom: 30px;
-		margin-top: 30px;
+		margin-top: 10vh;
 		//animation: 10s ease-in-out 1s infinite normal animation-text;
 	}
 	&-phone-box {
 		display: flex;
 		flex-direction: column;
-		row-gap: 15px;
+		row-gap: 20px;
+		padding: 10px;
 	}
 	&-phone-element {
 		animation-delay: 1s;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		column-gap: 15px;
 	}
 	&-icon {
@@ -74,6 +76,8 @@
 		}
 		&-box {
 			width: 100%;
+			padding: 5px;
+			justify-content: center;
 		}
 		&-title {
 			font-size: 48px;

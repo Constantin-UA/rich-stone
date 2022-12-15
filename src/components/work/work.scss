@@ -5,7 +5,7 @@
 	min-width: $min-width;
 	min-height: $min-heigth;
 	&-wrapper {
-		padding-top: 15vh;
+		padding-top: $wrapper-padding-top;
 		height: $heigth-wrapper;
 		min-height: $min-heigth-wrapper;
 		width: 100%;
@@ -14,7 +14,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-end;
+		padding-bottom: 20px;
+	}
+	&-wrapper::-webkit-scrollbar {
+		width: 0px;
 	}
 }
 
@@ -22,6 +26,11 @@
 @media (max-width: 768px) {
 }
 @media (max-width: 425px) {
+	.work {
+		&-wrapper {
+			padding-bottom: 0px;
+		}
+	}
 }
 @media (max-width: 375px) {
 }

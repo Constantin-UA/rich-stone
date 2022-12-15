@@ -18,7 +18,7 @@
 		animation-duration: 1s;
 	}
 	&-wrapper {
-		padding-top: 15vh;
+		padding-top: $wrapper-padding-top;
 		height: $heigth-wrapper;
 		min-height: $min-heigth-wrapper;
 		transition: all 3s ease;
@@ -31,36 +31,32 @@
 	}
 	&-logo {
 		&-box {
-			height: 333px;
 			width: 200px;
+			height: 331px;
 			position: relative;
-			background-image: url('../../assets/logo/Frame.webp');
+			background-image: url('../../assets/logo/Frame200x331.webp');
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
 			overflow: hidden;
 			box-shadow: 0 0 5px 0px #f9d073;
 			border-radius: 10px;
-			//animation: 10s ease-in-out 1s infinite normal animation-Logo;
 		}
 		&-R,
 		&-S {
+			width: 115px;
 			height: 160px;
-			width: 117px;
 			position: absolute;
+			transform: translate(-50%, -50%);
 		}
 		&-R {
 			top: 47%;
 			left: 40%;
-			transform: translate(-50%, -50%);
 			z-index: 1;
 		}
 		&-S {
-			/* 			padding-left: 10px;
-			padding-right: 10px; */
 			top: 53%;
 			left: 58%;
-			transform: translate(-50%, -50%);
 		}
 	}
 
@@ -85,19 +81,6 @@
 			row-gap: 1vh;
 			justify-content: space-evenly;
 		}
-		&-logo {
-			&-box {
-				background-image: url('../../assets/logo/Frame200x331.webp');
-				height: 331px;
-				width: 200px;
-			}
-			&-R,
-			&-S {
-				height: 155px;
-				width: 115px;
-			}
-		}
-
 		&-text {
 			width: 300px;
 			p {
@@ -117,13 +100,14 @@
 		}
 		&-logo {
 			&-box {
+				background-image: url('../../assets/logo/Frame175x290.webp');
 				height: 290px;
 				width: 175px;
 			}
 			&-R,
 			&-S {
-				height: 145px;
-				width: 110px;
+				width: 100px;
+				height: 140px;
 			}
 		}
 	}

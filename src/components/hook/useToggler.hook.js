@@ -10,9 +10,6 @@ export function useToggler() {
 			document.querySelector(`${elem}`).classList.add(`${add}`);
 		}
 	};
-	const togglerToSlider = (elem, remove, add) => {
-		document.querySelector(`${elem}`).classList.remove(...remove);
-		document.querySelector(`${elem}`).classList.add(...add);
-	};
-	return { toggler, togglerToSlider };
+
+	return { toggler };
 }

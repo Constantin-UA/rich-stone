@@ -6,7 +6,7 @@ import './mapComponent.scss';
 L.Icon.Default.imagePath = 'https://unpkg.com/leaflet@1.5.0/dist/images/';
 
 function MapComponent() {
-	const position = [48.503562, 34.998702];
+	const position = [48.504201, 34.998751];
 	const zoom = 15;
 
 	return (

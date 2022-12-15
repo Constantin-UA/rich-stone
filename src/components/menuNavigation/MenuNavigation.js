@@ -1,8 +1,9 @@
 import Nav from 'react-bootstrap/Nav';
-import logo from '../../assets/logo/LogoAll.webp';
+import logo from '../../assets/logo/LogoAll70x120.png';
 import logoS from '../../assets/logo/Frame200x201.webp';
 import './menuNavigation.scss';
-function MenuNavigation({ show }) {
+
+function MenuNavigation({ show, data }) {
 	const onClick = (e) => {
 		if (document.querySelector('.menuNavigation').offsetWidth < 770) {
 			show(true);
@@ -26,46 +27,18 @@ function MenuNavigation({ show }) {
 					</a>
 				</div>
 				<Nav className="menuNavigation-box" defaultActiveKey="1" as="ul">
-					<Nav.Item as="li">
-						<Nav.Link
-							className="menuNavigation-link animate__animated animate__fadeInDown"
-							href="/#about"
-						>
-							Компания
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item as="li">
-						<Nav.Link
-							className="menuNavigation-link animate__animated animate__fadeInDown"
-							href="/#work"
-						>
-							Галерая робiт
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item as="li">
-						<Nav.Link
-							className="menuNavigation-link animate__animated animate__fadeInDown"
-							href="/#partners"
-						>
-							Партнери
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item as="li">
-						<Nav.Link
-							className="menuNavigation-link animate__animated animate__fadeInDown"
-							href="/#materials"
-						>
-							Матерiали
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item as="li">
-						<Nav.Link
-							className="menuNavigation-link animate__animated animate__fadeInDown"
-							href="/#contacts"
-						>
-							Контакти
-						</Nav.Link>
-					</Nav.Item>
+					{data.menuNavText.map((item, idx) => {
+						return (
+							<Nav.Item as="li" key={idx}>
+								<Nav.Link
+									className="menuNavigation-link animate__animated animate__fadeInDown"
+									href={data.menuNavHref[idx]}
+								>
+									{item}
+								</Nav.Link>
+							</Nav.Item>
+						);
+					})}
 				</Nav>
 			</div>
 		</section>

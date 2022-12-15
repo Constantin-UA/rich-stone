@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image';
 import logo from '../../assets/logo/Frame200x201.webp';
 
 import './offNav.scss';
-function OffNav({ show, setShow }) {
+function OffNav({ show, setShow, data }) {
 	const handleClose = () => setShow(false);
 
 	return (
@@ -22,40 +22,18 @@ function OffNav({ show, setShow }) {
 			</Offcanvas.Header>
 			<Offcanvas.Body>
 				<Nav className="offcanvas-box" defaultActiveKey="1" as="ul">
-					<Nav.Item as="li">
-						<Nav.Link className="offcanvas-link animate__animated animate__zoomIn" href="/#about">
-							Компания
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item as="li">
-						<Nav.Link className="offcanvas-link animate__animated animate__zoomIn" href="/#work">
-							Галерая робiт
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item as="li">
-						<Nav.Link
-							className="offcanvas-link animate__animated animate__zoomIn"
-							href="/#partners"
-						>
-							Партнери
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item as="li">
-						<Nav.Link
-							className="offcanvas-link animate__animated animate__zoomIn"
-							href="/#materials"
-						>
-							Матерiали
-						</Nav.Link>
-					</Nav.Item>
-					<Nav.Item as="li">
-						<Nav.Link
-							className="offcanvas-link animate__animated animate__zoomIn"
-							href="/#contacts"
-						>
-							Контакти
-						</Nav.Link>
-					</Nav.Item>
+					{data.menuNavText.map((item, idx) => {
+						return (
+							<Nav.Item as="li" key={idx}>
+								<Nav.Link
+									className="offcanvas-link animate__animated animate__zoomIn"
+									href={data.menuNavHref[idx]}
+								>
+									{item}
+								</Nav.Link>
+							</Nav.Item>
+						);
+					})}
 				</Nav>
 			</Offcanvas.Body>
 		</Offcanvas>

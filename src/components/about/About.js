@@ -2,23 +2,24 @@ import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useToggler } from '../hook/useToggler.hook';
 
-import Desktop from '../../assets/about/Desktop-bg-min.webp';
-import Mobile from '../../assets/about/Mobile-bg-min.webp';
-import Tablet from '../../assets/about/Tablet-bg-min.webp';
+import Desktop from '../../assets/about/Desktop-bg2.png';
+import Mobile from '../../assets/about/Mobile-bg2.png';
+import Tablet from '../../assets/about/Tablet-bg2.png';
 
 import './about.scss';
 
 //fast toggle class
 
-function About({ data }) {
+function About({ scrollY, data }) {
 	const { toggler } = useToggler();
+	const { aboutData } = data;
 
 	useEffect(() => {
 		const about = document.querySelector('.about').clientHeight;
 		const min = about / 2;
 		const max = about + about / 2;
 
-		if (data >= min && data <= max) {
+		if (scrollY >= min && scrollY <= max) {
 			toggler('.about-title', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.about-subtitle', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.about-descr', 'animate__fadeOutDown', 'animate__fadeInUp');
@@ -29,35 +30,26 @@ function About({ data }) {
 			toggler('.about-descr', 'animate__fadeInUp', 'animate__fadeOutDown');
 			toggler('.about-text-footer', 'animate__zoomIn', 'animate__zoomOut', true);
 		}
-	}, [data]);
+	}, [scrollY]);
+
 	return (
 		<section id="about" className="about">
 			<picture>
 				<source media="(max-width: 430px)" srcSet={Mobile} />
-				<source media="(max-width: 800px)" srcSet={Tablet} />
+				<source media="(max-width: 768px)" srcSet={Tablet} />
 				<img className="about-bg" src={Desktop} alt="background sters work" />
 			</picture>
 
 			<Container className="about-wrapper">
-				<h2 className="about-title animate__animated">
-					Компанія Rich Stone вже понад 10 років надає послуги з виготовлення та монтажу виробів з
-					натурального та штучного каменю.
-				</h2>
-				<h3 className="about-subtitle animate__animated">
-					У нас Ви знайдете кращі зразки виробів із каменю для дому, офісу, торгівельного центру чи
-					магазину.
-				</h3>
+				<h2 className="about-title animate__animated">{aboutData.text.title}</h2>
+				<h3 className="about-subtitle animate__animated">{aboutData.text.subtitle}</h3>
 				<div className="about-descr animate__animated">
-					<h4 className="about-descr-title">Серед спектрів наших послуг:</h4>
+					<h4 className="about-descr-title">{aboutData.text.descrTitle}</h4>
 					<ul className="about-descr-lists">
-						<li className="about-descr-item">
-							виготовлення виробів з натурального каменю (травертину, оніксу, мармуру та граніту)
-						</li>
-						<li className="about-descr-item">
-							монтаж готових виробів із природного та штучного каменю
-						</li>
-						<li className="about-descr-item">створення мозаїк із натурального каменю</li>
-						<li className="about-descr-item">фігурне різання мармуру та граніту</li>
+						<li className="about-descr-item">{aboutData.text.descrText[0]}</li>
+						<li className="about-descr-item">{aboutData.text.descrText[1]}</li>
+						<li className="about-descr-item">{aboutData.text.descrText[2]}</li>
+						<li className="about-descr-item">{aboutData.text.descrText[3]}</li>
 					</ul>
 				</div>
 			</Container>

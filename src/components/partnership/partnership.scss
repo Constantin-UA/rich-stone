@@ -10,7 +10,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	&-wrapper {
-		padding-top: 15vh;
+		padding-top: $wrapper-padding-top;
 		height: $heigth-wrapper;
 		position: relative;
 		transition: all 1s ease-in-out;
@@ -50,6 +50,7 @@
 		justify-content: space-around;
 		gap: 10px;
 		animation-delay: 0.2s;
+		overflow: auto;
 	}
 	&-icon {
 		display: grid;

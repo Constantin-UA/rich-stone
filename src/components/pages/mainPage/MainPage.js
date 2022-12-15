@@ -13,7 +13,7 @@ const Materials = lazy(() => import('../../materials/Materials'));
 const Partnership = lazy(() => import('../../partnership/Partnership'));
 const Contacts = lazy(() => import('../../contacts/Contacts'));
 const Work = lazy(() => import('../../work/Work'));
-const MainPage = () => {
+const MainPage = ({ data }) => {
 	const [scrollY, setScrollY] = useState(0);
 	useEffect(() => {
 		const handleScroll = (event) => {
@@ -93,15 +93,15 @@ const MainPage = () => {
 				<meta property="twitter:image" content="./favicons/seoLogo.png" />
 			</Helmet>
 			<div className="mainPage">
-				<OffNav show={show} setShow={setShow} />
-				<MenuNavigation show={setShow} />
-				<Home data={scrollY} />
-				<About data={scrollY} />
+				<OffNav show={show} setShow={setShow} data={data} />
+				<MenuNavigation show={setShow} data={data} />
+				<Home scrollY={scrollY} data={data} />
+				<About scrollY={scrollY} data={data} />
 				<Suspense fallback={<Spiner />}>
-					<Work data={scrollY} />
-					<Partnership data={scrollY} />
-					<Materials data={scrollY} />
-					<Contacts data={scrollY} />
+					<Work scrollY={scrollY} data={data} />
+					<Partnership scrollY={scrollY} data={data} />
+					<Materials scrollY={scrollY} data={data} />
+					<Contacts scrollY={scrollY} data={data} />
 				</Suspense>
 			</div>
 		</>

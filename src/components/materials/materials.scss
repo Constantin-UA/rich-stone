@@ -5,22 +5,22 @@
 	min-width: $min-width;
 	min-height: $min-heigth;
 	&-wrapper {
-		padding-top: 15vh;
+		padding-top: $wrapper-padding-top;
 		height: $heigth-wrapper;
 		min-height: $min-heigth-wrapper;
-		width: 80vw;
+		width: 100vw;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
 	&-box {
+		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
 		overflow: auto;
 		align-items: center;
 		justify-content: space-evenly;
-		row-gap: 6vh;
 		column-gap: 10px;
 	}
 	&-box::-webkit-scrollbar {
@@ -42,15 +42,25 @@
 }
 
 // media
+@media (max-width: 1440px) {
+	.materials {
+		&-box {
+		}
+	}
+}
+@media (max-width: 1025px) {
+	.materials {
+		&-box {
+			width: 80%;
+		}
+	}
+}
 @media (max-width: 768px) {
 	.materials {
-		/* &-box {
-			display: flex;
-			flex-direction: column;
-			height: 100vh;
-			row-gap: 10px; 
+		&-box {
+			width: 100%;
+			row-gap: 10px;
 		}
-		*/
 	}
 }
 @media (max-width: 425px) {
