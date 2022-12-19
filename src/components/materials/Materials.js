@@ -3,12 +3,10 @@ import { useEffect } from 'react';
 import MaterialCard from '../materialCard/MaterialCard';
 import { useToggler } from '../hook/useToggler.hook';
 
-//images imports
-
 //scss imports
 import './materials.scss';
 
-function Materials({ scrollY, data }) {
+function Materials({ scrollY, dataLang, materialImg }) {
 	const { toggler } = useToggler();
 
 	useEffect(() => {
@@ -32,10 +30,10 @@ function Materials({ scrollY, data }) {
 		<section id="materials" className="materials">
 			<Container className="materials-wrapper">
 				<div className="materials-box animate__animated">
-					{data.materialImg.map((elem, idx) => {
+					{materialImg.map((elem, idx) => {
 						return (
 							<div className="materials-item animate__animated" key={idx}>
-								<MaterialCard cardImg={elem} cardTitle={data.materialData.dataTitle[idx]} />
+								<MaterialCard cardImg={elem} cardTitle={dataLang.materialData.dataTitle[idx]} />
 							</div>
 						);
 					})}

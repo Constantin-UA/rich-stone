@@ -1,9 +1,6 @@
-import L from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import './mapComponent.scss';
 
-// указываем путь к файлам marker
-L.Icon.Default.imagePath = 'https://unpkg.com/leaflet@1.5.0/dist/images/';
+import './mapComponent.scss';
 
 function MapComponent() {
 	const position = [48.504201, 34.998751];
@@ -11,10 +8,7 @@ function MapComponent() {
 
 	return (
 		<MapContainer zoom={zoom} center={position} scrollWheelZoom={false}>
-			<TileLayer
-				attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-			/>
+			<TileLayer attribution="&amp;" url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 			<Marker position={position}>
 				<Popup>Rich Stone</Popup>
 			</Marker>

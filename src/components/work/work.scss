@@ -23,8 +23,6 @@
 }
 
 // media
-@media (max-width: 768px) {
-}
 @media (max-width: 425px) {
 	.work {
 		&-wrapper {
@@ -32,7 +30,10 @@
 		}
 	}
 }
-@media (max-width: 375px) {
-}
-@media (max-width: 320px) {
+@media (max-height: 626px) {
+	.work {
+		&-wrapper {
+			min-height: 100vh;
+		}
+	}
 }

@@ -16,7 +16,7 @@ import bgM1 from '../../assets/home/Mobile-1.webp';
 
 import './home.scss';
 
-function Home({ data, scrollY }) {
+function Home({ dataLang, scrollY }) {
 	const { toggler } = useToggler();
 
 	useEffect(() => {
@@ -35,7 +35,7 @@ function Home({ data, scrollY }) {
 
 	return (
 		<section id="home" className="home">
-			<View />
+			<BackGround />
 			<Container className="home-wrapper">
 				<div className="home-logo-box animate__animated">
 					<div className="home-logo-R">
@@ -51,13 +51,13 @@ function Home({ data, scrollY }) {
 						</picture>
 					</div>
 				</div>
-				<h1 className="home-text animate__animated">{data.homeData.text}</h1>
+				<h1 className="home-text animate__animated">{dataLang.homeData.text}</h1>
 			</Container>
 		</section>
 	);
 }
 
-function View() {
+function BackGround() {
 	return (
 		<picture className="home-bg-slide home-show">
 			<source media="(max-width: 430px)" srcSet={bgM1} />

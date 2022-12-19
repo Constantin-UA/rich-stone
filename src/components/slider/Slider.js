@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import './slider.scss';
 
-function CarouselFade({ scrollY, data }) {
+function CarouselFade({ scrollY, dataLang, slides }) {
 	const [index, setIndex] = useState(0);
 	const handleSelect = (selectIndex, e) => {
 		setIndex(selectIndex);
@@ -18,7 +18,7 @@ function CarouselFade({ scrollY, data }) {
 			interval={4000}
 			fade
 		>
-			{data.slides.Desktop.map((src, idx) => {
+			{slides.Desktop.map((src, idx) => {
 				return (
 					<Carousel.Item key={idx}>
 						<img className="slide-bg" src={src} alt="bg" />
@@ -26,10 +26,10 @@ function CarouselFade({ scrollY, data }) {
 				);
 			})}
 			<ul className="slide-btn-box">
-				{data.sliderBtns.map((item, idx) => {
+				{dataLang.sliderBtns.map((item, idx) => {
 					return (
 						<li key={idx} className="slide-btn" onClick={() => setIndex(idx * 10)}>
-							{item}
+							<span className="slide-btn-text">{item}</span>
 						</li>
 					);
 				})}

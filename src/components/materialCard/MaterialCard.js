@@ -1,5 +1,3 @@
-//import Card from 'react-bootstrap/Card';
-
 import './materialCard.scss';
 
 function MaterialCard({ cardImg, cardTitle = 'Simple' }) {

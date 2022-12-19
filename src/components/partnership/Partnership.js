@@ -5,7 +5,7 @@ import Image from 'react-bootstrap/Image';
 import { useToggler } from '../hook/useToggler.hook';
 import './partnership.scss';
 
-function Partnership({ scrollY, data }) {
+function Partnership({ scrollY, dataLang, dataParntnerImg }) {
 	const { toggler } = useToggler();
 	useEffect(() => {
 		const home = document.querySelector('.home').clientHeight;
@@ -28,7 +28,7 @@ function Partnership({ scrollY, data }) {
 		<section id="partners" className="partnership">
 			<Container className="partnership-wrapper">
 				<div className="partnership-box animate__animated">
-					{data.dataParntnerImg.map((element, idx) => (
+					{dataParntnerImg.map((element, idx) => (
 						<Image
 							className="partnership-icon animate__animated"
 							alt={idx}

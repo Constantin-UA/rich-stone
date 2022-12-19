@@ -24,9 +24,6 @@
 		column-gap: 10px;
 	}
 	&-box::-webkit-scrollbar {
-		background-color: #f9d073;
-		border-radius: 10px;
-		border: 1px solid #fff;
 		width: 0;
 	}
 	&-item {
@@ -34,7 +31,7 @@
 		cursor: pointer;
 		transition: all 0.5s ease-in-out;
 		border: 1px solid #000;
-		box-shadow: 0px 0px 5px 0px hsla(0, 0%, 80%, 0.8);
+		box-shadow: 0px 0px 5px 0px #ffb300;
 	}
 	&-item:hover {
 		box-shadow: 0 0 5px 2px #f9d073;
@@ -42,12 +39,6 @@
 }
 
 // media
-@media (max-width: 1440px) {
-	.materials {
-		&-box {
-		}
-	}
-}
 @media (max-width: 1025px) {
 	.materials {
 		&-box {
@@ -63,14 +54,11 @@
 		}
 	}
 }
-@media (max-width: 425px) {
-}
+
 @media (max-width: 376px) {
 	.materials {
 		&-box {
 			row-gap: 10px;
 		}
 	}
-}
-@media (max-width: 320px) {
 }

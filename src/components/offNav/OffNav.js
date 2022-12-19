@@ -4,9 +4,8 @@ import Image from 'react-bootstrap/Image';
 import logo from '../../assets/logo/Frame200x201.webp';
 
 import './offNav.scss';
-function OffNav({ show, setShow, data }) {
+function OffNav({ show, setShow, dataLang, setLang }) {
 	const handleClose = () => setShow(false);
-
 	return (
 		<Offcanvas show={show} onHide={handleClose} placement="top" scroll={true}>
 			<Offcanvas.Header closeButton>
@@ -19,15 +18,24 @@ function OffNav({ show, setShow, data }) {
 						></Image>
 					</a>
 				</Offcanvas.Title>
+				<div className="offcanvas-lang">
+					<button className="offcanvas-lang-ua" onClick={() => setLang('UA')}>
+						UA
+					</button>
+					<div className="offcanvas-lang-line">/</div>
+					<button className="offcanvas-lang-ru" onClick={() => setLang('RU')}>
+						RU
+					</button>
+				</div>
 			</Offcanvas.Header>
 			<Offcanvas.Body>
 				<Nav className="offcanvas-box" defaultActiveKey="1" as="ul">
-					{data.menuNavText.map((item, idx) => {
+					{dataLang.menuNavText.map((item, idx) => {
 						return (
-							<Nav.Item as="li" key={idx}>
+							<Nav.Item as="li" key={idx} onClick={() => handleClose()}>
 								<Nav.Link
 									className="offcanvas-link animate__animated animate__zoomIn"
-									href={data.menuNavHref[idx]}
+									href={dataLang.menuNavHref[idx]}
 								>
 									{item}
 								</Nav.Link>

@@ -2,20 +2,18 @@ import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useToggler } from '../hook/useToggler.hook';
 
-import Desktop from '../../assets/about/Desktop-bg2.webp';
-import Mobile from '../../assets/about/Mobile-bg2.webp';
-import Tablet from '../../assets/about/Tablet-bg2.webp';
+import Desktop from '../../assets/about/Desktop-bg1.webp';
+import Mobile from '../../assets/about/Mobile-bg1.webp';
+import Tablet from '../../assets/about/Tablet-bg1.webp';
 
 import './about.scss';
 
-//fast toggle class
-
-function About({ scrollY, data }) {
+function About({ scrollY, dataLang }) {
 	const { toggler } = useToggler();
-	const { aboutData } = data;
+	const { aboutData } = dataLang;
 
 	useEffect(() => {
-		const about = document.querySelector('.about').clientHeight;
+		const about = document.querySelector('.home').clientHeight;
 		const min = about / 2;
 		const max = about + about / 2;
 
