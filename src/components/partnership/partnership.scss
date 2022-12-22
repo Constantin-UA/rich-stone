@@ -9,6 +9,9 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	&-wrapper {
 		padding-top: $wrapper-padding-top;
 		height: $heigth-wrapper;
@@ -49,16 +52,15 @@
 		align-items: center;
 		justify-content: space-around;
 		gap: 10px;
-		animation-delay: 0.2s;
 		overflow: auto;
 	}
 	&-icon {
 		display: grid;
 		width: fit-content;
 		height: fit-content;
-		transition: all 2s ease-in;
+		transition: all 1s ease-in;
 		animation-duration: 1s;
-		animation-delay: 1s;
+		animation-delay: 0.5s;
 	}
 }
 

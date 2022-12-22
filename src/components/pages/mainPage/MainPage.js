@@ -2,12 +2,10 @@
 import { useEffect, useState, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import Spiner from '../../spiner/Spiner';
-import OffNav from '../../offNav/OffNav';
-import MenuNavigation from '../../menuNavigation/MenuNavigation';
 import Home from '../../home/Home';
 import About from '../../about/About';
 //data
-import { lang, dataImg } from '../../../data';
+import { dataImg } from '../../../data';
 //CSS
 import './mainPage.scss';
 
@@ -15,10 +13,9 @@ const Materials = lazy(() => import('../../materials/Materials'));
 const Partnership = lazy(() => import('../../partnership/Partnership'));
 const Contacts = lazy(() => import('../../contacts/Contacts'));
 const Work = lazy(() => import('../../work/Work'));
-const MainPage = () => {
+const MainPage = ({ dataLang }) => {
 	const [scrollY, setScrollY] = useState(0);
-	const { ua, ru } = lang;
-	const [dataLang, setData] = useState(ua);
+
 	useEffect(() => {
 		const handleScroll = (event) => {
 			setScrollY(window.scrollY);
@@ -29,13 +26,8 @@ const MainPage = () => {
 		};
 	}, []);
 
-	const [show, setShow] = useState(false);
-
 	//Render MainPage
-	const setLang = (code) => {
-		if (code === 'UA') setData(ua);
-		if (code === 'RU') setData(ru);
-	};
+
 	return (
 		<>
 			<Helmet>
@@ -63,18 +55,15 @@ const MainPage = () => {
 				<meta name="theme-color" content="#ffffff" />
 			</Helmet>
 			<div className="mainPage">
-				<OffNav show={show} setShow={setShow} dataLang={dataLang} setLang={setLang} />
-				<MenuNavigation show={setShow} dataLang={dataLang} setLang={setLang} />
 				<Home scrollY={scrollY} dataLang={dataLang} />
 				<About scrollY={scrollY} dataLang={dataLang} />
 				<Suspense fallback={<Spiner />}>
-					<Work scrollY={scrollY} dataLang={dataLang} slides={dataImg.slides} />
+					<Work scrollY={scrollY} dataLang={dataLang} images={dataImg.images} />
 					<Partnership
 						scrollY={scrollY}
 						dataLang={dataLang}
 						dataParntnerImg={dataImg.dataParntnerImg}
 					/>
-					<Materials scrollY={scrollY} dataLang={dataLang} materialImg={dataImg.materialImg} />
 					<Contacts scrollY={scrollY} dataLang={dataLang} />
 				</Suspense>
 			</div>
@@ -83,3 +72,4 @@ const MainPage = () => {
 };
 
 export default MainPage;
+/* <Materials scrollY={scrollY} dataLang={dataLang} materialImg={dataImg.materialImg} /> */

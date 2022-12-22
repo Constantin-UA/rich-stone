@@ -1,11 +1,8 @@
 .app {
 	min-height: 100vh;
-	min-width: 98vw;
+	min-width: 99vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
-	font-size: calc(10px + 2vmin);
-	color: hsl(0, 0%, 80%);
 }

@@ -16,10 +16,10 @@ function Partnership({ scrollY, dataLang, dataParntnerImg }) {
 		const max = home + about + partners + partners / 2;
 
 		if (scrollY >= min && scrollY <= max) {
-			toggler('.partnership-box', 'animate__zoomOut', 'animate__zoomIn');
+			/* toggler('.partnership-box', 'animate__zoomOut', 'animate__zoomIn'); */
 			toggler('.partnership-icon', 'animate__zoomOut', 'animate__zoomIn', true);
 		} else {
-			toggler('.partnership-box', 'animate__zoomIn', 'animate__zoomOut');
+			/* 			toggler('.partnership-box', 'animate__zoomIn', 'animate__zoomOut'); */
 			toggler('.partnership-icon', 'animate__zoomIn', 'animate__zoomOut', true);
 		}
 	}, [scrollY, toggler]);

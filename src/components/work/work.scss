@@ -1,39 +1,76 @@
 @import '../../style/variables';
 
 .work {
+	position: relative;
 	overflow: hidden;
 	min-width: $min-width;
 	min-height: $min-heigth;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(135deg, #000000, rgb(25, 25, 25));
+	box-shadow: 0px 0px 20px 0px $yellow-second inset;
+	box-shadow: 0px 0px 20px 0px $yellow inset;
+
 	&-wrapper {
 		padding-top: $wrapper-padding-top;
+		padding-bottom: 10vh;
 		height: $heigth-wrapper;
 		min-height: $min-heigth-wrapper;
 		width: 100%;
 		overflow: hidden;
 		position: relative;
 		display: flex;
-		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		justify-content: flex-end;
-		padding-bottom: 20px;
 	}
 	&-wrapper::-webkit-scrollbar {
 		width: 0px;
 	}
+	&-btn-list {
+		position: relative;
+		display: grid;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		grid-template-columns: repeat(auto-fill, 270px);
+		grid-template-rows: repeat(auto-fill, 270px);
+		gap: 25px;
+	}
+	&-btn-item {
+		border-radius: 10px;
+		overflow: hidden;
+		width: 270px;
+		height: 270px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		cursor: pointer;
+		color: rgb(255, 221, 141);
+		box-shadow: rgba(249, 208, 115, 0.2) 0px -23px 25px 0px inset,
+			rgba(249, 208, 115, 0.15) 0px -36px 30px 0px inset,
+			rgba(249, 208, 115, 0.1) 0px -79px 40px 0px inset, rgba(255, 221, 141, 0.06) 0px 2px 1px,
+			rgba(255, 221, 141, 0.09) 0px 4px 2px, rgba(255, 221, 141, 0.09) 0px 8px 4px;
+	}
+	&-btn-img {
+		width: 270px;
+		height: 200px;
+	}
+	&-btn-name {
+		font-size: 20px;
+		color: #f9d073;
+		background: linear-gradient(90deg, #f9d073, #ffb300);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 }
 
 // media
-@media (max-width: 425px) {
+@media (max-width: 768px) {
 	.work {
-		&-wrapper {
-			padding-bottom: 0px;
-		}
-	}
-}
-@media (max-height: 626px) {
-	.work {
-		&-wrapper {
-			min-height: 100vh;
+		&-btn-list {
 		}
 	}
 }

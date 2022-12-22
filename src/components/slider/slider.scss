@@ -1,28 +1,34 @@
 //mine
 .carousel {
 	min-width: 100%;
-	min-height: 100%;
+	min-height: fit-content;
 	transition: all 1s ease-in-out;
-	position: absolute;
-	top: 50%;
+	position: relative;
+	/* 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
 	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	&-inner {
 		width: 900px; //60vw
 		height: 625px; //60vh
 		display: flex;
-		position: absolute;
+		/* 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%); */
 		box-shadow: 0px 0px 10px 0px #f9d073;
 		border-radius: 10px;
 	}
 	&-control-prev,
 	&-control-next {
 		&-icon {
-			box-shadow: 0px 0px 10px 0px hsla(0, 0%, 100%, 0.8);
+			height: 100%;
+			width: 100%;
+			/* 			box-shadow: 0px 0px 10px 0px #f9d073; */
 			border-radius: 10px;
 			position: absolute;
 			top: 50%;
@@ -30,24 +36,26 @@
 			transform: translate(-50%, -50%);
 		}
 	}
+	&-control-prev-icon {
+		background-image: url('../../assets/work/left_arrow.svg');
+	}
+	&-control-next-icon {
+		background-image: url('../../assets/work/right_arrow.svg');
+	}
 }
 .slide {
-	&-wrapper {
-	}
 	&-btn-box {
 		width: 100%;
-		height: 200px;
+		height: 20%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		text-align: center;
 		z-index: 10;
-		position: absolute;
-		bottom: 0;
-		text-overflow: clip;
-		overflow: auto;
+		position: relative;
 		padding: 5px;
 		row-gap: 5px;
+		background-color: rgba(9, 9, 9, 0.5);
 	}
 	&-btn {
 		width: 21%;
@@ -57,11 +65,8 @@
 		text-align: center;
 		justify-content: center;
 		align-items: center;
-		border-radius: 15px;
 		cursor: pointer;
 		transition: all 0.5s ease;
-		background-color: rgba(9, 9, 9, 0.5);
-		animation: 5s ease-in-out 0s infinite normal animation-navLogo;
 	}
 	&-btn-text {
 		font-weight: bold;
@@ -73,71 +78,65 @@
 		padding: 5px;
 		border-radius: 10px;
 	}
+}
 
-	&-btn:hover {
-		color: #f1f1ee;
-		border: 1px solid #f1f1ee;
-		box-shadow: 0 0 1px 1px #f9d073;
-	}
+.activeBtn {
+	-webkit-text-fill-color: #f9d073;
+	text-decoration: underline;
 }
 // media
 
 @media (max-width: 768px) {
 	.carousel {
 		&-inner {
-			width: 100vw;
-			height: 80vh;
+			height: 100%;
+			width: 100%;
 		}
 	}
 	.slide {
 		&-bg {
-			object-fit: cover;
+			object-fit: contain;
 		}
 		&-btn {
+			border-radius: 0;
 			height: auto;
-			background-color: rgba(9, 9, 9, 0.4);
 		}
 		&-btn-text {
 			font-size: 15px;
 		}
-	}
-}
-@media (max-width: 426px) {
-	.slide {
 		&-btn-box {
-			width: 35%;
-			height: 100%;
+			height: 50%;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-evenly;
 			text-align: center;
 			z-index: 10;
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			text-overflow: clip;
-			overflow: auto;
+			background-color: rgba(9, 9, 9, 0.2);
 		}
 		&-btn {
 			width: 100%;
 			height: auto;
-			background-color: rgba(9, 9, 9, 0.2);
 			color: #f9d073;
 			box-shadow: 0 0 1px 0px #f9d073;
 		}
 		&-btn-text {
-			font-size: 12px;
+			font-size: 14px;
 		}
 	}
 }
 
-@media (max-height: 625px) {
-	.carousel {
-		&-inner {
-			height: 80vh;
+@media (max-height: 626px) {
+	@media (min-width: 768px) {
+		.carousel {
+			&-inner {
+				height: 100%;
+				width: 100%;
+			}
 		}
-		&-bg {
-			object-fit: cover;
+	}
+	.slide {
+		&-btn-box {
+			height: 40%;
 		}
 	}
 }

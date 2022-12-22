@@ -2,6 +2,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Nav from 'react-bootstrap/Nav';
 import Image from 'react-bootstrap/Image';
 import logo from '../../assets/logo/Frame200x201.webp';
+import instaIcon from '../../assets/contacts/instagram.webp';
+import viberIcon from '../../assets/contacts/viber.webp';
 
 import './offNav.scss';
 function OffNav({ show, setShow, dataLang, setLang }) {
@@ -43,6 +45,21 @@ function OffNav({ show, setShow, dataLang, setLang }) {
 						);
 					})}
 				</Nav>
+				<div className="offcanvas-phone-box">
+					<div className="offcanvas-phone-wrapper">
+						<img className="offcanvas-icon" src={viberIcon} alt="icon" />
+						<div className="offcanvas-phone">+380508000840</div>
+					</div>
+					<div className="offcanvas-phone-wrapper">
+						<img className="offcanvas-icon" src={instaIcon} alt="icon" />
+						<a
+							href="https://instagram.com/stone__dnepr?igshid=YmMyMTA2M2Y="
+							className="offcanvas-phone"
+						>
+							@stone_dnepr
+						</a>
+					</div>
+				</div>
 			</Offcanvas.Body>
 		</Offcanvas>
 	);

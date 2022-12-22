@@ -10,20 +10,17 @@ function Materials({ scrollY, dataLang, materialImg }) {
 	const { toggler } = useToggler();
 
 	useEffect(() => {
-		const clientHeight = document.querySelector('.mainPage').clientHeight,
-			home = document.querySelector('.home').clientHeight,
-			mater = document.querySelector('.materials').clientHeight,
-			contacts = document.querySelector('.contacts').clientHeight;
+		const clientHeight = document.querySelector('.mainPage').clientHeight;
+		const home = document.querySelector('.home').clientHeight;
+		const mater = document.querySelector('.materials').clientHeight;
+		const min = clientHeight - home - mater - mater / 2;
 
-		const min = clientHeight - home - contacts - mater / 2;
-		const max = clientHeight - home - contacts / 2;
-
-		if (scrollY >= min && scrollY <= max) {
-			toggler('.materials-box', 'animate__zoomOut', 'animate__zoomIn');
-			toggler('.materials-item', 'animate__zoomOut', 'animate__zoomIn', true);
+		if (scrollY >= min) {
+			//	toggler('.materials-box', 'animate__zoomOut', 'animate__zoomIn');
+			toggler('.materials-item', 'animate__bounceOutRight', 'animate__bounceInRight', true);
 		} else {
-			toggler('.materials-box', 'animate__zoomIn', 'animate__zoomOut');
-			toggler('.materials-item', 'animate__zoomIn', 'animate__zoomOut', true);
+			//	toggler('.materials-box', 'animate__zoomIn', 'animate__zoomOut');
+			toggler('.materials-item', 'animate__bounceInRight', 'animate__bounceOutRight', true);
 		}
 	}, [scrollY, toggler]);
 	return (

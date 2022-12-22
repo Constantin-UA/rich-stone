@@ -54,7 +54,6 @@
 		height: 45px;
 	}
 	&-phone {
-		animation: 5s ease-in-out 0s infinite normal animation-navLogo;
 		font-size: 24px;
 		color: hsla(0, 0%, 100%, 0.9);
 		text-decoration: none;
@@ -115,20 +114,32 @@
 @media (max-height: 626px) {
 	.contacts {
 		height: 100vh;
-		overflow: auto;
+		overflow: hidden;
+		&-phone-box {
+			width: 100%;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
 		&-title {
 			font-size: 48px;
 			margin-bottom: 0px;
 			margin-top: 0px;
-			opacity: 0;
+			opacity: 1;
+		}
+		&-wrapper {
+			overflow: auto;
 		}
 		&-map {
 			width: 100%;
-			height: 100%;
+			height: 100vh;
 		}
 	}
 }
-@media (max-width: 375px) {
-}
-@media (max-width: 320px) {
+@media (max-height: 426px) {
+	.contacts {
+		&-wrapper {
+			padding-top: 0;
+		}
+	}
 }

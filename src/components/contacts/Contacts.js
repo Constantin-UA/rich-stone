@@ -1,6 +1,4 @@
 import { Image, Container } from 'react-bootstrap';
-import { useEffect } from 'react';
-import { useToggler } from '../hook/useToggler.hook';
 import MapComponent from '../mapComponent/MapComponent';
 import adresIcon from '../../assets/contacts/adres.webp';
 import instaIcon from '../../assets/contacts/instagram.webp';
@@ -10,23 +8,6 @@ import viberIcon from '../../assets/contacts/viber.webp';
 import './contacts.scss';
 
 function Contacts({ scrollY, dataLang }) {
-	const { toggler } = useToggler();
-	useEffect(() => {
-		const clientHeight = document.querySelector('.mainPage').clientHeight,
-			home = document.querySelector('.home').clientHeight,
-			contacts = document.querySelector('.contacts').clientHeight;
-		const min = clientHeight - home - contacts / 2;
-
-		if (scrollY >= min) {
-			toggler('.contacts-map', 'animate__fadeOutDown', 'animate__fadeInUp');
-			toggler('.contacts-title', 'animate__zoomOut', 'animate__zoomIn');
-			toggler('.contacts-phone-element', 'animate__zoomOut', 'animate__zoomIn', true);
-		} else {
-			toggler('.contacts-map', 'animate__fadeInUp', 'animate__fadeOutDown');
-			toggler('.contacts-title', 'animate__zoomIn', 'animate__zoomOut');
-			toggler('.contacts-phone-element', 'animate__zoomIn', 'animate__zoomOut', true);
-		}
-	}, [scrollY, toggler]);
 	return (
 		<section id="contacts" className="contacts">
 			<Container className="contacts-wrapper">
