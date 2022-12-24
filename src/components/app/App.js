@@ -48,7 +48,6 @@ function App() {
 					<ErrorBoundary>
 						<Routes>
 							<Route path="/" element={<MainPage dataLang={dataLang} changePage={changePage} />} />
-
 							{slides.map((item, idx) => {
 								return (
 									<Route
@@ -64,7 +63,6 @@ function App() {
 									/>
 								);
 							})}
-
 							<Route path="*" element={<ErrorPage />} />
 						</Routes>
 					</ErrorBoundary>

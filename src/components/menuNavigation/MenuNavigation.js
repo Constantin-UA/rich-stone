@@ -110,7 +110,7 @@ function ViewNav({ dataLang, page, changePage }) {
 								return (
 									<Dropdown.Item className="menuNavigation-link" key={idx} as="li">
 										<NavLink
-											end
+											end="true"
 											to={linksNames[idx]}
 											className="menuNavigation-link animate__animated animate__fadeInDown"
 											onClick={() => changePage('main')}

@@ -82,7 +82,7 @@ function ViewNavbarMenu({ dataLang, handleClose, page }) {
 			return (
 				<Nav.Item as="li" key={idx} onClick={() => handleClose()}>
 					<NavLink
-						end
+						end="true"
 						className="offcanvas-link sliders-link animate__animated animate__zoomIn"
 						to={linksNames[idx]}
 					>

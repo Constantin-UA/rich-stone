@@ -1,6 +1,6 @@
 //Components
 import { Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 //SCSS
 import './work.scss';
@@ -21,10 +21,10 @@ function Works({ scrollY, dataLang, images, changePage }) {
 					{dataLang.sliderBtns.map((item, idx) => {
 						return (
 							<li key={idx} className="work-btn-item" onClick={() => changePage('slide')}>
-								<Link end to={linksNames[idx]}>
+								<NavLink end="true" to={linksNames[idx]}>
 									<img className="work-btn-img" src={images[idx]} alt={idx} />
 									<span className="work-btn-name">{item}</span>
-								</Link>
+								</NavLink>
 							</li>
 						);
 					})}
