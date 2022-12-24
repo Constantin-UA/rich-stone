@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Spiner from '../../spiner/Spiner';
 import Home from '../../home/Home';
 import About from '../../about/About';
+
 //data
 import { dataImg } from '../../../data';
 //CSS
@@ -13,7 +14,7 @@ const Materials = lazy(() => import('../../materials/Materials'));
 const Partnership = lazy(() => import('../../partnership/Partnership'));
 const Contacts = lazy(() => import('../../contacts/Contacts'));
 const Work = lazy(() => import('../../work/Work'));
-const MainPage = ({ dataLang }) => {
+const MainPage = ({ dataLang, changePage }) => {
 	const [scrollY, setScrollY] = useState(0);
 
 	useEffect(() => {
@@ -25,7 +26,9 @@ const MainPage = ({ dataLang }) => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
-
+	useEffect(() => {
+		changePage('main');
+	});
 	//Render MainPage
 
 	return (
@@ -53,12 +56,19 @@ const MainPage = ({ dataLang }) => {
 				<meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="theme-color" content="#ffffff" />
+
+				<title>{dataLang.title}</title>
 			</Helmet>
 			<div className="mainPage">
 				<Home scrollY={scrollY} dataLang={dataLang} />
 				<About scrollY={scrollY} dataLang={dataLang} />
 				<Suspense fallback={<Spiner />}>
-					<Work scrollY={scrollY} dataLang={dataLang} images={dataImg.images} />
+					<Work
+						scrollY={scrollY}
+						dataLang={dataLang}
+						images={dataImg.images}
+						changePage={changePage}
+					/>
 					<Partnership
 						scrollY={scrollY}
 						dataLang={dataLang}

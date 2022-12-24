@@ -6,15 +6,15 @@ $bg-color: rgb(9, 9, 9);
 //width
 $min-width-768: 98.5vw;
 
-$min-width-nav: 99.5vw;
-$min-width-home: 99.5vw;
-$min-width-about: 99.5vw;
-$min-width-work: 99.5vw;
-$min-width-partners: 99.5vw;
-$min-width-materials: 99.5vw;
-$min-width-contacts: 99.5vw;
+$min-width-nav: 100%;
+$min-width-home: 100%;
+$min-width-about: 100%;
+$min-width-work: 100%;
+$min-width-partners: 100%;
+$min-width-materials: 100%;
+$min-width-contacts: 100%;
 //heigth
-$heigth-wrapper: auto;
+$heigth-wrapper: 100%;
 $min-heigth-wrapper: 100vh;
 //section wrapper padding-top
 $wrapper-padding-top: 15vh;
@@ -29,7 +29,7 @@ $min-heigth-materials: 100vh;
 $min-heigth-contacts: 100vh;
 //heigth
 $min-heigth: 100vh;
-$min-width: 98.5vw;
+$min-width: 100vw;
 //
 //animations
 @keyframes animation-Logo {

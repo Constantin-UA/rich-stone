@@ -4,13 +4,15 @@ import matImg_1 from './assets/materials/Marmor-1-min.webp';
 import matImg_2 from './assets/materials/Aqril-1-min.webp';
 import matImg_3 from './assets/materials/Quarz-1-min.webp';
 //works
-import btn_img_1 from './assets/work/1.png';
-import btn_img_2 from './assets/work/2.png';
-import btn_img_3 from './assets/work/3.png';
-import btn_img_4 from './assets/work/4.png';
-import btn_img_5 from './assets/work/5.png';
-import btn_img_6 from './assets/work/6.png';
-import btn_img_7 from './assets/work/7.png';
+//menu
+import btn_img_1 from './assets/work/1.webp';
+import btn_img_2 from './assets/work/2.webp';
+import btn_img_3 from './assets/work/3.webp';
+import btn_img_4 from './assets/work/4.webp';
+import btn_img_5 from './assets/work/5.webp';
+import btn_img_6 from './assets/work/6.webp';
+import btn_img_7 from './assets/work/7.webp';
+////	'/countertops',
 import Desktop_1_1 from './assets/work/desktop/Desktop-1-1.webp';
 import Desktop_1_2 from './assets/work/desktop/Desktop-1-2.webp';
 import Desktop_1_3 from './assets/work/desktop/Desktop-1-3.webp';
@@ -21,7 +23,7 @@ import Desktop_1_7 from './assets/work/desktop/Desktop-1-7.webp';
 import Desktop_1_8 from './assets/work/desktop/Desktop-1-8.webp';
 import Desktop_1_9 from './assets/work/desktop/Desktop-1-9.webp';
 import Desktop_1_10 from './assets/work/desktop/Desktop-1-10.webp';
-////
+////	'/facing',
 import Desktop_2_1 from './assets/work/desktop/Desktop-2-1.webp';
 import Desktop_2_2 from './assets/work/desktop/Desktop-2-2.webp';
 import Desktop_2_3 from './assets/work/desktop/Desktop-2-3.webp';
@@ -30,7 +32,7 @@ import Desktop_2_5 from './assets/work/desktop/Desktop-2-5.webp';
 import Desktop_2_6 from './assets/work/desktop/Desktop-2-6.webp';
 import Desktop_2_7 from './assets/work/desktop/Desktop-2-7.webp';
 import Desktop_2_8 from './assets/work/desktop/Desktop-2-8.webp';
-////
+////	'/fireplaces',
 import Desktop_3_1 from './assets/work/desktop/Desktop-3-1.webp';
 import Desktop_3_2 from './assets/work/desktop/Desktop-3-2.webp';
 import Desktop_3_3 from './assets/work/desktop/Desktop-3-3.webp';
@@ -41,7 +43,7 @@ import Desktop_3_7 from './assets/work/desktop/Desktop-3-7.webp';
 import Desktop_3_8 from './assets/work/desktop/Desktop-3-8.webp';
 import Desktop_3_9 from './assets/work/desktop/Desktop-3-9.webp';
 import Desktop_3_10 from './assets/work/desktop/Desktop-3-10.webp';
-////
+////	'/pavement',
 import Desktop_4_1 from './assets/work/desktop/Desktop-4-1.webp';
 import Desktop_4_2 from './assets/work/desktop/Desktop-4-2.webp';
 import Desktop_4_3 from './assets/work/desktop/Desktop-4-3.webp';
@@ -52,14 +54,14 @@ import Desktop_4_7 from './assets/work/desktop/Desktop-4-7.webp';
 import Desktop_4_8 from './assets/work/desktop/Desktop-4-8.webp';
 import Desktop_4_9 from './assets/work/desktop/Desktop-4-9.webp';
 import Desktop_4_10 from './assets/work/desktop/Desktop-4-10.webp';
-////
+////	'/facades',
 import Desktop_5_1 from './assets/work/desktop/Desktop-5-1.webp';
 import Desktop_5_2 from './assets/work/desktop/Desktop-5-2.webp';
 import Desktop_5_3 from './assets/work/desktop/Desktop-5-3.webp';
 import Desktop_5_4 from './assets/work/desktop/Desktop-5-4.webp';
 import Desktop_5_5 from './assets/work/desktop/Desktop-5-5.webp';
 import Desktop_5_6 from './assets/work/desktop/Desktop-5-6.webp';
-//
+////	'/interior',
 import Desktop_6_1 from './assets/work/desktop/Desktop-6-1.webp';
 import Desktop_6_2 from './assets/work/desktop/Desktop-6-2.webp';
 import Desktop_6_3 from './assets/work/desktop/Desktop-6-3.webp';
@@ -68,7 +70,7 @@ import Desktop_6_5 from './assets/work/desktop/Desktop-6-5.webp';
 import Desktop_6_6 from './assets/work/desktop/Desktop-6-6.webp';
 import Desktop_6_7 from './assets/work/desktop/Desktop-6-7.webp';
 import Desktop_6_8 from './assets/work/desktop/Desktop-6-8.webp';
-//
+////'/floors',
 import Desktop_7_1 from './assets/work/desktop/Desktop-7-1.webp';
 import Desktop_7_2 from './assets/work/desktop/Desktop-7-2.webp';
 import Desktop_7_3 from './assets/work/desktop/Desktop-7-3.webp';
@@ -120,6 +122,9 @@ export const lang = {
 		},
 		menuNavText: ['Компанія', 'Наші роботи', 'Партнери', 'Матерiали', 'Контакти'],
 		menuNavHref: ['/#about', '/#work', '/#partners', '/#materials', '/#contacts'],
+		menuNavSlider: ['На головну', 'Наші роботи'],
+		title: 'Rich Stone - вироби із каменю, граніту, мармуру.',
+
 		sliderBtns: [
 			'Стільниці та підвіконня',
 			'Облицювання вхідної группи',
@@ -156,6 +161,8 @@ export const lang = {
 		},
 		menuNavText: ['Компания', 'Наши работы', 'Партнеры', 'Материалы', 'Контакты'],
 		menuNavHref: ['/#about', '/#work', '/#partners', '/#materials', '/#contacts'],
+		menuNavSlider: ['На главную', 'Наши работы'],
+		title: 'Rich Stone – изделия из камня, гранита, мрамора.',
 		sliderBtns: [
 			'Столешницы и подоконники', //(10)
 			'Облицовка входной группы', //8
@@ -172,78 +179,76 @@ export const lang = {
 
 export const dataImg = {
 	materialImg: [matImg_0, matImg_1, matImg_2, matImg_3],
-	slides: {
-		desktop: {
-			countertops: [
-				Desktop_1_1,
-				Desktop_1_2,
-				Desktop_1_3,
-				Desktop_1_4,
-				Desktop_1_5,
-				Desktop_1_6,
-				Desktop_1_7,
-				Desktop_1_8,
-				Desktop_1_9,
-				Desktop_1_10,
-			],
-			facing: [
-				Desktop_2_1,
-				Desktop_2_2,
-				Desktop_2_3,
-				Desktop_2_4,
-				Desktop_2_5,
-				Desktop_2_6,
-				Desktop_2_7,
-				Desktop_2_8,
-			],
-			fireplaces: [
-				Desktop_3_1,
-				Desktop_3_2,
-				Desktop_3_3,
-				Desktop_3_4,
-				Desktop_3_5,
-				Desktop_3_6,
-				Desktop_3_7,
-				Desktop_3_8,
-				Desktop_3_9,
-				Desktop_3_10,
-			],
-			pavement: [
-				Desktop_4_1,
-				Desktop_4_2,
-				Desktop_4_3,
-				Desktop_4_4,
-				Desktop_4_5,
-				Desktop_4_6,
-				Desktop_4_7,
-				Desktop_4_8,
-				Desktop_4_9,
-				Desktop_4_10,
-			],
-			facades: [Desktop_5_1, Desktop_5_2, Desktop_5_3, Desktop_5_4, Desktop_5_5, Desktop_5_6],
-			interior: [
-				Desktop_6_1,
-				Desktop_6_2,
-				Desktop_6_3,
-				Desktop_6_4,
-				Desktop_6_5,
-				Desktop_6_6,
-				Desktop_6_7,
-				Desktop_6_8,
-			],
-			floors: [
-				Desktop_7_1,
-				Desktop_7_2,
-				Desktop_7_3,
-				Desktop_7_4,
-				Desktop_7_5,
-				Desktop_7_6,
-				Desktop_7_7,
-				Desktop_7_8,
-				Desktop_7_9,
-			],
-		},
-	},
+	slides: [
+		[
+			Desktop_1_1,
+			Desktop_1_2,
+			Desktop_1_3,
+			Desktop_1_4,
+			Desktop_1_5,
+			Desktop_1_6,
+			Desktop_1_7,
+			Desktop_1_8,
+			Desktop_1_9,
+			Desktop_1_10,
+		],
+		[
+			Desktop_2_1,
+			Desktop_2_2,
+			Desktop_2_3,
+			Desktop_2_4,
+			Desktop_2_5,
+			Desktop_2_6,
+			Desktop_2_7,
+			Desktop_2_8,
+		],
+		[
+			Desktop_3_1,
+			Desktop_3_2,
+			Desktop_3_3,
+			Desktop_3_4,
+			Desktop_3_5,
+			Desktop_3_6,
+			Desktop_3_7,
+			Desktop_3_8,
+			Desktop_3_9,
+			Desktop_3_10,
+		],
+		[
+			Desktop_4_1,
+			Desktop_4_2,
+			Desktop_4_3,
+			Desktop_4_4,
+			Desktop_4_5,
+			Desktop_4_6,
+			Desktop_4_7,
+			Desktop_4_8,
+			Desktop_4_9,
+			Desktop_4_10,
+		],
+		[Desktop_5_1, Desktop_5_2, Desktop_5_3, Desktop_5_4, Desktop_5_5, Desktop_5_6],
+		[
+			Desktop_6_1,
+			Desktop_6_2,
+			Desktop_6_3,
+			Desktop_6_4,
+			Desktop_6_5,
+			Desktop_6_6,
+			Desktop_6_7,
+			Desktop_6_8,
+		],
+		[
+			Desktop_7_1,
+			Desktop_7_2,
+			Desktop_7_3,
+			Desktop_7_4,
+			Desktop_7_5,
+			Desktop_7_6,
+			Desktop_7_7,
+			Desktop_7_8,
+			Desktop_7_9,
+		],
+	],
 	images: [btn_img_1, btn_img_2, btn_img_3, btn_img_4, btn_img_5, btn_img_6, btn_img_7],
 	dataParntnerImg: [
 		radianz,
@@ -262,5 +267,17 @@ export const dataImg = {
 		santa,
 		caesa,
 		quartz,
+	],
+};
+
+export const dataLinks = {
+	linksNames: [
+		'/countertops',
+		'/facing',
+		'/fireplaces',
+		'/pavement',
+		'/facades',
+		'/interior',
+		'/floors',
 	],
 };

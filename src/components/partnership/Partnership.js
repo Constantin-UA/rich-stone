@@ -9,11 +9,11 @@ function Partnership({ scrollY, dataLang, dataParntnerImg }) {
 	const { toggler } = useToggler();
 	useEffect(() => {
 		const home = document.querySelector('.home').clientHeight;
-		const about = document.querySelector('.about').clientHeight;
+		const main = document.querySelector('.mainPage').clientHeight;
 		const partners = document.querySelector('.partnership').clientHeight;
 
-		const min = home + about + partners / 2;
-		const max = home + about + partners + partners / 2;
+		const max = main - home;
+		const min = max - partners * 1.5;
 
 		if (scrollY >= min && scrollY <= max) {
 			/* toggler('.partnership-box', 'animate__zoomOut', 'animate__zoomIn'); */

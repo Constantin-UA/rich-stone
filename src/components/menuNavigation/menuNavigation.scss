@@ -10,9 +10,9 @@
 	align-items: center;
 	justify-content: center;
 	z-index: 10000;
+	box-shadow: inset 0px 15px 15px rgba(249, 208, 115, 0.25);
 
 	&-wrapper {
-		box-shadow: #f9d073 3px 3px 6px 0px inset, #ffb300 -3px -3px 6px 1px inset;
 		width: 100vw;
 		height: 100%;
 		display: grid;
@@ -109,7 +109,19 @@
 		text-decoration: none;
 	}
 }
-
+.dropdown {
+	&-menu {
+		background: rgba(9, 9, 9, 0.9);
+		padding: 5px;
+	}
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+	background-color: #ffb300;
+	a {
+		-webkit-text-fill-color: #090909;
+	}
+}
 // media
 @media (max-width: 1024px) {
 	.menuNavigation {

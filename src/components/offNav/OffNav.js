@@ -1,24 +1,34 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Nav from 'react-bootstrap/Nav';
+import { NavLink } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import logo from '../../assets/logo/Frame200x201.webp';
 import instaIcon from '../../assets/contacts/instagram.webp';
 import viberIcon from '../../assets/contacts/viber.webp';
 
 import './offNav.scss';
-function OffNav({ show, setShow, dataLang, setLang }) {
+const linksNames = [
+	'/countertops',
+	'/facing',
+	'/fireplaces',
+	'/pavement',
+	'/facades',
+	'/interior',
+	'/floors',
+];
+function OffNav({ show, setShow, dataLang, setLang, dataLinks, page }) {
 	const handleClose = () => setShow(false);
 	return (
 		<Offcanvas show={show} onHide={handleClose} placement="top" scroll={true}>
 			<Offcanvas.Header closeButton>
 				<Offcanvas.Title className="offcanvas-logo-box">
-					<a href="/#home" className="offcanvas-logo">
+					<NavLink to="/#" className="offcanvas-logo" onClick={() => handleClose()}>
 						<Image
 							className="offcanvas-logo-img animate__animated animate__zoomIn"
 							src={logo}
 							alt="Rich Stone offNav logo"
 						></Image>
-					</a>
+					</NavLink>
 				</Offcanvas.Title>
 				<div className="offcanvas-lang">
 					<button className="offcanvas-lang-ua" onClick={() => setLang('UA')}>
@@ -32,18 +42,7 @@ function OffNav({ show, setShow, dataLang, setLang }) {
 			</Offcanvas.Header>
 			<Offcanvas.Body>
 				<Nav className="offcanvas-box" defaultActiveKey="1" as="ul">
-					{dataLang.menuNavText.map((item, idx) => {
-						return (
-							<Nav.Item as="li" key={idx} onClick={() => handleClose()}>
-								<Nav.Link
-									className="offcanvas-link animate__animated animate__zoomIn"
-									href={dataLang.menuNavHref[idx]}
-								>
-									{item}
-								</Nav.Link>
-							</Nav.Item>
-						);
-					})}
+					{<ViewNavbarMenu dataLang={dataLang} handleClose={handleClose} page={page} />}
 				</Nav>
 				<div className="offcanvas-phone-box">
 					<div className="offcanvas-phone-wrapper">
@@ -63,5 +62,37 @@ function OffNav({ show, setShow, dataLang, setLang }) {
 			</Offcanvas.Body>
 		</Offcanvas>
 	);
+}
+function ViewNavbarMenu({ dataLang, handleClose, page }) {
+	if (page === 'main') {
+		return dataLang.menuNavText.map((item, idx) => {
+			return (
+				<Nav.Item as="li" key={idx} onClick={() => handleClose()}>
+					<Nav.Link
+						className="offcanvas-link animate__animated animate__zoomIn"
+						href={dataLang.menuNavHref[idx]}
+					>
+						{item}
+					</Nav.Link>
+				</Nav.Item>
+			);
+		});
+	} else {
+		return dataLang.sliderBtns.map((item, idx) => {
+			return (
+				<Nav.Item as="li" key={idx} onClick={() => handleClose()}>
+					<NavLink
+						end
+						className="offcanvas-link sliders-link animate__animated animate__zoomIn"
+						to={linksNames[idx]}
+					>
+						{item}
+					</NavLink>
+				</Nav.Item>
+			);
+		});
+	}
+	/*
+	 */
 }
 export default OffNav;

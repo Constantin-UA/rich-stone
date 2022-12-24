@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useToggler } from '../hook/useToggler.hook';
 
-import Desktop from '../../assets/about/Desktop-bg1.png';
-import Mobile from '../../assets/about/Mobile-bg1.png';
-import Tablet from '../../assets/about/Tablet-bg1.png';
+import Desktop from '../../assets/about/Desktop-bg1.webp';
+import Mobile from '../../assets/about/Mobile-bg1.webp';
+import Tablet from '../../assets/about/Tablet-bg1.webp';
 import './about.scss';
 
 function About({ scrollY, dataLang }) {
@@ -12,8 +12,9 @@ function About({ scrollY, dataLang }) {
 	const { aboutData } = dataLang;
 
 	useEffect(() => {
-		const about = document.querySelector('.home').clientHeight;
-		const min = about / 2;
+		const about = document.querySelector('.about').clientHeight;
+		const home = document.querySelector('.home').clientHeight;
+		const min = home / 2;
 		const max = about + about / 2;
 
 		if (scrollY >= min && scrollY <= max) {

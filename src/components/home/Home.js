@@ -8,11 +8,11 @@ import logoR_M from '../../assets/logo/R_100x140_Mobile.webp';
 import logoS_D from '../../assets/logo/S_115x160_Desktop.webp';
 import logoS_M from '../../assets/logo/S_100x140_Mobile.webp';
 //desktop bg
-import bgD1 from '../../assets/home/Desktop-1.webp';
+import bgD1 from '../../assets/home/Desktop.webp';
 //tablet bg
-import bgT1 from '../../assets/home/Tablet-1.webp';
+import bgT1 from '../../assets/home/Tablet.webp';
 //mobile bg
-import bgM1 from '../../assets/home/Mobile-1.webp';
+import bgM1 from '../../assets/home/Mobile.webp';
 
 import './home.scss';
 
