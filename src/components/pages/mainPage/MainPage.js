@@ -1,22 +1,23 @@
 //import component
-import { useEffect, useState, lazy, Suspense } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import Spiner from '../../spiner/Spiner';
 import Home from '../../home/Home';
 import About from '../../about/About';
-
+import Work from '../../work/Work';
+import Materials from '../../materials/Materials';
+import Partnership from '../../partnership/Partnership';
+import Contacts from '../../contacts/Contacts';
 //data
 import { dataImg } from '../../../data';
 //CSS
 import './mainPage.scss';
 
-const Materials = lazy(() => import('../../materials/Materials'));
-const Partnership = lazy(() => import('../../partnership/Partnership'));
-const Contacts = lazy(() => import('../../contacts/Contacts'));
-const Work = lazy(() => import('../../work/Work'));
 const MainPage = ({ dataLang, changePage }) => {
 	const [scrollY, setScrollY] = useState(0);
-
+	useEffect(() => {
+		changePage('main');
+	});
 	useEffect(() => {
 		const handleScroll = (event) => {
 			setScrollY(window.scrollY);
@@ -26,9 +27,7 @@ const MainPage = ({ dataLang, changePage }) => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
-	useEffect(() => {
-		changePage('main');
-	});
+
 	//Render MainPage
 
 	return (
@@ -63,17 +62,13 @@ const MainPage = ({ dataLang, changePage }) => {
 				<Home scrollY={scrollY} dataLang={dataLang} />
 				<About scrollY={scrollY} dataLang={dataLang} />
 				<Suspense fallback={<Spiner />}>
-					<Work
-						scrollY={scrollY}
-						dataLang={dataLang}
-						images={dataImg.images}
-						changePage={changePage}
-					/>
+					<Work scrollY={scrollY} dataLang={dataLang} images={dataImg.images} />
 					<Partnership
 						scrollY={scrollY}
 						dataLang={dataLang}
 						dataParntnerImg={dataImg.dataParntnerImg}
 					/>
+					<Materials scrollY={scrollY} dataLang={dataLang} materialImg={dataImg.materialImg} />
 					<Contacts scrollY={scrollY} dataLang={dataLang} />
 				</Suspense>
 			</div>
@@ -82,4 +77,4 @@ const MainPage = ({ dataLang, changePage }) => {
 };
 
 export default MainPage;
-/* <Materials scrollY={scrollY} dataLang={dataLang} materialImg={dataImg.materialImg} /> */
+/*  */

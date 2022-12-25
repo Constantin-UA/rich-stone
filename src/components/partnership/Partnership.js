@@ -8,18 +8,16 @@ import './partnership.scss';
 function Partnership({ scrollY, dataLang, dataParntnerImg }) {
 	const { toggler } = useToggler();
 	useEffect(() => {
-		const home = document.querySelector('.home').clientHeight;
-		const main = document.querySelector('.mainPage').clientHeight;
+		const about = document.querySelector('.about').clientHeight;
+		const work = document.querySelector('.work').clientHeight;
 		const partners = document.querySelector('.partnership').clientHeight;
-
-		const max = main - home;
-		const min = max - partners * 1.5;
-
+		const min = about + work;
+		const max = min + partners + partners / 2;
 		if (scrollY >= min && scrollY <= max) {
-			/* toggler('.partnership-box', 'animate__zoomOut', 'animate__zoomIn'); */
+			toggler('.partnership-box', 'animate__zoomOut', 'animate__zoomIn');
 			toggler('.partnership-icon', 'animate__zoomOut', 'animate__zoomIn', true);
 		} else {
-			/* 			toggler('.partnership-box', 'animate__zoomIn', 'animate__zoomOut'); */
+			toggler('.partnership-box', 'animate__zoomIn', 'animate__zoomOut');
 			toggler('.partnership-icon', 'animate__zoomIn', 'animate__zoomOut', true);
 		}
 	}, [scrollY, toggler]);

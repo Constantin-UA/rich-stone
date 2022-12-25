@@ -2,12 +2,10 @@
 
 .contacts {
 	position: relative;
-	overflow: hidden;
 	min-width: $min-width;
 	min-height: $min-heigth;
 	&-wrapper {
 		padding-top: $wrapper-padding-top;
-		transition: all 1s ease-in-out;
 		min-height: $min-heigth-wrapper;
 		height: $heigth-wrapper;
 		position: relative;
@@ -59,11 +57,16 @@
 		text-decoration: none;
 		padding: 5px;
 		border-radius: 10px;
+		text-align: center;
 	}
 	&-map {
 		width: 59vw;
 		height: 100%;
 		overflow: hidden;
+	}
+	&-map-wrapper {
+		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -74,12 +77,10 @@
 			padding-left: 0;
 			padding-right: 0;
 			position: relative;
-			display: flex;
 			width: 100%;
-			flex-direction: column;
-			justify-content: space-between;
+			grid-template: 1fr 1fr/1fr;
+			justify-content: center;
 			align-items: center;
-			overflow: hidden;
 		}
 		&-box {
 			width: 100%;
@@ -127,12 +128,10 @@
 			margin-top: 0px;
 			opacity: 1;
 		}
-		&-wrapper {
-			overflow: auto;
-		}
 		&-map {
+			overflow: hidden;
 			width: 100%;
-			height: 100vh;
+			height: 100%;
 		}
 	}
 }

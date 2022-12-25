@@ -41,8 +41,10 @@ function Contacts({ scrollY, dataLang }) {
 						</div>
 					</div>
 				</div>
-				<div className="contacts-map animate__animated">
-					<MapComponent />
+				<div className="contacts-map">
+					<div className="contacts-map-wrapper">
+						<MapComponent />
+					</div>
 				</div>
 			</Container>
 		</section>

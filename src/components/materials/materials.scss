@@ -1,14 +1,15 @@
 @import '../../style/variables';
 .materials {
 	position: relative;
-	overflow: auto;
+	overflow: hidden;
 	min-width: $min-width;
 	min-height: $min-heigth;
 	&-wrapper {
 		padding-top: $wrapper-padding-top;
+		padding-bottom: 15vh;
 		height: $heigth-wrapper;
 		min-height: $min-heigth-wrapper;
-		width: 100vw;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -16,49 +17,36 @@
 	}
 	&-box {
 		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		overflow: auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 300px);
+		grid-template-rows: auto;
+		justify-items: center;
+		justify-content: center;
 		align-items: center;
-		justify-content: space-evenly;
-		column-gap: 10px;
+		align-content: center;
+		gap: 25px;
 	}
 	&-box::-webkit-scrollbar {
 		width: 0;
 	}
 	&-item {
-		border-radius: 10px;
+		transition: all 0.5s ease;
+		box-shadow: 0px 0px 15px #f9d073, inset 0px 0px 150px #f9d073;
 		cursor: pointer;
-		transition: all 0.5s ease-in-out;
-		border: 1px solid #000;
-		box-shadow: 0px 0px 5px 0px #ffb300;
+		border-radius: 5px;
+		overflow: hidden;
 	}
 	&-item:hover {
-		box-shadow: 0 0 5px 2px #f9d073;
+		box-shadow: 0px 0px 25px #f9d073, inset 0px 0px 50px #f9d073;
+		.card-wrapper {
+			background: rgba(9, 9, 9, 0.2);
+		}
 	}
 }
 
 // media
-@media (max-width: 1025px) {
-	.materials {
-		&-box {
-			width: 80%;
-		}
-	}
-}
+
 @media (max-width: 768px) {
 	.materials {
-		&-box {
-			width: 100%;
-			row-gap: 10px;
-		}
-	}
-}
-
-@media (max-width: 376px) {
-	.materials {
-		&-box {
-			row-gap: 10px;
-		}
 	}
 }

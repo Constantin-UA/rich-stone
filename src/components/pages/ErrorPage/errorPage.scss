@@ -25,4 +25,10 @@
 		top: 0;
 		z-index: -1;
 	}
+	&-link {
+		font-size: 28px;
+		font-weight: bold;
+		text-decoration: none;
+		color: red;
+	}
 }

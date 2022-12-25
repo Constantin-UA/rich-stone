@@ -4,9 +4,13 @@ import { useToggler } from '../hook/useToggler.hook';
 
 //logo
 import logoR_D from '../../assets/logo/R_115x160_Desktop.webp';
-import logoR_M from '../../assets/logo/R_100x140_Mobile.webp';
+import logoR_T from '../../assets/logo/R_100x140_Mobile.webp';
+import logoR_M from '../../assets/logo/R64x88.webp';
+
 import logoS_D from '../../assets/logo/S_115x160_Desktop.webp';
-import logoS_M from '../../assets/logo/S_100x140_Mobile.webp';
+import logoS_T from '../../assets/logo/S_100x140_Mobile.webp';
+import logoS_M from '../../assets/logo/S64x88.webp';
+
 //desktop bg
 import bgD1 from '../../assets/home/Desktop.webp';
 //tablet bg
@@ -40,13 +44,18 @@ function Home({ dataLang, scrollY }) {
 				<div className="home-logo-box animate__animated">
 					<div className="home-logo-R">
 						<picture>
+							<source media="(max-height: 426px)" srcSet={logoR_M} />
 							<source media="(max-width: 426px)" srcSet={logoR_M} />
+							<source media="(max-width: 768px)" srcSet={logoR_T} />
+
 							<img className="home-logo-R-img animate__animated" src={logoR_D} alt="Rich logo R" />
 						</picture>
 					</div>
 					<div className="home-logo-S">
 						<picture>
+							<source media="(max-height: 425px)" srcSet={logoS_M} />
 							<source media="(max-width: 425px)" srcSet={logoS_M} />
+							<source media="(max-width: 768px)" srcSet={logoS_T} />
 							<img className="home-logo-S-img animate__animated" src={logoS_D} alt="Stone logo S" />
 						</picture>
 					</div>

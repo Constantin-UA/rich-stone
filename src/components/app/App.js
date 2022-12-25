@@ -4,7 +4,7 @@ import Spiner from '../spiner/Spiner';
 import ErrorBoundary from '../errorBoundary/errorBoundary';
 import OffNav from '../offNav/OffNav';
 import MenuNavigation from '../menuNavigation/MenuNavigation';
-import { lang, dataImg, dataLinks } from '../../data';
+import { lang, dataLinks } from '../../data';
 import './app.scss';
 const MainPage = lazy(() => import('../pages/mainPage/MainPage'));
 const SliderPage = lazy(() => import('../pages/sliderPage/SliderPage'));
@@ -18,17 +18,17 @@ function App() {
 		if (code === 'UA') setData(ua);
 		if (code === 'RU') setData(ru);
 	};
-	const { slides } = dataImg;
 	const { linksNames } = dataLinks;
 	const [page, setPage] = useState('main');
 	const changePage = (elem) => {
 		setPage(elem);
 	};
+
 	return (
 		<Router>
 			<main className="app">
-				<Suspense fallback={<Spiner />}>
-					<ErrorBoundary>
+				<ErrorBoundary>
+					<Suspense fallback={<Spiner />}>
 						<OffNav
 							show={show}
 							setShow={setShow}
@@ -44,32 +44,29 @@ function App() {
 							page={page}
 							changePage={changePage}
 						/>
-					</ErrorBoundary>
-					<ErrorBoundary>
 						<Routes>
 							<Route path="/" element={<MainPage dataLang={dataLang} changePage={changePage} />} />
-							{slides.map((item, idx) => {
+							{linksNames.map((item, idx) => {
 								return (
 									<Route
-										path={linksNames[idx]}
+										path={item}
 										element={
-											<SliderPage
-												slides={dataImg.slides[idx]}
-												title={dataLang.sliderBtns[idx]}
-												changePage={changePage}
-											/>
+											<SliderPage indexPage={idx} changePage={changePage} dataLang={dataLang} />
 										}
 										key={idx}
 									/>
 								);
 							})}
-							<Route path="*" element={<ErrorPage />} />
+							<Route path="/*" element={<ErrorPage />} />
 						</Routes>
-					</ErrorBoundary>
-				</Suspense>
+					</Suspense>
+				</ErrorBoundary>
 			</main>
 		</Router>
 	);
 }
 
 export default App;
+/* 
+				
+*/
