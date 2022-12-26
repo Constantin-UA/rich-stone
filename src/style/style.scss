@@ -9,6 +9,7 @@
 * {
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 h1,
 h2,
@@ -40,4 +41,10 @@ body {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+}
+@if $dark-theme {
+	$yellow: #c0c0c0;
+	$yellow-second: #2523a0;
+	$bg-color: rgb(9, 9, 9);
+	$bg-color-second: rgb(20, 20, 20);
 }

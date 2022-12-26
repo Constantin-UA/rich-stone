@@ -3,14 +3,14 @@
 .menuNavigation {
 	position: fixed;
 	height: $min-heigth-nav;
-	background-color: rgba(9, 9, 9, 0.9);
+	background-color: rgba($bg-color, 0.9);
 	width: $min-width-nav;
 	top: 0px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: 10000;
-	box-shadow: inset 0px 15px 15px rgba(249, 208, 115, 0.25);
+	box-shadow: inset 0px 15px 15px rgba($yellow, 0.25);
 
 	&-wrapper {
 		width: 100vw;
@@ -37,12 +37,12 @@
 			height: 120px;
 		}
 		&-wrapper:hover {
-			box-shadow: 0px 0px 5px 1px hsl(42, 92%, 71%);
+			box-shadow: 0px 0px 5px 1px $yellow;
 		}
 	}
 	&-logo:hover {
 		color: hsla(0, 0%, 100%, 0.8);
-		text-shadow: 0px 0px 1px #f9d073;
+		text-shadow: 0px 0px 1px $yellow;
 	}
 	&-lang {
 		display: flex;
@@ -57,12 +57,12 @@
 			font-size: 14px;
 			background-color: unset;
 			border: unset;
-			color: #f9d073;
+			color: $yellow;
 			padding: 2px;
 		}
 		&-line {
 			font-size: 14px;
-			color: #f9d073;
+			color: $yellow;
 		}
 	}
 	&-box {
@@ -71,8 +71,8 @@
 		width: 100%;
 		a {
 			font-size: 22px;
-			color: #f9d073;
-			background: linear-gradient(90deg, #f9d073, #ffb300);
+			color: $yellow;
+			background: linear-gradient(135deg, $yellow, $yellow-second);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			padding: 0px 20px 0px 0px;
@@ -80,7 +80,7 @@
 		}
 		a:hover {
 			color: hsla(0, 0%, 100%, 0.8);
-			text-shadow: 0px 0px 1px #f9d073;
+			text-shadow: 0px 0px 1px $yellow;
 		}
 	}
 	&-phone-box {
@@ -103,8 +103,8 @@
 	}
 	&-phone {
 		font-size: 16px;
-		color: #f9d073;
-		background: linear-gradient(90deg, #f9d073, #ffb300);
+		color: $yellow;
+		background: linear-gradient(135deg, $yellow, $yellow-second);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 
@@ -113,15 +113,15 @@
 }
 .dropdown {
 	&-menu {
-		background: rgba(9, 9, 9, 0.9);
+		background: rgba($bg-color, 0.9);
 		padding: 5px;
 	}
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
-	background-color: #ffb300;
+	background-color: $yellow-second;
 	a {
-		-webkit-text-fill-color: #090909;
+		-webkit-text-fill-color: $bg-color;
 	}
 }
 .nav-item {

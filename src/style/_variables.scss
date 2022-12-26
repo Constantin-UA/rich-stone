@@ -1,8 +1,12 @@
-$yellow: #f9d073;
-$yellow-second: #ffb300;
-$white-opacity: #ffffffcc;
-$bg-color: rgb(9, 9, 9);
-
+/* $yellow: #f9d073 !default;
+$yellow-second: #ffb300 !default;
+$bg-color: rgb(9, 9, 9) !default;
+$bg-color-second: rgb(20, 20, 20) !default; */
+$yellow: rgb(249, 208, 115) !default;
+$yellow-second: #ffb300 !default;
+$bg-color: rgb(9, 9, 9) !default;
+$bg-color-second: rgb(20, 20, 20) !default;
+$dark-theme: true !default;
 //width
 $min-width-768: 98.5vw;
 
@@ -14,7 +18,7 @@ $min-width-partners: 100%;
 $min-width-materials: 100%;
 $min-width-contacts: 100%;
 //heigth
-$heigth-wrapper: 100%;
+$heigth-wrapper: fit-content; //100%
 $min-heigth-wrapper: 100vh;
 //section wrapper padding-top
 $wrapper-padding-top: 15vh;

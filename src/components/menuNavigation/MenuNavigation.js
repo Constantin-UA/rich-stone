@@ -6,16 +6,9 @@ import logoS from '../../assets/logo/Frame200x201.webp';
 import instaIcon from '../../assets/contacts/instagram.webp';
 import emailIcon from '../../assets/contacts/email.webp';
 import viberIcon from '../../assets/contacts/viber.webp';
+import { dataLinks } from '../../data';
 import './menuNavigation.scss';
-const linksNames = [
-	'/countertops',
-	'/facing',
-	'/fireplaces',
-	'/pavement',
-	'/facades',
-	'/interior',
-	'/floors',
-];
+
 function MenuNavigation({ show, dataLang, setLang, page, changePage }) {
 	const onClick = (e) => {
 		if (document.querySelector('.menuNavigation').offsetWidth < 769) {
@@ -111,7 +104,7 @@ function ViewNav({ dataLang, page, changePage }) {
 									<Dropdown.Item className="menuNavigation-link" key={idx} as="li">
 										<NavLink
 											end="true"
-											to={linksNames[idx]}
+											to={dataLinks.linksNames[idx]}
 											className="menuNavigation-link animate__animated animate__fadeInDown"
 											onClick={() => changePage('main')}
 											style={({ isActive }) => ({
@@ -130,36 +123,5 @@ function ViewNav({ dataLang, page, changePage }) {
 		);
 	}
 }
-/* 
-    <Dropdown>
 
-
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-*/
 export default MenuNavigation;
-/* 
-  <Nav>
-            <NavDropdown
-              id="nav-dropdown-dark-example"
-              title="Dropdown"
-              menuVariant="dark"
-            >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-
-
-
-*/

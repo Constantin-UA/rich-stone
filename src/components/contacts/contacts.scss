@@ -24,8 +24,8 @@
 	&-title {
 		animation-delay: 1s;
 		font-size: 60px;
-		color: #f9d073;
-		background: linear-gradient(90deg, #f9d073, #ffb300);
+		color: $yellow;
+		background: linear-gradient(135deg, $yellow, $yellow-second);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		margin-bottom: 30px;
@@ -46,6 +46,10 @@
 		justify-content: flex-start;
 		column-gap: 15px;
 		cursor: pointer;
+		color: $yellow;
+		background: linear-gradient(90deg, $yellow, $yellow-second);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 	&-icon {
 		width: 45px;
@@ -53,11 +57,14 @@
 	}
 	&-phone {
 		font-size: 24px;
-		color: hsla(0, 0%, 100%, 0.9);
 		text-decoration: none;
 		padding: 5px;
 		border-radius: 10px;
 		text-align: center;
+		color: $yellow;
+		background: linear-gradient(90deg, $yellow, $yellow-second);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
 	&-map {
 		width: 59vw;
@@ -81,6 +88,8 @@
 			grid-template: 1fr 1fr/1fr;
 			justify-content: center;
 			align-items: center;
+			overflow: hidden;
+			height: 100vh;
 		}
 		&-box {
 			width: 100%;
@@ -109,6 +118,7 @@
 		&-map {
 			width: 100%;
 			height: 100%;
+			overflow: hidden;
 		}
 	}
 }
@@ -116,6 +126,9 @@
 	.contacts {
 		height: 100vh;
 		overflow: hidden;
+		&-phone {
+			font-size: 20px;
+		}
 		&-phone-box {
 			width: 100%;
 			flex-wrap: wrap;
@@ -123,15 +136,21 @@
 			justify-content: space-evenly;
 		}
 		&-title {
-			font-size: 48px;
+			font-size: 38px;
 			margin-bottom: 0px;
 			margin-top: 0px;
 			opacity: 1;
 		}
 		&-map {
-			overflow: hidden;
 			width: 100%;
 			height: 100%;
+		}
+	}
+}
+@media (max-height: 575px) {
+	.contacts {
+		&-map {
+			display: none;
 		}
 	}
 }

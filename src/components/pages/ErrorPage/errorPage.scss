@@ -1,3 +1,4 @@
+@import '../../../style/variables';
 .errorPage {
 	display: flex;
 	align-items: center;
@@ -9,14 +10,14 @@
 		font-size: 80px;
 		line-height: 70px;
 		font-weight: bold;
-		color: hsla(0, 0%, 0%, 0.9);
-		text-shadow: 0px 0px 3px hsla(0, 0%, 0%, 0.9);
+		color: rgba($bg-color, 0.9);
+		text-shadow: 0px 0px 3px rgba($bg-color, 0.9);
 	}
 	&-text {
 		font-size: 28px;
 		line-height: 30px;
 		color: hsla(0, 0%, 0%, 0.9);
-		text-shadow: 0px 0px 3px hsla(0, 0%, 0%, 0.9);
+		text-shadow: 0px 0px 3px rgba($bg-color, 0.9);
 	}
 	&-img {
 		width: 100%;
@@ -29,6 +30,6 @@
 		font-size: 28px;
 		font-weight: bold;
 		text-decoration: none;
-		color: red;
+		color: $yellow-second;
 	}
 }

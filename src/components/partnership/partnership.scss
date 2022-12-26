@@ -5,6 +5,7 @@
 	overflow: hidden;
 	min-width: $min-width;
 	min-height: $min-heigth;
+
 	background-image: url('../../assets/partner/bg.webp');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -36,7 +37,7 @@
 		background-color: hsl(0, 0%, 98%);
 		max-width: 800px;
 		height: fit-content;
-		max-height: 100vh;
+		max-height: 600px;
 		border-radius: 10px;
 		padding: 15px;
 		position: relative;
@@ -46,7 +47,7 @@
 		justify-content: space-around;
 		gap: 10px;
 		overflow: auto;
-		box-shadow: 0px 0px 15px #f9d073, inset 0px 0px 150px #f9d073;
+		box-shadow: 0px 0px 15px $yellow, inset 0px 0px 50px $yellow;
 	}
 	&-icon {
 		display: grid;
@@ -73,12 +74,19 @@
 @media (max-width: 425px) {
 	.partnership {
 		&-box {
-			padding: 0;
+			padding: 5px;
 			gap: 5px;
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: space-around;
+		}
+	}
+}
+@media (max-width: 375px) {
+	.partnership {
+		&-box {
+			max-height: fit-content;
 		}
 	}
 }

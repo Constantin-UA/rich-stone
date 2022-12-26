@@ -7,15 +7,7 @@ import instaIcon from '../../assets/contacts/instagram.webp';
 import viberIcon from '../../assets/contacts/viber.webp';
 
 import './offNav.scss';
-const linksNames = [
-	'/countertops',
-	'/facing',
-	'/fireplaces',
-	'/pavement',
-	'/facades',
-	'/interior',
-	'/floors',
-];
+
 function OffNav({ show, setShow, dataLang, setLang, dataLinks, page }) {
 	const handleClose = () => setShow(false);
 	return (
@@ -42,7 +34,14 @@ function OffNav({ show, setShow, dataLang, setLang, dataLinks, page }) {
 			</Offcanvas.Header>
 			<Offcanvas.Body>
 				<Nav className="offcanvas-box" defaultActiveKey="1" as="ul">
-					{<ViewNavbarMenu dataLang={dataLang} handleClose={handleClose} page={page} />}
+					{
+						<ViewNavbarMenu
+							dataLang={dataLang}
+							handleClose={handleClose}
+							page={page}
+							dataLinks={dataLinks}
+						/>
+					}
 				</Nav>
 				<div className="offcanvas-phone-box">
 					<div className="offcanvas-phone-wrapper">
@@ -63,7 +62,7 @@ function OffNav({ show, setShow, dataLang, setLang, dataLinks, page }) {
 		</Offcanvas>
 	);
 }
-function ViewNavbarMenu({ dataLang, handleClose, page }) {
+function ViewNavbarMenu({ dataLang, handleClose, page, dataLinks }) {
 	if (page === 'main') {
 		return dataLang.menuNavText.map((item, idx) => {
 			return (
@@ -84,7 +83,7 @@ function ViewNavbarMenu({ dataLang, handleClose, page }) {
 					<NavLink
 						end="true"
 						className="offcanvas-link sliders-link animate__animated animate__zoomIn"
-						to={linksNames[idx]}
+						to={dataLinks.linksNames[idx]}
 					>
 						{item}
 					</NavLink>

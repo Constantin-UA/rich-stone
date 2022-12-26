@@ -63,8 +63,10 @@
 		font-size: 42px;
 		font-weight: bold;
 		padding: 10px;
-		color: #fccf66;
-		text-shadow: 1px 1px 15px #ffb300;
+		cursor: none;
+		color: #090909;
+		text-shadow: $yellow 1px 1px 15px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	}
 }
 
@@ -79,7 +81,7 @@
 		&-text {
 			font-size: 34px;
 			width: 300px;
-			text-shadow: 1px 1px 15px #000;
+
 			p {
 				margin: 0;
 			}

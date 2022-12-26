@@ -39,7 +39,6 @@ import Desktop_3_3 from './assets/work/desktop/Desktop-3-3.webp';
 import Desktop_3_4 from './assets/work/desktop/Desktop-3-4.webp';
 import Desktop_3_5 from './assets/work/desktop/Desktop-3-5.webp';
 import Desktop_3_6 from './assets/work/desktop/Desktop-3-6.webp';
-import Desktop_3_7 from './assets/work/desktop/Desktop-3-7.webp';
 import Desktop_3_8 from './assets/work/desktop/Desktop-3-8.webp';
 import Desktop_3_9 from './assets/work/desktop/Desktop-3-9.webp';
 import Desktop_3_10 from './assets/work/desktop/Desktop-3-10.webp';
@@ -90,7 +89,7 @@ import hanex from './assets/partner/hanex.webp';
 import hanstone from './assets/partner/hanstone.webp';
 import himacs from './assets/partner/himacs.webp';
 import neomarm from './assets/partner/neomarm.webp';
-import quartz from './assets/partner/quartz.webp';
+
 import santa from './assets/partner/santa.webp';
 import silestone from './assets/partner/silestone.webp';
 import staron from './assets/partner/staron.webp';
@@ -209,7 +208,6 @@ export const dataImg = {
 			Desktop_3_4,
 			Desktop_3_5,
 			Desktop_3_6,
-			Desktop_3_7,
 			Desktop_3_8,
 			Desktop_3_9,
 			Desktop_3_10,
@@ -266,7 +264,6 @@ export const dataImg = {
 		staron,
 		santa,
 		caesa,
-		quartz,
 	],
 };
 

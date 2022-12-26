@@ -12,7 +12,7 @@ function Materials({ scrollY, dataLang, materialImg }) {
 		const clientHeight = document.querySelector('.mainPage').clientHeight;
 		const home = document.querySelector('.home').clientHeight;
 		const mater = document.querySelector('.materials').clientHeight;
-		const min = clientHeight - home - mater;
+		const min = clientHeight - home - mater - mater / 2;
 
 		if (scrollY >= min) {
 			//	toggler('.materials-box', 'animate__zoomOut', 'animate__zoomIn');

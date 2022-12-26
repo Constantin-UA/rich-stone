@@ -77,4 +77,3 @@ const MainPage = ({ dataLang, changePage }) => {
 };
 
 export default MainPage;
-/*  */

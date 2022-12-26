@@ -1,6 +1,6 @@
 @import '../../style/variables';
 
-.card {
+.materialCard {
 	width: 300px;
 	height: 80vh;
 	position: relative;
@@ -21,7 +21,7 @@
 		font-size: 32px;
 		padding: 0px;
 		color: $yellow;
-		background: linear-gradient(90deg, $yellow, $yellow-second);
+		background: linear-gradient(135deg, $yellow, $yellow-second);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		margin-bottom: 0px;
@@ -30,8 +30,8 @@
 		transition: all 0.5s ease;
 		width: 100%;
 		z-index: 1;
-		background: rgba(9, 9, 9, 0.5);
-		box-shadow: 0px 0px 15px #f9d073, inset 0px 0px 50px #f9d073;
+		background: rgba($bg-color, 0.5);
+		box-shadow: 0px 0px 15px $yellow, inset 0px 0px 50px $yellow;
 		padding: 20px 10px 20px 10px;
 	}
 }

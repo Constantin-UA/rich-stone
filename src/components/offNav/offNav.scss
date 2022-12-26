@@ -1,12 +1,13 @@
 @import url('bootstrap/dist/css/bootstrap.min.css');
+@import '../../style/variables';
 
 // mine
 .offcanvas {
 	z-index: 10000;
 	--bs-offcanvas-height: 100vh;
-	background: rgba(9, 9, 9, 0.8);
-	box-shadow: 0px 0px 15px #f9d073, inset 0px 0px 150px #f9d073;
-	transition: all 1s ease-in-out;
+	background: rgba($bg-color, 0.8);
+	box-shadow: 0px 0px 15px $yellow, inset 0px 0px 150px $yellow;
+	transition: all 0.5s ease-in-out;
 
 	&-box {
 		display: flex;
@@ -38,7 +39,7 @@
 			transform: translate(-50%, -10%);
 			width: 90px;
 			height: 90px;
-			animation: 10s ease-in-out 1s infinite normal animation-offNavLogo;
+			animation: 10s ease-in-out 1s infinite normal animation-navLogo;
 		}
 		&-img {
 			width: 100%;
@@ -47,20 +48,20 @@
 	}
 	&-logo:hover {
 		color: hsla(0, 0%, 100%, 0.8);
-		text-shadow: 0px 0px 1px #f9d073;
+		text-shadow: 0px 0px 1px $yellow;
 	}
 	&-link {
 		font-size: 24px;
 		font-weight: bold;
-		color: #f9d073;
-		background: linear-gradient(135deg, #f9d073, #ffb300);
+		color: $yellow;
+		background: linear-gradient(135deg, $yellow, $yellow-second);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		padding: 10px;
 	}
 	&-link:hover {
 		color: hsla(0, 0%, 100%, 0.8);
-		text-shadow: 0px 0px 1px #f9d073;
+		text-shadow: 0px 0px 1px $yellow;
 	}
 	&-lang {
 		display: flex;
@@ -70,13 +71,13 @@
 		&-ru {
 			background-color: unset;
 			border: unset;
-			color: hsl(0, 0%, 4%);
+			color: $bg-color;
 			padding: 5px;
 			font-size: 16px;
 		}
 		&-line {
 			font-size: 16px;
-			color: hsl(0, 0%, 4%);
+			color: $bg-color;
 		}
 	}
 	&-phone-box {
@@ -101,8 +102,8 @@
 	}
 	&-phone {
 		font-size: 18px;
-		color: #f9d073;
-		background: linear-gradient(135deg, #f9d073, #ffb300);
+		color: $yellow;
+		background: linear-gradient(135deg, $yellow, $yellow-second);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		text-decoration: none;
@@ -111,17 +112,6 @@
 .sliders-link {
 	font-size: 18px;
 	text-align: center;
-}
-@keyframes animation-offNavLogo {
-	from {
-		box-shadow: 0 0 1px 1px #f9d073;
-	}
-	50% {
-		box-shadow: 0 0 10px 1px #f9d073;
-	}
-	to {
-		box-shadow: 0 0 1px 1px #f9d073;
-	}
 }
 @media (max-width: 425px) {
 	.sliders-link {
