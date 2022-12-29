@@ -65,11 +65,13 @@
 			color: $yellow;
 		}
 	}
+
 	&-box {
 		flex-wrap: nowrap;
 		justify-content: space-evenly;
 		width: 100%;
 		a {
+			display: block;
 			font-size: 22px;
 			color: $yellow;
 			background: linear-gradient(135deg, $yellow, $yellow-second);
@@ -85,21 +87,31 @@
 	}
 	&-phone-box {
 		display: grid;
-		grid-template: 1fr 1fr 1fr / 1fr;
+		grid-template: 1fr / 10% 90%;
 		height: 100%;
 		max-height: 80px;
 		width: 100%;
 		align-items: center;
 		justify-items: start;
-		padding: 5px 0px 5px 10px;
+		column-gap: 5px;
 	}
-	&-phone-wrapper {
+	&-phone-left {
 		display: flex;
-		column-gap: 10px;
+		flex-direction: column;
+		gap: 5px;
+		align-items: center;
+		justify-content: center;
+	}
+	&-phone-right {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		align-items: center;
+		justify-content: center;
 	}
 	&-icon {
-		width: 20px;
-		height: 20px;
+		width: 15px;
+		height: 15px;
 	}
 	&-phone {
 		font-size: 16px;
@@ -180,7 +192,34 @@
 @media (max-width: 525px) {
 	.menuNavigation {
 		&-phone-box {
-			display: none;
+			padding: 5px 5px 5px 5px;
+		}
+		&-phone {
+			font-size: 14px;
+		}
+	}
+}
+@media (max-width: 375px) {
+	.menuNavigation {
+		&-phone-box {
+			grid-template: 80% 20% / 100%;
+			max-height: 100%;
+		}
+		&-phone-left {
+			flex-direction: row;
+			width: 100%;
+		}
+		&-phone-right {
+			grid-row-start: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 0px;
+			height: fit-content;
+			align-items: center;
+			justify-content: center;
+		}
+		&-phone {
+			font-size: 12px;
 		}
 	}
 }

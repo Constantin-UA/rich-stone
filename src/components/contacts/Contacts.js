@@ -3,8 +3,8 @@ import MapComponent from '../mapComponent/MapComponent';
 import adresIcon from '../../assets/contacts/adres.webp';
 import instaIcon from '../../assets/contacts/instagram.webp';
 import emailIcon from '../../assets/contacts/email.webp';
-import telegaIcon from '../../assets/contacts/telegram.webp';
 import viberIcon from '../../assets/contacts/viber.webp';
+import telegramIcon from '../../assets/contacts/telegram.webp';
 import './contacts.scss';
 
 function Contacts({ scrollY, dataLang }) {
@@ -15,20 +15,17 @@ function Contacts({ scrollY, dataLang }) {
 					<h4 className="contacts-title animate__animated">{dataLang.contactsText}</h4>
 					<div className="contacts-phone-box">
 						<div className="contacts-phone-element animate__animated">
-							<Image className="contacts-icon" src={telegaIcon} alt="icon" />
-							<div className="contacts-phone">+380508000840</div>
-						</div>
-						<div className="contacts-phone-element animate__animated">
 							<Image className="contacts-icon" src={viberIcon} alt="icon" />
-							<div className="contacts-phone">+380508000840</div>
+							<Image className="contacts-icon" src={telegramIcon} alt="icon" />
+
+							<a href="tel:+380508000840" className="contacts-phone">
+								+380508000840
+							</a>
 						</div>
 						<div className="contacts-phone-element animate__animated">
 							<Image className="contacts-icon" src={instaIcon} alt="icon" />
-							<a
-								href="https://instagram.com/stone__dnepr?igshid=YmMyMTA2M2Y="
-								className="contacts-phone"
-							>
-								@stone_dnepr
+							<a href="https://www.instagram.com/r.i.c.h_s.t.o.n.e/" className="contacts-phone">
+								@r.i.c.h_s.t.o.n.e
 							</a>
 						</div>
 						<div className="contacts-phone-element animate__animated">

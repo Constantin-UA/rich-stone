@@ -123,10 +123,20 @@
 	.home {
 		&-logo {
 			&-box {
-				position: absolute;
-				opacity: 1;
+				background-image: url('../../assets/logo/Frame120x200.webp');
+				height: 200px;
+				width: 120px;
+			}
+			&-R,
+			&-S {
+				width: 64px;
+				height: 88px;
 			}
 		}
+	}
+}
+@media (max-height: 501px) {
+	.home {
 		&-text {
 			display: none;
 		}
@@ -136,6 +146,9 @@
 	.home {
 		&-wrapper {
 			padding-top: 0;
+		}
+		&-text {
+			display: none;
 		}
 		&-logo {
 			&-box {

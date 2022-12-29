@@ -6,6 +6,7 @@ import logoS from '../../assets/logo/Frame200x201.webp';
 import instaIcon from '../../assets/contacts/instagram.webp';
 import emailIcon from '../../assets/contacts/email.webp';
 import viberIcon from '../../assets/contacts/viber.webp';
+import telegramIcon from '../../assets/contacts/telegram.webp';
 import { dataLinks } from '../../data';
 import './menuNavigation.scss';
 
@@ -34,21 +35,19 @@ function MenuNavigation({ show, dataLang, setLang, page, changePage }) {
 				</div>
 				<ViewNav dataLang={dataLang} page={page} changePage={changePage} />
 				<div className="menuNavigation-phone-box">
-					<div className="menuNavigation-phone-wrapper">
+					<div className="menuNavigation-phone-left">
 						<img className="menuNavigation-icon" src={viberIcon} alt="icon" />
-						<div className="menuNavigation-phone">+380508000840</div>
-					</div>
-					<div className="menuNavigation-phone-wrapper">
+						<img className="menuNavigation-icon" src={telegramIcon} alt="icon" />
 						<img className="menuNavigation-icon" src={instaIcon} alt="icon" />
-						<a
-							href="https://instagram.com/stone__dnepr?igshid=YmMyMTA2M2Y="
-							className="menuNavigation-phone"
-						>
-							@stone_dnepr
-						</a>
-					</div>
-					<div className="menuNavigation-phone-wrapper">
 						<img className="menuNavigation-icon" src={emailIcon} alt="icon" />
+					</div>
+					<div className="menuNavigation-phone-right">
+						<a href="tel:+380508000840" className="menuNavigation-phone">
+							+380508000840
+						</a>
+						<a href="https://www.instagram.com/r.i.c.h_s.t.o.n.e/" className="menuNavigation-phone">
+							@r.i.c.h_s.t.o.n.e
+						</a>
 						<div className="menuNavigation-phone">richstone@i.ua</div>
 					</div>
 				</div>
@@ -101,7 +100,7 @@ function ViewNav({ dataLang, page, changePage }) {
 						<Dropdown.Menu as="ul">
 							{dataLang.sliderBtns.map((item, idx) => {
 								return (
-									<Dropdown.Item className="menuNavigation-link" key={idx} as="li">
+									<Dropdown.Item className="menuNavigation-drop-link" key={idx} as="li">
 										<NavLink
 											end="true"
 											to={dataLinks.linksNames[idx]}
@@ -125,3 +124,4 @@ function ViewNav({ dataLang, page, changePage }) {
 }
 
 export default MenuNavigation;
+/* 	<div className="menuNavigation-phone-wrapper"> */

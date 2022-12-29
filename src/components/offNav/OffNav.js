@@ -46,15 +46,14 @@ function OffNav({ show, setShow, dataLang, setLang, dataLinks, page }) {
 				<div className="offcanvas-phone-box">
 					<div className="offcanvas-phone-wrapper">
 						<img className="offcanvas-icon" src={viberIcon} alt="icon" />
-						<div className="offcanvas-phone">+380508000840</div>
+						<a href="tel:+380508000840" className="offcanvas-phone">
+							+380508000840
+						</a>
 					</div>
 					<div className="offcanvas-phone-wrapper">
 						<img className="offcanvas-icon" src={instaIcon} alt="icon" />
-						<a
-							href="https://instagram.com/stone__dnepr?igshid=YmMyMTA2M2Y="
-							className="offcanvas-phone"
-						>
-							@stone_dnepr
+						<a href="https://www.instagram.com/r.i.c.h_s.t.o.n.e/" className="offcanvas-phone">
+							@r.i.c.h_s.t.o.n.e
 						</a>
 					</div>
 				</div>

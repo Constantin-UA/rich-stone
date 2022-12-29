@@ -2,6 +2,7 @@ import { Container } from 'react-bootstrap';
 import { useEffect } from 'react';
 import MaterialCard from '../materialCard/MaterialCard';
 import { useToggler } from '../hook/useToggler.hook';
+
 //scss imports
 import './materials.scss';
 
@@ -22,18 +23,23 @@ function Materials({ scrollY, dataLang, materialImg }) {
 			toggler('.materials-item', 'animate__fadeInRight', 'animate__fadeOutRight', true);
 		}
 	}, [scrollY, toggler]);
+
 	return (
 		<section id="materials" className="materials">
 			<Container className="materials-wrapper">
-				<div className="materials-box animate__animated">
+				<ul className="materials-box animate__animated">
 					{materialImg.map((elem, idx) => {
 						return (
-							<div className="materials-item animate__animated" key={idx}>
-								<MaterialCard cardImg={elem} cardTitle={dataLang.materialData.dataTitle[idx]} />
-							</div>
+							<li className="materials-item animate__animated" key={idx}>
+								<MaterialCard
+									cardImg={elem}
+									cardTitle={dataLang.materialData.dataTitle[idx]}
+									cardDescription={dataLang.materialData.dataDescription[idx]}
+								/>
+							</li>
 						);
 					})}
-				</div>
+				</ul>
 			</Container>
 		</section>
 	);

@@ -1,8 +1,10 @@
 //materials
-import matImg_0 from './assets/materials/Granit-1-min.webp';
-import matImg_1 from './assets/materials/Marmor-1-min.webp';
-import matImg_2 from './assets/materials/Aqril-1-min.webp';
-import matImg_3 from './assets/materials/Quarz-1-min.webp';
+import matImg_0 from './assets/materials/1.webp';
+import matImg_1 from './assets/materials/2.webp';
+import matImg_2 from './assets/materials/3.webp';
+import matImg_3 from './assets/materials/4.webp';
+import matImg_4 from './assets/materials/5.webp';
+import matImg_5 from './assets/materials/6.webp';
 //works
 //menu
 import btn_img_1 from './assets/work/1.webp';
@@ -11,7 +13,6 @@ import btn_img_3 from './assets/work/3.webp';
 import btn_img_4 from './assets/work/4.webp';
 import btn_img_5 from './assets/work/5.webp';
 import btn_img_6 from './assets/work/6.webp';
-import btn_img_7 from './assets/work/7.webp';
 ////	'/countertops',
 import Desktop_1_1 from './assets/work/desktop/Desktop-1-1.webp';
 import Desktop_1_2 from './assets/work/desktop/Desktop-1-2.webp';
@@ -42,24 +43,17 @@ import Desktop_3_6 from './assets/work/desktop/Desktop-3-6.webp';
 import Desktop_3_8 from './assets/work/desktop/Desktop-3-8.webp';
 import Desktop_3_9 from './assets/work/desktop/Desktop-3-9.webp';
 import Desktop_3_10 from './assets/work/desktop/Desktop-3-10.webp';
-////	'/pavement',
+////	'/pavement and /facades',
 import Desktop_4_1 from './assets/work/desktop/Desktop-4-1.webp';
 import Desktop_4_2 from './assets/work/desktop/Desktop-4-2.webp';
 import Desktop_4_3 from './assets/work/desktop/Desktop-4-3.webp';
 import Desktop_4_4 from './assets/work/desktop/Desktop-4-4.webp';
 import Desktop_4_5 from './assets/work/desktop/Desktop-4-5.webp';
-import Desktop_4_6 from './assets/work/desktop/Desktop-4-6.webp';
-import Desktop_4_7 from './assets/work/desktop/Desktop-4-7.webp';
-import Desktop_4_8 from './assets/work/desktop/Desktop-4-8.webp';
-import Desktop_4_9 from './assets/work/desktop/Desktop-4-9.webp';
-import Desktop_4_10 from './assets/work/desktop/Desktop-4-10.webp';
-////	'/facades',
 import Desktop_5_1 from './assets/work/desktop/Desktop-5-1.webp';
 import Desktop_5_2 from './assets/work/desktop/Desktop-5-2.webp';
 import Desktop_5_3 from './assets/work/desktop/Desktop-5-3.webp';
 import Desktop_5_4 from './assets/work/desktop/Desktop-5-4.webp';
 import Desktop_5_5 from './assets/work/desktop/Desktop-5-5.webp';
-import Desktop_5_6 from './assets/work/desktop/Desktop-5-6.webp';
 ////	'/interior',
 import Desktop_6_1 from './assets/work/desktop/Desktop-6-1.webp';
 import Desktop_6_2 from './assets/work/desktop/Desktop-6-2.webp';
@@ -106,7 +100,7 @@ export const lang = {
 				title:
 					'Компанія Rich Stone вже понад 10 років надає послуги з виготовлення та монтажу виробів з натурального та штучного каменю.',
 				subtitle:
-					'У нас Ви знайдете кращі зразки виробів із каменю для дому, офісу, торгівельного центру чи магазину.',
+					'Запрошуємо до нашого шоурум, де Ви знайдете найкращі зразки каменю для дому, офісу, торгового центру чи магазину.',
 				descrTitle: 'ПРОПОНУЄМО:',
 				descrText: [
 					'- Кухонні стільниці з натурального каменю',
@@ -117,7 +111,16 @@ export const lang = {
 			},
 		},
 		materialData: {
-			dataTitle: ['Граніт', 'Мармур', 'Акрил', 'Кварц'],
+			dataTitle: ['Граніт', 'Мармур', 'Акрил', 'Кварц', 'Широкоформатна кераміка', 'Травертин'],
+			dataDescription: [
+				'Цей матеріал відрізняється високою стійкістю до тертя, стиснення та стирання. Це дуже щільний (2,6-2,7 т/м3) та міцний камінь (його міцність при стисканні – 90-250 МПа – удвічі більше, ніж у мармуру). Стійкість до впливу атмосферних явищ та кислот. Граніт - ідеальний камінь для зовнішнього оздоблення будівель.',
+				"Натуральний мармур – це природний та екологічний мінерал, який відрізняється довговічністю, унікальним та неповторним малюнком, фактурою, гарною переносимістю високих та низьких температур, їх різких перепадів. Він універсальний, оскільки використовується для виготовлення різного декору, прикрас, предметів меблів, фасадів, інтер'єрів.",
+				'Штучний (або акриловий) камінь – це міцний матеріал, що імітує текстуру і якості натурального каменю, деякі з яких акриловий аналог перевершує. Він складається з акрилових смол, тригідрату алюмінію, який видобувається з білої глини, і гігієнічних барвників. Матеріал був винайдений в 60-х роках 20 століття американською хімічною компанією DuPont – вона і наразі є одним з найбільших виробників акрилового каменю.',
+				'Кварцовий агломерат (на 95% натуральний камінь) майже за всіма параметрами перевершує акрил (штучний камінь). Він надійніший, міцніший, стійкіший до зовнішніх впливів, екологічніший. При цьому вироби з кварцу важчі та дорожчі, але це не мінуси, а лише особливості матеріалу.',
+				`Кераміка - це особливо міцний облицювальний матеріал екстра-класу, який роблять із різних сумішей мелених гірських порід (кварц, шпат) на основі глин високої якості та природних мінеральних барвників.
+				Широкоформатна кераміка випускається форматом 3000*1000 або 3240*1620 мм та товщиною всього від 3 до 20 мм.`,
+				'Це полікристалічна, міцна, тонкозерниста гомогенна гірська порода. Для травертину характерна пориста будова, ніздрюватість, невелика твердість (не залишає подряпин на склі), світле забарвлення (білий, сірий, жовтуватий, бурий), реакція при дії розбавленої соляної кислоти. Відрізняється малою густиною(від 1800 до 2500 кг / м³).',
+			],
 		},
 		menuNavText: ['Компанія', 'Наші роботи', 'Партнери', 'Матерiали', 'Контакти'],
 		menuNavHref: ['/#about', '/#work', '/#partners', '/#materials', '/#contacts'],
@@ -128,8 +131,7 @@ export const lang = {
 			'Стільниці та підвіконня',
 			'Облицювання вхідної группи',
 			'Каміни та барбекю',
-			'Бруківка',
-			'Облицювання фасадів',
+			'Облицювання фасадів та бруківка',
 			'Оздоблення внутрішніх стін',
 			'Облицювання внутрішніх сходів та підлог',
 		],
@@ -145,7 +147,7 @@ export const lang = {
 				title:
 					'Компания Rich Stone уже более 10 лет предоставляет услуги по производству и монтажу изделий из натурального и искусственного камня.',
 				subtitle:
-					'У нас Вы найдете лучшие образцы камня для дома, офиса, торгового центра или магазина.',
+					'Приглашаем в наш шоурум, где Вы найдете лучшие образцы камня для дома, офиса, торгового центра или магазина.',
 				descrTitle: 'ПРЕДЛАГАЕМ:',
 				descrText: [
 					'- Кухонные столешницы из натурального камня',
@@ -156,7 +158,16 @@ export const lang = {
 			},
 		},
 		materialData: {
-			dataTitle: ['Гранит', 'Мрамор', 'Акрил', 'Кварц'],
+			dataTitle: ['Гранит', 'Мрамор', 'Акрил', 'Кварц', 'Широкоформатная керамика', 'Травертин'],
+			dataDescription: [
+				'Этот материал отличается высокой устойчивостью к трению, сжатию и истиранию. Это очень плотный (2,6-2,7 т/м3) и прочный камень (его прочность при сжатии — 90-250 МПа — вдвое больше,чем у мрамора). Устойчивость к воздействию атмосферных явлений и кислот. Гранит — идеальный камень для наружной отделки зданий.',
+				'Натуральный мрамор – это природный и экологичный минерал, отличающийся долговечностью, уникальным и неповторимым рисунком, фактурой, хорошей переносимостью высоких и низких температур, их резких перепадов. Он универсален, без использования для изготовления разного декора, украшений, предметов мебели, фасадов, интерьеров.',
+				'Искусственный (или акриловый) камень – это крепкий материал, имитирующий текстуру и качества натурального камня, некоторые из которых акриловый аналог превосходит. Он состоит из акриловых смол, извлекаемого из белой глины тригидрата алюминия и гигиенических красителей. Материал был изобретен в 60-х годах 20 века американской химической компанией DuPont – она и сейчас является одним из крупнейших производителей акрилового камня.',
+				'Кварцевый агломерат (на 95% натуральный камень) практически по всем параметрам превосходит акрил (искусственный камень). Он надежнее, прочнее, устойчивее к внешним воздействиям, экологичнее. При этом изделия из кварца тяжелее и дороже, но это не минусы, а лишь особенности материала.',
+				`Керамика — это особо прочный облицовочный материал экстра-класса, который делают из различных смесей молотых горных пород (кварц, шпат) на основе глин высокого качества и естественных минеральных красителей.  
+				Широкоформатная керамика выпускается форматом 3000*1000 или 3240*1620 мм и толщиной всего от 3 до 20 мм.`,
+				'Это поликристаллическая, крепкая, тонкозернистая гомогенная горная порода. Для травертина характерна пористое строение, ячеистость, небольшая жесткость (не оставляет царапин на стекле), светлая окраска (белый, серый, желтоватый, бурый), реакция при действии разбавленной соляной кислоты. Отличается малой густотой (от 1800 до 2500 кг/м³).',
+			],
 		},
 		menuNavText: ['Компания', 'Наши работы', 'Партнеры', 'Материалы', 'Контакты'],
 		menuNavHref: ['/#about', '/#work', '/#partners', '/#materials', '/#contacts'],
@@ -166,8 +177,7 @@ export const lang = {
 			'Столешницы и подоконники', //(10)
 			'Облицовка входной группы', //8
 			'Камины и барбекю', //10
-			'Брусчатка', //10
-			'Облицовка фасадов', //6
+			'Облицовка фасадов и брусчатка', //10
 			'Отделка внутренних стен', //8
 			'Облицовка внутренних лестниц и полов', //10
 		],
@@ -175,79 +185,79 @@ export const lang = {
 		contactsAdres: 'Днепр, ул. Береговая 135',
 	},
 };
-
-export const dataImg = {
-	materialImg: [matImg_0, matImg_1, matImg_2, matImg_3],
-	slides: [
-		[
-			Desktop_1_1,
-			Desktop_1_2,
-			Desktop_1_3,
-			Desktop_1_4,
-			Desktop_1_5,
-			Desktop_1_6,
-			Desktop_1_7,
-			Desktop_1_8,
-			Desktop_1_9,
-			Desktop_1_10,
-		],
-		[
-			Desktop_2_1,
-			Desktop_2_2,
-			Desktop_2_3,
-			Desktop_2_4,
-			Desktop_2_5,
-			Desktop_2_6,
-			Desktop_2_7,
-			Desktop_2_8,
-		],
-		[
-			Desktop_3_1,
-			Desktop_3_2,
-			Desktop_3_3,
-			Desktop_3_4,
-			Desktop_3_5,
-			Desktop_3_6,
-			Desktop_3_8,
-			Desktop_3_9,
-			Desktop_3_10,
-		],
-		[
-			Desktop_4_1,
-			Desktop_4_2,
-			Desktop_4_3,
-			Desktop_4_4,
-			Desktop_4_5,
-			Desktop_4_6,
-			Desktop_4_7,
-			Desktop_4_8,
-			Desktop_4_9,
-			Desktop_4_10,
-		],
-		[Desktop_5_1, Desktop_5_2, Desktop_5_3, Desktop_5_4, Desktop_5_5, Desktop_5_6],
-		[
-			Desktop_6_1,
-			Desktop_6_2,
-			Desktop_6_3,
-			Desktop_6_4,
-			Desktop_6_5,
-			Desktop_6_6,
-			Desktop_6_7,
-			Desktop_6_8,
-		],
-		[
-			Desktop_7_1,
-			Desktop_7_2,
-			Desktop_7_3,
-			Desktop_7_4,
-			Desktop_7_5,
-			Desktop_7_6,
-			Desktop_7_7,
-			Desktop_7_8,
-			Desktop_7_9,
-		],
+export const slides = [
+	[
+		Desktop_1_1,
+		Desktop_1_2,
+		Desktop_1_3,
+		Desktop_1_4,
+		Desktop_1_5,
+		Desktop_1_6,
+		Desktop_1_7,
+		Desktop_1_8,
+		Desktop_1_9,
+		Desktop_1_10,
 	],
-	images: [btn_img_1, btn_img_2, btn_img_3, btn_img_4, btn_img_5, btn_img_6, btn_img_7],
+	[
+		Desktop_2_1,
+		Desktop_2_2,
+		Desktop_2_3,
+		Desktop_2_4,
+		Desktop_2_5,
+		Desktop_2_6,
+		Desktop_2_7,
+		Desktop_2_8,
+	],
+	[
+		Desktop_3_1,
+		Desktop_3_2,
+		Desktop_3_3,
+		Desktop_3_4,
+		Desktop_3_5,
+		Desktop_3_6,
+		Desktop_3_8,
+		Desktop_3_9,
+		Desktop_3_10,
+	],
+	[
+		Desktop_4_1,
+		Desktop_4_2,
+		Desktop_4_3,
+		Desktop_4_4,
+		Desktop_4_5,
+		Desktop_5_1,
+		Desktop_5_2,
+		Desktop_5_3,
+		Desktop_5_4,
+		Desktop_5_5,
+	],
+
+	[
+		Desktop_6_1,
+		Desktop_6_2,
+		Desktop_6_3,
+		Desktop_6_4,
+		Desktop_6_5,
+		Desktop_6_6,
+		Desktop_6_7,
+		Desktop_6_8,
+	],
+	[
+		Desktop_7_1,
+		Desktop_7_2,
+		Desktop_7_3,
+		Desktop_7_4,
+		Desktop_7_5,
+		Desktop_7_6,
+		Desktop_7_7,
+		Desktop_7_8,
+		Desktop_7_9,
+	],
+];
+export const dataImg = {
+	materialImg: [matImg_0, matImg_1, matImg_2, matImg_3, matImg_4, matImg_5],
+
+	images: [btn_img_1, btn_img_2, btn_img_3, btn_img_4, btn_img_5, btn_img_6],
 	dataParntnerImg: [
 		radianz,
 		hanex,
@@ -268,13 +278,5 @@ export const dataImg = {
 };
 
 export const dataLinks = {
-	linksNames: [
-		'/countertops',
-		'/facing',
-		'/fireplaces',
-		'/pavement',
-		'/facades',
-		'/interior',
-		'/floors',
-	],
+	linksNames: ['/countertops', '/facing', '/fireplaces', '/facades', '/interior', '/floors'],
 };

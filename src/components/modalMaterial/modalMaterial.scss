@@ -1,0 +1,89 @@
+@import '../../style/variables';
+
+.modal-content {
+	background-color: rgba($bg-color, 0.8) !important;
+	padding: 30px !important;
+	box-shadow: 0px 0px 15px $yellow, inset 0px 0px 50px $yellow;
+}
+.modal-title {
+	/* 	width: 100% !important; */
+	text-align: center !important;
+	font-size: 24px !important;
+	font-weight: bold !important;
+	color: $yellow !important;
+	background: linear-gradient(135deg, $yellow, $yellow-second) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+}
+.modal-body {
+	font-size: calc(1rem + 0.3vw) !important;
+	font-weight: normal !important;
+	color: $yellow;
+	background: linear-gradient(135deg, $yellow, $yellow-second);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.btn-close {
+	color: $yellow-second !important;
+	background: transparent url('../../assets/materials/closeBtn.svg') center/1em auto no-repeat !important;
+}
+.btn-close:focus {
+	box-shadow: 0 0 0 0.25rem rgba($yellow-second, 1) !important;
+}
+/* 
+.modalMaterial {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba($bg-color, 0.8);
+	display: flex;
+	 	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	&-wrapper {
+		width: 500px;
+		height: 500px;
+		background-color: #fff;
+		padding: 30px;
+		border-radius: 10px;
+		box-shadow: 0px 0px 15px $yellow, inset 0px 0px 50px $yellow;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&-close {
+		font-size: 30px;
+		font-weight: bold;
+		position: absolute;
+		top: 15px;
+		right: 25px;
+		cursor: pointer;
+	}
+	&-title {
+		font-size: 24px;
+		font-weight: bold;
+		color: $yellow;
+		background: linear-gradient(135deg, $yellow, $yellow-second);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	&-descr {
+		font-size: 22px;
+		font-weight: normal;
+		color: $yellow;
+		background: linear-gradient(135deg, $yellow, $yellow-second);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+.showMod {
+	display: flex;
+}
+
+*/
