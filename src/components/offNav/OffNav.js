@@ -14,7 +14,14 @@ function OffNav({ show, setShow, dataLang, setLang, dataLinks, page }) {
 		<Offcanvas show={show} onHide={handleClose} placement="top" scroll={true}>
 			<Offcanvas.Header closeButton>
 				<Offcanvas.Title className="offcanvas-logo-box">
-					<NavLink to="/#" className="offcanvas-logo" onClick={() => handleClose()}>
+					<NavLink
+						to="/#home"
+						className="offcanvas-logo"
+						onClick={() => {
+							handleClose();
+							window.scrollTo(0, 0);
+						}}
+					>
 						<Image
 							className="offcanvas-logo-img animate__animated animate__zoomIn"
 							src={logo}

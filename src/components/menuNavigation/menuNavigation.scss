@@ -69,7 +69,6 @@
 	&-box {
 		flex-wrap: nowrap;
 		justify-content: space-evenly;
-		width: 100%;
 		a {
 			display: block;
 			font-size: 22px;
@@ -86,6 +85,9 @@
 		}
 	}
 	&-phone-box {
+		display: block;
+	}
+	&-phone-wrapper {
 		display: grid;
 		grid-template: 1fr / 10% 90%;
 		height: 100%;
@@ -191,7 +193,7 @@
 
 @media (max-width: 525px) {
 	.menuNavigation {
-		&-phone-box {
+		&-phone-wrapper {
 			padding: 5px 5px 5px 5px;
 		}
 		&-phone {
@@ -201,7 +203,7 @@
 }
 @media (max-width: 375px) {
 	.menuNavigation {
-		&-phone-box {
+		&-phone-wrapper {
 			grid-template: 80% 20% / 100%;
 			max-height: 100%;
 		}

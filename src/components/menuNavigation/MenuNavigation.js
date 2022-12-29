@@ -35,20 +35,25 @@ function MenuNavigation({ show, dataLang, setLang, page, changePage }) {
 				</div>
 				<ViewNav dataLang={dataLang} page={page} changePage={changePage} />
 				<div className="menuNavigation-phone-box">
-					<div className="menuNavigation-phone-left">
-						<img className="menuNavigation-icon" src={viberIcon} alt="icon" />
-						<img className="menuNavigation-icon" src={telegramIcon} alt="icon" />
-						<img className="menuNavigation-icon" src={instaIcon} alt="icon" />
-						<img className="menuNavigation-icon" src={emailIcon} alt="icon" />
-					</div>
-					<div className="menuNavigation-phone-right">
-						<a href="tel:+380508000840" className="menuNavigation-phone">
-							+380508000840
-						</a>
-						<a href="https://www.instagram.com/r.i.c.h_s.t.o.n.e/" className="menuNavigation-phone">
-							@r.i.c.h_s.t.o.n.e
-						</a>
-						<div className="menuNavigation-phone">richstone@i.ua</div>
+					<div className="menuNavigation-phone-wrapper">
+						<div className="menuNavigation-phone-left">
+							<img className="menuNavigation-icon" src={viberIcon} alt="icon" />
+							<img className="menuNavigation-icon" src={telegramIcon} alt="icon" />
+							<img className="menuNavigation-icon" src={instaIcon} alt="icon" />
+							<img className="menuNavigation-icon" src={emailIcon} alt="icon" />
+						</div>
+						<div className="menuNavigation-phone-right">
+							<a href="tel:+380508000840" className="menuNavigation-phone">
+								+380508000840
+							</a>
+							<a
+								href="https://www.instagram.com/r.i.c.h_s.t.o.n.e/"
+								className="menuNavigation-phone"
+							>
+								@r.i.c.h_s.t.o.n.e
+							</a>
+							<div className="menuNavigation-phone">richstone@i.ua</div>
+						</div>
 					</div>
 				</div>
 				<div className="menuNavigation-lang">
