@@ -5,6 +5,7 @@ import ErrorBoundary from '../errorBoundary/errorBoundary';
 import OffNav from '../offNav/OffNav';
 import MenuNavigation from '../menuNavigation/MenuNavigation';
 import { lang, dataLinks } from '../../data';
+import KosLogo from '../../assets/logo/KonstantinLogo.webp';
 import './app.scss';
 const MainPage = lazy(() => import('../pages/mainPage/MainPage'));
 const SliderPage = lazy(() => import('../pages/sliderPage/SliderPage'));
@@ -61,6 +62,7 @@ function App() {
 						</Routes>
 					</Suspense>
 				</ErrorBoundary>
+				<img src={KosLogo} alt="Konstantin logo" className="logo-kos" />
 			</main>
 		</Router>
 	);
