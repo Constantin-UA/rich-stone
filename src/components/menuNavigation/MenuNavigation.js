@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { NavLink } from 'react-router-dom';
@@ -18,6 +19,13 @@ function MenuNavigation({ show, dataLang, setLang, page, changePage }) {
 			window.scrollTo(0, 0);
 		}
 	};
+	const viewNav = useCallback(() => {
+		if (page === 'main') {
+			return <MaineComp dataLang={dataLang} />;
+		} else {
+			return <SliderComp dataLang={dataLang} changePage={changePage} />;
+		}
+	}, [page, dataLang, changePage]);
 	return (
 		<header className="menuNavigation animate__animated animate__fadeInDown">
 			<div className="menuNavigation-wrapper">
@@ -33,7 +41,7 @@ function MenuNavigation({ show, dataLang, setLang, page, changePage }) {
 						</picture>
 					</div>
 				</div>
-				<ViewNav dataLang={dataLang} page={page} changePage={changePage} />
+				{viewNav()}
 				<div className="menuNavigation-phone-box">
 					<div className="menuNavigation-phone-wrapper">
 						<div className="menuNavigation-phone-left">
@@ -69,64 +77,62 @@ function MenuNavigation({ show, dataLang, setLang, page, changePage }) {
 		</header>
 	);
 }
-
-function ViewNav({ dataLang, page, changePage }) {
-	if (page === 'main') {
-		return (
-			<Nav className="menuNavigation-box" defaultActiveKey="1" as="ul">
-				{dataLang.menuNavText.map((item, idx) => {
-					return (
-						<Nav.Item as="li" key={idx}>
-							<Nav.Link
-								className="menuNavigation-link animate__animated animate__fadeInDown"
-								href={dataLang.menuNavHref[idx]}
-							>
-								{item}
-							</Nav.Link>
-						</Nav.Item>
-					);
-				})}
-			</Nav>
-		);
-	} else {
-		return (
-			<Nav className="menuNavigation-box" defaultActiveKey="1">
-				<Nav.Item onClick={() => changePage('main')}>
-					<NavLink to="/" className="menuNavigation-link animate__animated animate__fadeInDown">
-						{dataLang.menuNavSlider[0]}
-					</NavLink>
-				</Nav.Item>
-				<Nav.Item>
-					<Dropdown>
-						<Dropdown.Toggle variant="outline-warning" id="dropdown-basic">
-							{dataLang.menuNavSlider[1]}
-						</Dropdown.Toggle>
-
-						<Dropdown.Menu as="ul">
-							{dataLang.sliderBtns.map((item, idx) => {
-								return (
-									<Dropdown.Item className="menuNavigation-drop-link" key={idx} as="li">
-										<NavLink
-											end="true"
-											to={dataLinks.linksNames[idx]}
-											className="menuNavigation-link animate__animated animate__fadeInDown"
-											onClick={() => changePage('main')}
-											style={({ isActive }) => ({
-												WebkitTextFillColor: isActive ? '#fff' : 'transparent',
-											})}
-										>
-											{item}
-										</NavLink>
-									</Dropdown.Item>
-								);
-							})}
-						</Dropdown.Menu>
-					</Dropdown>
-				</Nav.Item>
-			</Nav>
-		);
-	}
+function MaineComp({ dataLang }) {
+	return (
+		<Nav className="menuNavigation-box" defaultActiveKey="1" as="ul">
+			{dataLang.menuNavText.map((item, idx) => {
+				return (
+					<Nav.Item as="li" key={idx}>
+						<Nav.Link
+							className="menuNavigation-link animate__animated animate__fadeInDown"
+							href={dataLang.menuNavHref[idx]}
+						>
+							{item}
+						</Nav.Link>
+					</Nav.Item>
+				);
+			})}
+		</Nav>
+	);
 }
 
+function SliderComp({ dataLang, changePage }) {
+	return (
+		<Nav className="menuNavigation-box" defaultActiveKey="1">
+			<Nav.Item onClick={() => changePage('main')}>
+				<NavLink to="/" className="menuNavigation-link animate__animated animate__fadeInDown">
+					{dataLang.menuNavSlider[0]}
+				</NavLink>
+			</Nav.Item>
+			<Nav.Item>
+				<Dropdown>
+					<Dropdown.Toggle variant="outline-warning" id="dropdown-basic">
+						{dataLang.menuNavSlider[1]}
+					</Dropdown.Toggle>
+
+					<Dropdown.Menu as="ul">
+						{dataLang.sliderBtns.map((item, idx) => {
+							return (
+								<Dropdown.Item className="menuNavigation-drop-link" key={idx} as="li">
+									<NavLink
+										end="true"
+										to={dataLinks.linksNames[idx]}
+										className="menuNavigation-link animate__animated animate__fadeInDown"
+										onClick={() => changePage('main')}
+										style={({ isActive }) => ({
+											WebkitTextFillColor: isActive ? '#fff' : 'transparent',
+										})}
+									>
+										{item}
+									</NavLink>
+								</Dropdown.Item>
+							);
+						})}
+					</Dropdown.Menu>
+				</Dropdown>
+			</Nav.Item>
+		</Nav>
+	);
+}
 export default MenuNavigation;
 /* 	<div className="menuNavigation-phone-wrapper"> */

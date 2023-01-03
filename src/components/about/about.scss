@@ -36,25 +36,27 @@
 	&-title,
 	&-subtitle {
 		&-box {
-			border-radius: 15%;
+			/* 			border-radius: 75px;
 			overflow: hidden;
 			width: fit-content;
 			height: 100%;
-			display: flex;
 			flex-direction: column;
-			text-align: center;
 			justify-content: center;
 			align-items: center;
 			background: rgba($bg-color, 0.8);
 			box-shadow: 0px 0px 15px $yellow, inset 0px 0px 150px $yellow;
-			padding: 20px 10px 20px 10px;
+			padding: 20px 10px 20px 10px; */
+			border-radius: 0.5rem;
+
+			text-align: center;
+			display: block;
+			background-color: rgba($bg-color, 0.8);
+			padding: 60px;
+			box-shadow: 0px 0px 15px $yellow, inset 0px 0px 50px $yellow;
 		}
 		&-wrapper {
-			width: 80%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
+			width: 100%;
+			display: block;
 		}
 		&-title,
 		&-subtitle {
@@ -81,28 +83,19 @@
 	}
 	&-descr {
 		&-box {
+			border-radius: 0.5rem;
 			animation-delay: 0.2s;
 			grid-row: 2/3;
 			grid-column: 2/5;
-			border-radius: 15%;
-			overflow: hidden;
-			width: fit-content;
-			height: fit-content;
-			display: flex;
-			flex-direction: column;
+			display: block;
 			text-align: center;
-			justify-content: center;
-			align-items: center;
-			background: rgba($bg-color, 0.8);
-			box-shadow: 0px 0px 15px $yellow, inset 0px 0px 150px $yellow;
-			padding: 20px 10px 20px 10px;
+			background-color: rgba($bg-color, 0.8);
+			padding: 60px;
+			box-shadow: 0px 0px 15px $yellow, inset 0px 0px 50px $yellow;
 		}
 		&-wrapper {
-			width: 80%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
+			width: 100%;
+			display: block;
 		}
 		&-title {
 			align-items: center;
