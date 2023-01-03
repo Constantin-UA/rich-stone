@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Container } from 'react-bootstrap';
 import { useToggler } from '../hook/useToggler.hook';
 
 import Desktop from '../../assets/about/Desktop-bg1.webp';
@@ -38,7 +37,7 @@ function About({ scrollY, dataLang }) {
 				<img className="about-bg" src={Desktop} alt="background sters work" />
 			</picture>
 
-			<Container className="about-wrapper">
+			<div className="about-wrapper">
 				<div className="about-title-box animate__animated">
 					<div className="about-title-wrapper">
 						<h2 className="about-title-title">{aboutData.text.title}</h2>
@@ -60,7 +59,7 @@ function About({ scrollY, dataLang }) {
 						</ul>
 					</div>
 				</div>
-			</Container>
+			</div>
 		</section>
 	);
 }

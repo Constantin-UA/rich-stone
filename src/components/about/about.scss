@@ -21,7 +21,8 @@
 	}
 	&-wrapper {
 		padding-top: $wrapper-padding-top;
-		padding-bottom: 10vh;
+		padding-left: 2rem;
+		padding-right: 2rem;
 		height: $heigth-wrapper;
 		width: 100%;
 		display: grid;
@@ -29,29 +30,19 @@
 		grid-auto-rows: 1fr;
 		justify-items: center;
 		align-items: center;
-		gap: 10px;
+		column-gap: 10px;
+		row-gap: 5vh;
 		/*background-color: rgba($color: #0000, $alpha: 0.5);*/
 	}
 
 	&-title,
 	&-subtitle {
 		&-box {
-			/* 			border-radius: 75px;
-			overflow: hidden;
-			width: fit-content;
-			height: 100%;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			background: rgba($bg-color, 0.8);
-			box-shadow: 0px 0px 15px $yellow, inset 0px 0px 150px $yellow;
-			padding: 20px 10px 20px 10px; */
 			border-radius: 0.5rem;
-
 			text-align: center;
 			display: block;
 			background-color: rgba($bg-color, 0.8);
-			padding: 60px;
+			padding: 25px;
 			box-shadow: 0px 0px 15px $yellow, inset 0px 0px 50px $yellow;
 		}
 		&-wrapper {
@@ -90,7 +81,7 @@
 			display: block;
 			text-align: center;
 			background-color: rgba($bg-color, 0.8);
-			padding: 60px;
+			padding: 25px;
 			box-shadow: 0px 0px 15px $yellow, inset 0px 0px 50px $yellow;
 		}
 		&-wrapper {
@@ -137,6 +128,7 @@
 		&-wrapper {
 			width: 100%;
 			grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+			padding-bottom: 10vh;
 		}
 		&-title-box {
 			align-self: end;

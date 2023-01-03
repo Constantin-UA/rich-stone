@@ -11,6 +11,9 @@
 		position: relative;
 		display: grid;
 		grid-template: 1fr/ 50% 50%;
+		max-width: unset !important;
+		width: 100vw !important;
+		margin: 0 !important;
 	}
 	&-box {
 		display: flex;

@@ -13,7 +13,6 @@
 		padding-bottom: 10vh;
 		height: $heigth-wrapper;
 		min-height: $min-heigth-wrapper;
-		width: 100%;
 		overflow: hidden;
 		position: relative;
 		display: flex;
@@ -30,6 +29,7 @@
 		justify-items: center;
 		align-items: center;
 		width: 100%;
+		max-width: 900px;
 		height: 100%;
 		grid-template-columns: repeat(auto-fill, 270px);
 		grid-template-rows: repeat(auto-fill, 270px);
@@ -69,3 +69,10 @@
 }
 
 // media
+@media (max-width: 600px) {
+	.work {
+		&-wrapper {
+			max-width: 100%;
+		}
+	}
+}
