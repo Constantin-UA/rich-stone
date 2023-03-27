@@ -8,6 +8,7 @@ import Work from '../../work/Work';
 import Materials from '../../materials/Materials';
 import Partnership from '../../partnership/Partnership';
 import Contacts from '../../contacts/Contacts';
+import Separator from '../../separator/Separator';
 //data
 import { dataImg } from '../../../data';
 //CSS
@@ -60,14 +61,21 @@ const MainPage = ({ dataLang, changePage }) => {
 			</Helmet>
 			<div className="mainPage">
 				<Home scrollY={scrollY} dataLang={dataLang} />
+				<Separator />
 				<About scrollY={scrollY} dataLang={dataLang} />
+				<Separator />
+
 				<Suspense fallback={<Spiner />}>
 					<Work scrollY={scrollY} dataLang={dataLang} images={dataImg.images} />
+					<Separator />
+
 					<Partnership
 						scrollY={scrollY}
 						dataLang={dataLang}
 						dataParntnerImg={dataImg.dataParntnerImg}
 					/>
+					<Separator />
+
 					<Materials scrollY={scrollY} dataLang={dataLang} materialImg={dataImg.materialImg} />
 					<Contacts scrollY={scrollY} dataLang={dataLang} />
 				</Suspense>

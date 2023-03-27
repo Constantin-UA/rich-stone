@@ -169,10 +169,9 @@
 		min-width: $min-width-768;
 		&-wrapper {
 			width: 100%;
-			grid-template: 1fr / 1fr 1fr 1fr;
+			grid-template: 1fr / 1fr 1fr;
 		}
 		&-logo {
-			grid-column: 2/3;
 			justify-self: center;
 			&-wrapper {
 				width: 70px;

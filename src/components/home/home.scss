@@ -4,6 +4,7 @@
 	overflow: hidden;
 	min-width: $min-width;
 	min-height: $min-heigth;
+
 	&-bg {
 		position: absolute;
 		background-position: center;
@@ -38,7 +39,7 @@
 			background-repeat: no-repeat;
 			overflow: hidden;
 			box-shadow: rgba($yellow-second, 0.35) 0px 5px 15px;
-			border-radius: 10px;
+			border-radius: 4px;
 		}
 		&-R,
 		&-S {
@@ -75,10 +76,14 @@
 @media (max-width: 768px) {
 	.home {
 		&-wrapper {
-			row-gap: 1vh;
-			justify-content: space-evenly;
+			display: grid;
+			align-items: unset;
+			justify-content: unset;
+			text-align: center;
 		}
 		&-text {
+			align-self: center;
+			justify-self: center;
 			font-size: 34px;
 			width: 300px;
 
@@ -90,21 +95,21 @@
 	.home {
 		&-logo {
 			&-box {
-				background-image: url('../../assets/logo/Frame175x290.webp');
-				height: 290px;
-				width: 175px;
+				background-image: url('../../assets/logo/Frame70x116.webp');
+				height: 116px;
+				width: 70px;
 			}
 			&-R,
 			&-S {
-				width: 100px;
-				height: 140px;
+				width: 37px;
+				height: 51px;
 			}
 		}
 	}
 }
 
 @media (max-width: 425px) {
-	.home {
+	/* 	.home {
 		&-logo {
 			&-box {
 				background-image: url('../../assets/logo/Frame120x200.webp');
@@ -117,25 +122,43 @@
 				height: 88px;
 			}
 		}
-	}
+	} */
 }
 @media (max-height: 626px) {
 	.home {
+		&-wrapper {
+			display: grid;
+			align-items: unset;
+			justify-content: unset;
+			text-align: center;
+		}
+		&-text {
+			align-self: center;
+			justify-self: center;
+			font-size: 34px;
+			width: 300px;
+
+			p {
+				margin: 0;
+			}
+		}
+	}
+	.home {
 		&-logo {
 			&-box {
-				background-image: url('../../assets/logo/Frame120x200.webp');
-				height: 200px;
-				width: 120px;
+				background-image: url('../../assets/logo/Frame70x116.webp');
+				height: 116px;
+				width: 70px;
 			}
 			&-R,
 			&-S {
-				width: 64px;
-				height: 88px;
+				width: 37px;
+				height: 51px;
 			}
 		}
 	}
 }
-@media (max-height: 501px) {
+/* @media (max-height: 501px) {
 	.home {
 		&-text {
 			display: none;
@@ -164,3 +187,4 @@
 		}
 	}
 }
+ */

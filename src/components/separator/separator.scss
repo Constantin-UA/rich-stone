@@ -1,0 +1,30 @@
+.separator {
+	width: 100%;
+	height: 1rem;
+	position: relative;
+	background-color: #000;
+	&:before {
+		pointer-events: none;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: linear-gradient(180deg, rgba(14, 14, 14, 0) 5%, #000 80%);
+		transform: translate(0px, -100%);
+		z-index: 100;
+	}
+	&:after {
+		pointer-events: none;
+		content: '';
+		position: absolute;
+		top: 1rem;
+		left: 0;
+		width: 100%;
+		height: 100px;
+		background: linear-gradient(0deg, rgba(14, 14, 14, 0) 5%, #000 80%);
+
+		z-index: 100;
+	}
+}

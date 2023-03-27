@@ -5,7 +5,7 @@ import errorImg from '../../../assets/error/1.png';
 // scss import
 import './errorPage.scss';
 
-function ErrorPage() {
+export default function ErrorPage() {
 	return (
 		<section className="errorPage">
 			<Image className="errorPage-img" alt="bg" src={errorImg} />
@@ -17,5 +17,3 @@ function ErrorPage() {
 		</section>
 	);
 }
-
-export default ErrorPage;

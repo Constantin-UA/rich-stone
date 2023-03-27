@@ -47,7 +47,6 @@ function Home({ dataLang, scrollY }) {
 							<source media="(max-height: 426px)" srcSet={logoR_M} />
 							<source media="(max-width: 426px)" srcSet={logoR_M} />
 							<source media="(max-width: 768px)" srcSet={logoR_T} />
-
 							<img className="home-logo-R-img animate__animated" src={logoR_D} alt="Rich logo R" />
 						</picture>
 					</div>

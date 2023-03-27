@@ -5,6 +5,7 @@ import instaIcon from '../../assets/contacts/instagram.webp';
 import emailIcon from '../../assets/contacts/email.webp';
 import viberIcon from '../../assets/contacts/viber.webp';
 import telegramIcon from '../../assets/contacts/telegram.webp';
+import prom from '../../assets/contacts/prom.webp';
 import './contacts.scss';
 
 function Contacts({ scrollY, dataLang }) {
@@ -35,6 +36,12 @@ function Contacts({ scrollY, dataLang }) {
 						<div className="contacts-phone-element animate__animated">
 							<Image className="contacts-icon" src={adresIcon} alt="icon" />
 							<div className="contacts-phone">{dataLang.contactsAdres}</div>
+						</div>
+						<div className="contacts-phone-element animate__animated">
+							<Image className="contacts-icon" src={prom} alt="icon" />
+							<a href="https://rich-stone.prom.ua/ua/" className="contacts-phone">
+								www.rich-stone.prom.ua
+							</a>
 						</div>
 					</div>
 				</div>
