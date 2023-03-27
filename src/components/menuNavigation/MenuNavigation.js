@@ -55,10 +55,10 @@ function MenuNavigation({ show, dataLang, setLang, page, changePage }) {
 								+380508000840
 							</a>
 							<a
-								href="https://www.instagram.com/r.i.c.h_s.t.o.n.e/"
+								href="https://www.instagram.com/r.i.c.h.s.t.o.n.e/"
 								className="menuNavigation-phone"
 							>
-								@r.i.c.h_s.t.o.n.e
+								@r.i.c.h.s.t.o.n.e
 							</a>
 							<div className="menuNavigation-phone">richstone@i.ua</div>
 						</div>

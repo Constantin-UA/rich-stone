@@ -4,11 +4,11 @@ import { useToggler } from '../hook/useToggler.hook';
 
 //logo
 import logoR_D from '../../assets/logo/R_115x160_Desktop.webp';
-import logoR_T from '../../assets/logo/R_100x140_Mobile.webp';
+import logoR_T from '../../assets/logo/R_37.12x51.04.webp';
 import logoR_M from '../../assets/logo/R64x88.webp';
 
 import logoS_D from '../../assets/logo/S_115x160_Desktop.webp';
-import logoS_T from '../../assets/logo/S_100x140_Mobile.webp';
+import logoS_T from '../../assets/logo/S_37.12x51.04.webp';
 import logoS_M from '../../assets/logo/S64x88.webp';
 
 //desktop bg

@@ -59,8 +59,8 @@ function OffNav({ show, setShow, dataLang, setLang, dataLinks, page }) {
 					</div>
 					<div className="offcanvas-phone-wrapper">
 						<img className="offcanvas-icon" src={instaIcon} alt="icon" />
-						<a href="https://www.instagram.com/r.i.c.h_s.t.o.n.e/" className="offcanvas-phone">
-							@r.i.c.h_s.t.o.n.e
+						<a href="https://www.instagram.com/r.i.c.h.s.t.o.n.e/" className="offcanvas-phone">
+							@r.i.c.h.s.t.o.n.e
 						</a>
 					</div>
 				</div>

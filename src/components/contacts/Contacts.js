@@ -25,8 +25,8 @@ function Contacts({ scrollY, dataLang }) {
 						</div>
 						<div className="contacts-phone-element animate__animated">
 							<Image className="contacts-icon" src={instaIcon} alt="icon" />
-							<a href="https://www.instagram.com/r.i.c.h_s.t.o.n.e/" className="contacts-phone">
-								@r.i.c.h_s.t.o.n.e
+							<a href="https://www.instagram.com/r.i.c.h.s.t.o.n.e/" className="contacts-phone">
+								@r.i.c.h.s.t.o.n.e
 							</a>
 						</div>
 						<div className="contacts-phone-element animate__animated">
@@ -34,14 +34,14 @@ function Contacts({ scrollY, dataLang }) {
 							<div className="contacts-phone">richstone@i.ua</div>
 						</div>
 						<div className="contacts-phone-element animate__animated">
-							<Image className="contacts-icon" src={adresIcon} alt="icon" />
-							<div className="contacts-phone">{dataLang.contactsAdres}</div>
-						</div>
-						<div className="contacts-phone-element animate__animated">
 							<Image className="contacts-icon" src={prom} alt="icon" />
 							<a href="https://rich-stone.prom.ua/ua/" className="contacts-phone">
 								www.rich-stone.prom.ua
 							</a>
+						</div>
+						<div className="contacts-phone-element animate__animated">
+							<Image className="contacts-icon" src={adresIcon} alt="icon" />
+							<div className="contacts-phone">{dataLang.contactsAdres}</div>
 						</div>
 					</div>
 				</div>
